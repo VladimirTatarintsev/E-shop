@@ -1,0 +1,59 @@
+.input {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.field {
+  height: 2rem;
+  width: 100%;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 30px 8px 8px;
+}
+.field:focus {
+  box-shadow: 0 0.3em 2em rgba(0, 0, 0, 0.2);
+}
+.field::placeholder {
+  color: #868687;
+}
+.fieldIncorrect {
+  border: 1px solid #f53152;
+  padding: 8px 32px 8px 8px;
+}
+.fieldIncorrect:focus {
+  border: 1px solid #459df5;
+}
+.button {
+  border: none;
+  cursor: pointer;
+  background: inherit;
+  position: absolute;
+  display: flex;
+  right: 0.5rem;
+  padding: 0;
+}
+.iconInput {
+  padding: 0.5rem 2.25rem 0.5rem 2rem;
+}
+.searchIconInput {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  left: 9.5px;
+  stroke: #000;
+}
+.text {
+  position: absolute;
+  left: 0.5rem;
+}
+.textInput {
+  padding: 8px 32px 8px 26px;
+}
+.buttonIcon {
+  width: 1rem;
+  height: 1rem;
+  stroke: #686869;
+  fill: #686869;
+}

@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+.App {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1500px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Lato", sans-serif;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.25rem;
+}
+.cardWrapper {
+  margin-right: 5rem;
+}
+
+.inputWrapper {
+  display: flex;
+  height: 100%;
+  width: 50%;
+  position: relative;
+  align-items: center;
+  justify-self: end;
+}
+.searchInput {
+  overflow: hidden;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  outline: none;
+  background-color: transparent;
+}
+.searchBtn {
+  position: absolute;
+  right: -2.5rem;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding: 0.5rem 1rem;
+}
+
+.btnWrapper {
+  display: flex;
+  flex: 0 1 15%;
+  justify-content: flex-end;
+}

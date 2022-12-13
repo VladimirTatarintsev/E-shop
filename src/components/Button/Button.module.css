@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+.button {
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  line-height: 1rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.text {
+  font-size: 13px;
+  line-height: 1rem;
+  display: block;
+}
+.colorPrimary {
+  background: #06a56c;
+  color: white;
+}
+.colorSecondary {
+  color: #fff;
+  background: #01579b;
+}
+.colorTertiary {
+  color: black;
+  background: transparent;
+}
+.colorRed {
+  background: #f53152;
+  color: white;
+}
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+.sizeMedium {
+  height: 2rem;
+  padding: 0.5rem 1rem;
+}
+.sizeMedium .icon + .text {
+  margin-left: 0.5rem;
+}
+.sizeSmall .icon + .text {
+  margin-left: 0.25rem;
+}
+.sizeMedium ~ .iconOnly .icon {
+  padding: 0.5rem;
+}
+.sizeSmall {
+  height: 1.5rem;
+  padding: 0.25rem 0.5rem;
+}
+.sizeSmall ~ .iconOnly {
+  padding: 0.25rem;
+  height: 1.5rem;
+}
+.colorPrimary .icon {
+  stroke: #fff;
+  fill: #fff;
+}
+.colorSecondary .icon {
+  stroke: #fff;
+}
+.colorTertiary .icon {
+  stroke: #000;
+}
+.colorRed .icon {
+  stroke: #fff;
+}
+.sizeLarge .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.sizeLarge .icon + .text {
+  margin-left: 0.5rem;
+}
+.sizeLarge {
+  padding: 0.25rem 0.5rem;
+}
+.colorTransparent {
+  background-color: transparent;
+  color: #fff;
+}
+.colorTransparent .icon {
+  stroke: #fff;
+  fill: #fff;
+}
+.buttonFullWidth {
+  width: 100%;
+}
