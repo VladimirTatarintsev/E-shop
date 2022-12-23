@@ -1,0 +1,12 @@
+.menuCat {
+  max-height: 100%;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 800px) {
+  .menuCat {
+    display: none;
+  }
+}

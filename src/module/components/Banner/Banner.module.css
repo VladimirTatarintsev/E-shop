@@ -1,0 +1,17 @@
+.banner {
+  position: relative;
+  display: flex;
+  flex: 1 0 auto;
+  background-color: rgb(255, 255, 255);
+  justify-content: flex-start;
+  padding: 2.25rem;
+}
+
+@media (max-width: 800px) {
+  .banner {
+    height: 12.5rem;
+    padding: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}

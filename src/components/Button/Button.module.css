@@ -13,7 +13,7 @@
   white-space: nowrap;
 }
 .text {
-  font-size: 13px;
+  font-size: 0.75rem;
   line-height: 1rem;
   display: block;
 }
@@ -26,8 +26,12 @@
   background: #01579b;
 }
 .colorTertiary {
-  color: black;
+  color: #060f42;
   background: transparent;
+}
+.colorTransparent {
+  background-color: transparent;
+  color: #fff;
 }
 .colorRed {
   background: #f53152;
@@ -38,7 +42,7 @@
   height: 1rem;
 }
 .sizeMedium {
-  height: 2rem;
+  height: 2.5rem;
   padding: 0.5rem 1rem;
 }
 .sizeMedium .icon + .text {
@@ -51,8 +55,8 @@
   padding: 0.5rem;
 }
 .sizeSmall {
-  height: 1.5rem;
-  padding: 0.25rem 0.5rem;
+  height: 2rem;
+  padding: 0.5rem 1rem;
 }
 .sizeSmall ~ .iconOnly {
   padding: 0.25rem;
@@ -60,13 +64,15 @@
 }
 .colorPrimary .icon {
   stroke: #fff;
-  fill: #fff;
 }
 .colorSecondary .icon {
   stroke: #fff;
 }
 .colorTertiary .icon {
-  stroke: #000;
+  stroke: #060f42;
+}
+.colorTertiary .largeIcon {
+  stroke: #060f42;
 }
 .colorRed .icon {
   stroke: #fff;
@@ -75,20 +81,22 @@
   width: 1.5rem;
   height: 1.5rem;
 }
-.sizeLarge .icon + .text {
-  margin-left: 0.5rem;
-}
 .sizeLarge {
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0.75rem;
 }
-.colorTransparent {
-  background-color: transparent;
-  color: #fff;
-}
+
 .colorTransparent .icon {
   stroke: #fff;
-  fill: #fff;
 }
 .buttonFullWidth {
   width: 100%;
+}
+.iconLabel {
+  stroke: #01579b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.largeIcon {
+  width: 2rem;
+  height: 2rem;
 }

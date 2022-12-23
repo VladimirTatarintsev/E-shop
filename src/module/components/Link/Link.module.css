@@ -1,0 +1,37 @@
+.link {
+  display: flex;
+  text-decoration: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  align-items: center;
+}
+.text {
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+  line-height: 0.75rem;
+}
+.icon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+.colorPrimary {
+  color: #01579b;
+}
+.colorPrimary:visited {
+  color: #01579b;
+}
+.colorPrimary .icon {
+  stroke: #01579b;
+}
+.colorSecondary {
+  color: #fff;
+}
+.colorSecondary:visited {
+  color: #fff;
+}
+.colorSecondary .icon {
+  stroke: #fff;
+}
+
+@media (max-width: 800px) {
+}
