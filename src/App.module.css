@@ -5,7 +5,7 @@
   position: relative;
   display: flex;
   margin: 0 auto;
-  max-width: 1500px;
+  max-width: 1550px;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -55,12 +55,6 @@
   justify-self: end;
   margin-right: 1rem;
 }
-.searchInput {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  outline: none;
-  background-color: transparent;
-}
 .searchBtn {
   position: absolute;
   right: -3rem;
@@ -80,7 +74,23 @@
 .btnWrapper {
   position: relative;
 }
-.cartQty {
+.productQty {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: #ffcd1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.675rem;
+  border-radius: 50%;
+  font-weight: 700;
+  font-family: "Lato" sans-serif;
+  color: #060f42;
+}
+.btnWrapper:last-child .productQty {
   position: absolute;
   top: 0;
   right: 0;
@@ -95,38 +105,6 @@
   font-weight: 700;
   font-family: "Lato" sans-serif;
   color: #fff;
-}
-.favQty {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: #ffcd1b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.675rem;
-  border-radius: 50%;
-  font-weight: 700;
-  font-family: "Lato" sans-serif;
-  color: #060f42;
-}
-.compareQty {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: #ffcd1b;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.675rem;
-  border-radius: 50%;
-  font-weight: 700;
-  font-family: "Lato" sans-serif;
-  color: #060f42;
 }
 .pageContainer {
   display: flex;
@@ -145,7 +123,6 @@
 .banner {
   display: flex;
   flex: 1 0 auto;
-  height: 100%;
 }
 .bannerImg {
   background-image: url(../public/image/banner/banner_msi.png);
@@ -177,29 +154,37 @@
   width: 100%;
   height: 2rem;
 }
-.productBlockWrapper {
+.productContainer {
   display: flex;
   max-width: 100%;
   box-sizing: border-box;
   flex-direction: column;
-  padding: 0;
+  padding: 0 1rem;
 }
-.productContainer {
-  margin-bottom: 1rem;
+.productBlockWrapper {
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
 .productBlock {
   display: flex;
+  justify-content: flex-start;
   margin-bottom: 1rem;
+  overflow: hidden;
 }
 .product {
   display: flex;
-  margin-right: 0.75rem;
+  margin-right: 1rem;
 }
-.link {
+.product:last-child {
+  margin: 0;
+}
+.links {
   display: flex;
-  align-self: flex-end;
+  justify-content: flex-end;
+}
+.secondLink {
+  display: none !important;
 }
 .gameZoneContainer {
   width: 100%;
@@ -210,7 +195,7 @@
   flex-direction: column;
 }
 .bgImg {
-  background: linear-gradient(rgba(76, 118, 255, 0.8), rgba(26, 26, 68, 0.9)),
+  background: linear-gradient(rgba(76, 118, 255, 0.8), rgba(25, 25, 73, 0.9)),
     url(../public/image/game-zone/game-zone.jpg) no-repeat;
   background-size: 110%;
   position: absolute;
@@ -221,7 +206,6 @@
   z-index: -1;
 }
 .gameZoneHeader {
-  height: 2.25rem;
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
@@ -232,7 +216,7 @@
   display: flex;
   background-color: #fff;
 }
-.gameZoneLine:nth-last-child(1) {
+.gameZoneLine:last-child {
   flex-grow: 6;
 }
 .gameZoneText {
@@ -241,25 +225,21 @@
   line-height: 2rem;
   font-family: "Lato";
   padding: 0 1.25rem;
-}
-.gameProductBlock {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1rem;
+  white-space: nowrap;
 }
 .categoryForGamer {
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 .headCategoryText {
   display: flex;
   align-items: flex-end;
-  height: 3.5rem;
   font-size: 1.75rem;
   font-family: "Lato" serif;
   color: #fff;
   margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 .categoryItem {
   width: 15rem;
@@ -271,7 +251,7 @@
 .itemImg {
   width: 210px;
   position: absolute;
-  left: 0.375rem;
+  left: 6%;
 }
 .itemBg {
   width: 170px;
@@ -288,25 +268,146 @@
   padding-left: 1rem;
 }
 
-@media (max-width: 800px) {
-  .App {
-    width: 100%;
-  }
+@media (max-width: 1201px) and (min-width: 768px) {
   .productTitle {
-    padding-left: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  .productBlock {
+    margin-bottom: 0.5rem;
+    overflow: scroll;
+  }
+  .productBlockWrapper:last-of-type .productBlock {
+    flex-wrap: wrap;
+  }
+  .product {
+    margin: 0 0.5rem 0.5rem 0;
+  }
+  .navLogo {
+    display: block;
+  }
+  .navbar {
+    border-radius: 0;
+    margin: 0;
+    height: 4rem;
+    padding: 0.5rem 1rem;
+  }
+  .navBtn {
+    padding: 0.25rem;
+  }
+  .navBtn span {
+    display: none;
+  }
+  .header {
+    background-color: #060f42;
+    margin-bottom: 0;
+  }
+  .logo {
+    display: none;
+  }
+  .inputWrapper {
+    margin: 0;
+  }
+  .searchBtn {
+    position: static;
+    background-color: transparent !important;
+  }
+  .searchBtn svg {
+    height: 2rem;
+    width: 2rem;
+  }
+  .headBtnWrapper {
+    padding-right: 1rem;
+    justify-content: flex-end;
+  }
+  .btnWrapper {
+    display: none;
+  }
+  .btnWrapper:last-child {
+    display: block;
+  }
+  .headBtn svg {
+    stroke: #fff !important;
+  }
+  .menuWrapper {
+    height: 25rem;
+    margin-bottom: 0.5rem;
+  }
+  .bannerTitle {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+    line-height: normal;
+  }
+  .bannerDiscription {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .links {
+    justify-content: space-between;
+  }
+  .secondLink {
+    display: block !important;
+  }
+  .bgImg {
+    background-size: 550%;
+  }
+  .gameZoneContainer {
+    height: 100%;
+  }
+  .gameZoneLine {
+    flex: 6 0 auto;
+  }
+  .gameZoneContainer .productBlock {
+    height: 20rem;
+    overflow: scroll;
+  }
+  .gameZoneContainer .links {
+    margin-bottom: 1rem;
+  }
+  .gameProduct {
+    margin-bottom: 1rem;
+  }
+  .categoryForGamer {
+    overflow: scroll;
+    justify-content: flex-start;
+  }
+  .headCategoryText {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .categoryItem {
+    height: 12rem;
+    width: 10rem;
+    padding: 0.5rem 0;
+    margin-right: 1rem;
+  }
+  .itemBg {
+    width: 160px;
+  }
+  .itemImg {
+    left: 1%;
+  }
+  .itemTitle {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .productTitle {
     margin-bottom: 1rem;
     font-size: 1.25rem;
   }
   .productBlock {
     flex-wrap: wrap;
+    margin-bottom: 0.5rem;
     justify-content: space-around;
-    margin: 0;
+  }
+  .productBlockWrapper:first-of-type .productBlock {
+    height: 20rem;
+    overflow: hidden;
   }
   .product {
     margin: 0 0 0.5rem 0;
-  }
-  .containerProd {
-    width: 100%;
   }
   .navLogo {
     display: block;
@@ -350,21 +451,18 @@
   .btnWrapper {
     display: none;
   }
-  .btnWrapper:nth-last-child(1) {
+  .btnWrapper:last-child {
     display: block;
   }
   .headBtn svg {
     stroke: #fff !important;
   }
   .menuWrapper {
-    max-height: 12.5rem;
+    height: 100%;
     margin-bottom: 0.5rem;
   }
   .banner {
-    width: 100%;
-  }
-  .bannerImg {
-    background-size: 105%;
+    background-size: 100%;
   }
   .bannerText {
     align-items: flex-end;
@@ -377,5 +475,51 @@
   .bannerDiscription {
     font-size: 0.75rem;
     margin-bottom: 1rem;
+  }
+  .links {
+    justify-content: space-between;
+  }
+  .secondLink {
+    display: block !important;
+  }
+  .bgImg {
+    background-size: 550%;
+  }
+  .gameZoneContainer {
+    height: 100%;
+  }
+  .gameZoneContainer .productBlock {
+    height: 20rem;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  .gameZoneContainer .links {
+    margin-bottom: 1rem;
+  }
+  .gameProduct {
+    margin-bottom: 1rem;
+  }
+  .categoryForGamer {
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-around;
+  }
+  .headCategoryText {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .categoryItem {
+    height: 12rem;
+    width: 10rem;
+    padding: 0.5rem 0;
+  }
+  .itemBg {
+    width: 160px;
+  }
+  .itemImg {
+    left: 1%;
+  }
+  .itemTitle {
+    font-size: 0.75rem;
   }
 }

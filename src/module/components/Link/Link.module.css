@@ -1,14 +1,14 @@
 .link {
   display: flex;
-  text-decoration: none;
-  padding: 0 1rem;
-  cursor: pointer;
   align-items: center;
+  text-decoration: none;
+  padding: 0 0.5rem;
+  cursor: pointer;
 }
 .text {
   font-size: 0.75rem;
   margin-right: 0.25rem;
-  line-height: 0.75rem;
+  line-height: 1rem;
 }
 .icon {
   width: 0.75rem;
@@ -31,7 +31,4 @@
 }
 .colorSecondary .icon {
   stroke: #fff;
-}
-
-@media (max-width: 800px) {
 }

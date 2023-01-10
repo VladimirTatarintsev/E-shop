@@ -10,6 +10,7 @@ import { ReactComponent as SearchIcon } from "./icons/search.svg";
 import { ReactComponent as Catalog } from "./icons/catalog.svg";
 import { ReactComponent as DeleteIcon } from "./icons/x-large.svg";
 import { ReactComponent as ArrowRight } from "./icons/arrow-right.svg";
+import { ReactComponent as ArrowDown } from "./icons/arrow-down.svg";
 import { ReactComponent as CpuIcon } from "./icons/cpu.svg";
 import { ReactComponent as Display } from "./icons/display.svg";
 import { ReactComponent as Laptop } from "./icons/laptop.svg";
@@ -94,7 +95,7 @@ export const App = () => {
               color="tertiary"
               largeIcon={ScalesIcon}
             />
-            <div className={styles.compareQty}>15</div>
+            <div className={styles.productQty}>15</div>
           </div>
           <div className={styles.btnWrapper}>
             <Button
@@ -103,7 +104,7 @@ export const App = () => {
               color="tertiary"
               largeIcon={LikeIcon}
             />
-            <div className={styles.favQty}>2</div>
+            <div className={styles.productQty}>2</div>
           </div>
           <div className={styles.btnWrapper}>
             <Button
@@ -112,7 +113,7 @@ export const App = () => {
               color="tertiary"
               largeIcon={Cart}
             />
-            <div className={styles.cartQty}>15</div>
+            <div className={styles.productQty}>15</div>
           </div>
         </div>
       </PageHeader>
@@ -143,9 +144,9 @@ export const App = () => {
             </Banner>
           </div>
         </div>
-        <div className={styles.productBlockWrapper}>
+        <div className={styles.productContainer}>
           <h2 className={styles.productTitle}>Топ продаж</h2>
-          <div className={styles.productContainer}>
+          <div className={styles.productBlockWrapper}>
             <div className={styles.productBlock}>
               {products
                 .map((product) => (
@@ -160,16 +161,26 @@ export const App = () => {
                 ))
                 .slice(0, 6)}
             </div>
-            <Link
-              className={styles.link}
-              href="http://localhost:3004/goods"
-              color="primary"
-              icon={ArrowRight}
-            >
-              Смотреть все товары
-            </Link>
+            <div className={styles.links}>
+              <Link
+                className={styles.secondLink}
+                color="primary"
+                icon={ArrowDown}
+              >
+                Еще товары
+              </Link>
+              <Link
+                className={styles.mainLink}
+                href="http://localhost:3004/goods"
+                color="primary"
+                icon={ArrowRight}
+              >
+                Смотреть все товары
+              </Link>
+            </div>
           </div>
-          <div className={styles.productContainer}>
+          <h2 className={styles.productTitle}>Топ продаж</h2>
+          <div className={styles.productBlockWrapper}>
             <div className={styles.productBlock}>
               {products
                 .map((product) => (
@@ -184,14 +195,23 @@ export const App = () => {
                 ))
                 .slice(-6)}
             </div>
-            <Link
-              className={styles.link}
-              href="http://localhost:3004/goods"
-              color="primary"
-              icon={ArrowRight}
-            >
-              Смотреть все товары
-            </Link>
+            <div className={styles.links}>
+              <Link
+                className={styles.secondLink}
+                color="primary"
+                icon={ArrowDown}
+              >
+                Скрыть
+              </Link>
+              <Link
+                className={styles.mainLink}
+                href="http://localhost:3004/goods"
+                color="primary"
+                icon={ArrowRight}
+              >
+                Смотреть все товары
+              </Link>
+            </div>
           </div>
         </div>
         <div className={styles.gameZoneContainer}>
@@ -201,11 +221,11 @@ export const App = () => {
             <hr className={styles.gameZoneLine}></hr>
           </div>
           <div className={styles.bgImg} />
-          <div className={styles.gameProductBlock}>
+          <div className={styles.productBlock}>
             {products
               .map((product) => (
                 <Card
-                  className={styles.gameProduct}
+                  className={styles.product}
                   product={product}
                   key={product.id}
                   alt={product.alt}
@@ -215,14 +235,23 @@ export const App = () => {
               ))
               .slice(11, 17)}
           </div>
-          <Link
-            className={styles.link}
-            href="http://localhost:3004/goods"
-            color="secondary"
-            icon={ArrowRight}
-          >
-            Смотреть все товары
-          </Link>
+          <div className={styles.links}>
+            <Link
+              className={styles.secondLink}
+              color="secondary"
+              icon={ArrowDown}
+            >
+              Еще товары
+            </Link>
+            <Link
+              className={styles.mainLink}
+              href="http://localhost:3004/goods"
+              color="secondary"
+              icon={ArrowRight}
+            >
+              Смотреть все товары
+            </Link>
+          </div>
           <span className={styles.headCategoryText}>
             Категории для геймеров
           </span>
@@ -284,7 +313,6 @@ export const App = () => {
           </div>
         </div>
       </div>
-
       <PageFooter></PageFooter>
     </div>
   );

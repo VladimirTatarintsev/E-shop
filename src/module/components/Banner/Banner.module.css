@@ -7,9 +7,9 @@
   padding: 2.25rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   .banner {
-    height: 12.5rem;
+    height: 12rem;
     padding: 1rem;
     justify-content: flex-end;
     align-items: flex-end;
