@@ -1,0 +1,40 @@
+.bannerItem {
+  flex: 1 0 100%;
+  padding: 2.25rem;
+  position: relative;
+}
+.itemImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.itemText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-left: 0.25rem;
+}
+.itemTitle {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+.itemDescription {
+  margin-bottom: 2rem;
+  color: #cdcdcd;
+}
+
+@media (max-width: 500px) {
+  .bannerItem {
+    height: 12rem;
+    padding: 1rem;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}

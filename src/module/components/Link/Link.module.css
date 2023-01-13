@@ -9,26 +9,27 @@
   font-size: 0.75rem;
   margin-right: 0.25rem;
   line-height: 1rem;
+  font-family: "Lato" sans-serif;
 }
 .icon {
   width: 0.75rem;
   height: 0.75rem;
 }
 .colorPrimary {
-  color: #01579b;
+  color: #f4f8fb;
 }
 .colorPrimary:visited {
-  color: #01579b;
+  color: #f4f8fb;
 }
 .colorPrimary .icon {
-  stroke: #01579b;
+  stroke: #f4f8fb;
 }
 .colorSecondary {
-  color: #fff;
+  color: #01579b;
 }
 .colorSecondary:visited {
-  color: #fff;
+  color: #01579b;
 }
 .colorSecondary .icon {
-  stroke: #fff;
+  stroke: #01579b;
 }

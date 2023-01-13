@@ -1,6 +1,6 @@
 import cx from "classnames";
 import styles from "./Link.module.css";
-import { capitalize } from "../../../helpers/helpers";
+import { capitalize } from "helpers/helpers";
 
 export const Link = ({ className, children, href, icon: Icon, color }) => {
   const linkClass = cx(styles.link, className, {

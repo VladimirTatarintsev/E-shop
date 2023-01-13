@@ -1,10 +1,10 @@
 import cx from "classnames";
 import styles from "./PageFooter.module.css";
-import { ReactComponent as Visa } from "../../../icons/visa.svg";
-import { ReactComponent as Mastercard } from "../../../icons/mastercard.svg";
-import { ReactComponent as Telegram } from "../../../icons/telegram.svg";
-import { Input } from "../../../components/Input/Input";
-import { Label } from "../../../components/Lable/Lable";
+import { ReactComponent as Visa } from "icons/visa.svg";
+import { ReactComponent as Mastercard } from "icons/mastercard.svg";
+import { ReactComponent as Telegram } from "icons/telegram.svg";
+import { Input } from "components/Input/Input";
+import { Label } from "components/Lable/Lable";
 
 export const PageFooter = ({ className }) => {
   const footerClass = cx(styles.footer, className);
