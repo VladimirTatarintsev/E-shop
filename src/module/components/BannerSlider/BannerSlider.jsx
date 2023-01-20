@@ -4,7 +4,7 @@ import axios from "axios";
 import cx from "classnames";
 import { ReactComponent as Dot } from "icons/dot.svg";
 import styles from "./BannerSlider.module.css";
-import { BannersList } from "./BannersList/BannersList";
+import { BannerItem } from "./BannerItem/BannerItem";
 
 export const BannerSliderContext = createContext();
 
@@ -19,6 +19,21 @@ export const BannerSlider = ({ className, autoPlay, autoPlayTime }) => {
     const response = await axios.get("http://localhost:3004/banners");
     setBanners(response.data);
   }
+
+  const preloadImages = () => {
+    const prevItemIndex = slide - 1 < 0 ? banners.length - 1 : slide - 1;
+    const nextItemIndex = (slide + 1) % banners.length;
+
+    new Image().src = banners[slide].src;
+    new Image().src = banners[prevItemIndex].src;
+    new Image().src = banners[nextItemIndex].src;
+  };
+
+  useEffect(() => {
+    if (banners.length) {
+      preloadImages();
+    }
+  }, [slide, banners]);
 
   const goToSlide = (number) => {
     setSlide(number % banners.length);
@@ -52,15 +67,15 @@ export const BannerSlider = ({ className, autoPlay, autoPlayTime }) => {
           banners,
         }}
       >
-        <BannersList />
+        {banners.length ? <BannerItem data={banners[slide]} /> : null}
         <div className={styles.dots}>
-          {banners.map((banner) => (
+          {banners.map((banner, index) => (
             <div
-              className={`${
-                slide === banner.id ? [styles.selectedDot] : [styles.dot]
+              className={`${[styles.dot]} ${
+                slide === index ? [styles.selectedDot] : ""
               }`}
               key={banner.id}
-              onClick={() => goToSlide(banner.id)}
+              onClick={() => goToSlide(index)}
             >
               <Dot className={styles.dotIcon} />
             </div>

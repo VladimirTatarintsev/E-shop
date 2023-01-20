@@ -14,7 +14,7 @@ import { ReactComponent as Display } from "icons/display.svg";
 import { ReactComponent as Laptop } from "icons/laptop.svg";
 import { ReactComponent as Router } from "icons/router.svg";
 import { ReactComponent as PlayStation } from "icons/playstation.svg";
-import { ReactComponent as LikeIcon } from "icons/heart.svg";
+import { ReactComponent as HeartIcon } from "icons/heart.svg";
 import { ReactComponent as ScalesIcon } from "icons/scales.svg";
 import {
   MenuCategories,
@@ -22,14 +22,17 @@ import {
   PageHeader,
   PageFooter,
   MenuCategoryItem,
-  Link,
+  MyLink,
   NavBar,
+  BurgerMenu,
+  BannerSlider,
 } from "module/components";
+import { CartPage } from "module/CartPage/CartPage";
 import styles from "./MainPage.module.css";
-import { BannerSlider } from "module/components/BannerSlider/BannerSlider";
 
 export const MainPage = () => {
   const [products, setProducts] = useState([]);
+  const [menuActive, setMenuActive] = useState(false);
 
   useEffect(() => {
     fetchProducts();
@@ -47,23 +50,24 @@ export const MainPage = () => {
       <NavBar className={styles.navbar}>
         <div className={styles.navItem}>
           <Button
+            onClick={() => setMenuActive(!menuActive)}
             className={styles.navBtnMenu}
             size="large"
             color="transparent"
             icon={MenuIcon}
           />
-          <Link className={styles.navMenuLink} color="primary">
+          <MyLink className={styles.navMenuLink} color="primary">
             Акции
-          </Link>
-          <Link className={styles.navMenuLink} color="primary">
+          </MyLink>
+          <MyLink className={styles.navMenuLink} color="primary">
             Кредит
-          </Link>
-          <Link className={styles.navMenuLink} color="primary">
+          </MyLink>
+          <MyLink className={styles.navMenuLink} color="primary">
             Помощь
-          </Link>
-          <Link className={styles.navMenuLink} color="primary">
+          </MyLink>
+          <MyLink className={styles.navMenuLink} color="primary">
             Контакты
-          </Link>
+          </MyLink>
         </div>
         <div className={styles.navItem}>
           <div className={styles.navLogo}>E-SHOP</div>
@@ -77,6 +81,11 @@ export const MainPage = () => {
           />
         </div>
       </NavBar>
+      <BurgerMenu
+        active={menuActive}
+        setActive={setMenuActive}
+        header={"E-SHOP"}
+      />
       <PageHeader className={styles.header}>
         <div className={styles.logoWrapper}>
           <div className={styles.logo}>E-SHOP</div>
@@ -116,7 +125,7 @@ export const MainPage = () => {
               className={styles.headBtn}
               size="large"
               color="tertiary"
-              largeIcon={LikeIcon}
+              largeIcon={HeartIcon}
             />
             <div className={styles.productQty}>2</div>
           </div>
@@ -144,7 +153,7 @@ export const MainPage = () => {
               Сетевое оборудование
             </MenuCategoryItem>
           </MenuCategories>
-          <BannerSlider autoPlay={true} autoPlayTime={2000} />
+          <BannerSlider />
         </div>
         <div className={styles.productContainer}>
           <h2 className={styles.productTitle}>Топ продаж</h2>
@@ -163,22 +172,17 @@ export const MainPage = () => {
                 ))
                 .slice(0, 6)}
             </div>
-            <div className={styles.links}>
-              <Link
-                className={styles.secondLink}
-                color="secondary"
-                icon={ArrowDown}
-              >
+            <div className={styles.myLinks}>
+              <MyLink color="secondary" iconRight={ArrowDown}>
                 Еще товары
-              </Link>
-              <Link
-                className={styles.mainLink}
+              </MyLink>
+              <MyLink
                 href="http://localhost:3004/goods"
                 color="secondary"
-                icon={ArrowRight}
+                iconRight={ArrowRight}
               >
                 Смотреть все товары
-              </Link>
+              </MyLink>
             </div>
           </div>
           <h2 className={styles.productTitle}>Топ продаж</h2>
@@ -197,22 +201,17 @@ export const MainPage = () => {
                 ))
                 .slice(-6)}
             </div>
-            <div className={styles.links}>
-              <Link
-                className={styles.secondLink}
-                color="secondary"
-                icon={ArrowDown}
-              >
+            <div className={styles.myLinks}>
+              <MyLink color="secondary" iconRight={ArrowDown}>
                 Скрыть
-              </Link>
-              <Link
-                className={styles.mainLink}
+              </MyLink>
+              <MyLink
                 href="http://localhost:3004/goods"
                 color="secondary"
-                icon={ArrowRight}
+                iconRight={ArrowRight}
               >
                 Смотреть все товары
-              </Link>
+              </MyLink>
             </div>
           </div>
         </div>
@@ -237,22 +236,17 @@ export const MainPage = () => {
               ))
               .slice(11, 17)}
           </div>
-          <div className={styles.links}>
-            <Link
-              className={styles.secondLink}
-              color="primary"
-              icon={ArrowDown}
-            >
+          <div className={styles.myLinks}>
+            <MyLink color="primary" iconRight={ArrowDown}>
               Еще товары
-            </Link>
-            <Link
-              className={styles.mainLink}
+            </MyLink>
+            <MyLink
               href="http://localhost:3004/goods"
               color="primary"
-              icon={ArrowRight}
+              iconRight={ArrowRight}
             >
               Смотреть все товары
-            </Link>
+            </MyLink>
           </div>
           <span className={styles.headCategoryText}>
             Категории для геймеров
@@ -321,6 +315,7 @@ export const MainPage = () => {
           </div>
         </div>
       </div>
+      <CartPage />
       <PageFooter></PageFooter>
     </div>
   );

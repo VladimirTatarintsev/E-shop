@@ -1,9 +1,10 @@
 export { Card } from "./Card/Card";
 export { BannerItem } from "./BannerSlider/BannerItem/BannerItem";
-export { Link } from "./Link/Link";
+export { MyLink } from "./Link/Link";
 export { MenuCategories } from "./MenuCategories/MenuCategories";
 export { MenuCategoryItem } from "./MenuCategoryItem/MenuCategoryItem";
 export { PageHeader } from "./PageHeader/PageHeader";
 export { PageFooter } from "./PageFooter/PageFooter";
 export { NavBar } from "./NavBar/NavBar";
-export { ProductList } from "./ProductList/ProductList";
+export { BurgerMenu } from "./BurgerMenu/BurgerMenu";
+export { BannerSlider } from "./BannerSlider/BannerSlider";

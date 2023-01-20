@@ -50,7 +50,8 @@
 	],
 
 	"cart": [
-
+		{ "id": 5, "title": "Видеокарта GIGABYTE AORUS GeForce RTX 4080 XTREME WATERFORCE 16Gb", "price": 123999, "src": "/image/card-image/GIGABYTEAORUSGeForceRTX4080XTREMEWATERFORCE.jpg", "qty": 1 },
+		{ "id": 29, "title": "Игровая консоль PlayStation 5 Digital Edition", "price": 59499, "src": "/image/card-image/Игровая консоль PlayStation 5 Digital Edition.jpg", "qty": 1 }
 	],
 
 	"users": [
