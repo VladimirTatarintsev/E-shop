@@ -1,0 +1,221 @@
+.layout {
+  position: relative;
+  width: 100%;
+}
+.navbar {
+  margin-bottom: 0.25rem;
+}
+.navLogo {
+  display: none;
+  font-size: 2rem;
+  font-family: "Ubuntu";
+  white-space: nowrap;
+  color: #fff;
+}
+.navItem {
+  display: flex;
+}
+.navMenuLink {
+  margin-right: 1.25rem;
+  padding: 0;
+}
+.navBtnMenu {
+  display: none;
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  margin-bottom: 1rem;
+}
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  flex: 0 0 25%;
+  height: 100%;
+  justify-content: space-between;
+  margin-right: 1rem;
+}
+.logo {
+  font-size: 2rem;
+  font-family: "Ubuntu";
+  white-space: nowrap;
+  text-decoration: none;
+  color: #060f42;
+}
+.inputWrapper {
+  display: flex;
+  height: 100%;
+  flex: 0 1 45%;
+  position: relative;
+  align-items: center;
+  justify-self: end;
+}
+.searchBtn {
+  position: absolute;
+  right: -3rem;
+  height: 2.5rem;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.searchBtn svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.headBtnWrapper {
+  display: flex;
+  flex: 0 0 20%;
+  justify-content: flex-end;
+}
+.btnWrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem;
+}
+.btnWrapper:last-child {
+  margin: 0;
+}
+.headBtn {
+  height: 2.75rem;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.linkIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  stroke: #060f42;
+}
+.cartLinkCounter {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 1rem;
+  height: 1rem;
+  background-color: #ffcd1b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.675rem;
+  border-radius: 50%;
+  font-weight: 700;
+  color: #060f42;
+}
+.btnWrapper:last-child .cartLinkCounter {
+  position: absolute;
+  top: 0;
+  right: -4px;
+  width: 1rem;
+  height: 1rem;
+  background-color: #06a56c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.675rem;
+  border-radius: 50%;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media (max-width: 1201px) and (min-width: 768px) {
+  .navLogo {
+    display: block;
+  }
+  .navbar {
+    margin: 0;
+  }
+  .navMenuLink {
+    display: none !important;
+  }
+  .navBtnMenu {
+    display: block;
+    padding: 0.25rem;
+  }
+  .navBtn {
+    padding: 0.25rem;
+  }
+  .header {
+    background-color: #060f42;
+    margin-bottom: 0;
+  }
+  .logo {
+    display: none;
+  }
+  .inputWrapper {
+    margin: 0;
+  }
+  .searchBtn {
+    position: static;
+    background-color: transparent !important;
+  }
+  .searchBtn svg {
+    height: 2rem;
+    width: 2rem;
+  }
+  .headBtnWrapper {
+    justify-content: flex-end;
+    height: 100%;
+  }
+  .btnWrapper {
+    display: none;
+  }
+  .btnWrapper:last-child {
+    display: flex;
+  }
+  .linkIcon {
+    stroke: #fff;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    margin: 0;
+  }
+  .navLogo {
+    display: block;
+  }
+  .navMenuLink {
+    display: none !important;
+  }
+  .navBtnMenu {
+    display: flex;
+    padding: 0.25rem;
+  }
+  .navBtn {
+    padding: 0.25rem;
+  }
+  .header {
+    position: static;
+    background-color: #060f42;
+    margin-bottom: 0;
+  }
+  .logo {
+    display: none;
+  }
+  .inputWrapper {
+    margin: 0;
+    justify-content: center;
+  }
+  .searchInput {
+    display: none;
+  }
+  .searchBtn {
+    position: static;
+    background-color: transparent !important;
+  }
+  .searchBtn svg {
+    height: 2rem;
+    width: 2rem;
+  }
+  .btnWrapper {
+    display: none;
+  }
+  .btnWrapper:last-child {
+    display: block;
+  }
+  .linkIcon {
+    stroke: #fff !important;
+  }
+}

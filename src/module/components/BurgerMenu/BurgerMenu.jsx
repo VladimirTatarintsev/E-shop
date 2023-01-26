@@ -1,5 +1,8 @@
-import { MyLink } from "..";
+import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { setBurgerMenu } from "store/slices/burgerMenuSlice";
 import { Button } from "components";
+import { MyLink } from "..";
 import { ReactComponent as Cart } from "icons/cart.svg";
 import { ReactComponent as User } from "icons/user.svg";
 import { ReactComponent as Catalog } from "icons/catalog.svg";
@@ -13,63 +16,73 @@ import { ReactComponent as YouTube } from "icons/youTube.svg";
 import { ReactComponent as CloseIcon } from "icons/x-large.svg";
 import styles from "./BurgerMenu.module.css";
 
-export const BurgerMenu = ({ header, active, setActive }) => {
+export const BurgerMenu = ({ header }) => {
+  const menuActive = useSelector((state) => state.burgerMenu.active);
+  const dispatch = useDispatch();
   return (
     <div
-      className={`${[styles.menu]} ${active ? [styles.menuActive] : ""}`}
-      onClick={() => setActive(false)}
+      className={`${[styles.menu]} ${
+        menuActive === true ? [styles.menuActive] : ""
+      }`}
+      onClick={() => dispatch(setBurgerMenu(false))}
     >
       <div className={styles.blur} />
       <div className={styles.menuContent} onClick={(e) => e.stopPropagation()}>
         <div className={styles.headerContainer}>
-          <div className={styles.header}>{header}</div>
+          <Link
+            to="/"
+            className={styles.header}
+            onClick={() => dispatch(setBurgerMenu(false))}
+          >
+            {header}
+          </Link>
           <Button
             color="transparent"
             size="medium"
             icon={CloseIcon}
-            onClick={() => setActive()}
+            onClick={() => dispatch(setBurgerMenu(false))}
           />
         </div>
-        <MyLink
-          className={styles.item}
-          href="/signIn"
-          color="primary"
-          icon={User}
+        <Link
+          className={styles.menuItem}
+          to="/signIn"
+          onClick={() => dispatch(setBurgerMenu(false))}
         >
-          Вход | Регистрация
-        </MyLink>
-        <MyLink
-          className={styles.item}
-          href="/goods"
-          color="primary"
-          icon={Catalog}
+          <User className={styles.linkIcon} />
+          <span className={styles.linkText}>Вход | Регистрация</span>
+        </Link>
+        <Link
+          className={styles.menuItem}
+          to="/goods"
+          onClick={() => dispatch(setBurgerMenu(false))}
         >
-          Каталог товаров
-        </MyLink>
-        <MyLink
-          className={styles.item}
-          href="/cart"
-          color="primary"
-          icon={Cart}
+          <Catalog className={styles.linkIcon} />
+          <span className={styles.linkText}>Каталог товаров</span>
+        </Link>
+        <Link
+          className={styles.menuItem}
+          to="/cart"
+          onClick={() => dispatch(setBurgerMenu(false))}
         >
-          Корзина
-        </MyLink>
-        <MyLink
-          className={styles.item}
-          href="/compare"
-          color="primary"
-          icon={ScalesIcon}
+          <Cart className={styles.linkIcon} />
+          <span className={styles.linkText}>Корзина</span>
+        </Link>
+        <Link
+          className={styles.menuItem}
+          to="/compare"
+          onClick={() => dispatch(setBurgerMenu(false))}
         >
-          Сравнение
-        </MyLink>
-        <MyLink
-          className={styles.item}
-          href="/wishList"
-          color="primary"
-          icon={HeartIcon}
+          <ScalesIcon className={styles.linkIcon} />
+          <span className={styles.linkText}>Сравнение</span>
+        </Link>
+        <Link
+          className={styles.menuItem}
+          to="/wishList"
+          onClick={() => dispatch(setBurgerMenu(false))}
         >
-          Избранное
-        </MyLink>
+          <HeartIcon className={styles.linkIcon} />
+          <span className={styles.linkText}>Избранное</span>
+        </Link>
         <div className={styles.followUs}>
           <span className={styles.title}>Следите за нами</span>
           <div className={styles.socials}>

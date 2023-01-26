@@ -6,7 +6,6 @@ export const Button = ({
   size,
   color,
   icon: Icon,
-  iconLabel: IconLabel,
   largeIcon: LargeIcon,
   onClick,
   children,
@@ -20,7 +19,6 @@ export const Button = ({
   return (
     <button className={buttonClass} onClick={onClick}>
       {Icon && <Icon className={styles.icon} />}
-      {IconLabel && <IconLabel className={styles.iconLabel} />}
       {LargeIcon && <LargeIcon className={styles.largeIcon} />}
       {children && <span className={styles.text}>{children}</span>}
     </button>

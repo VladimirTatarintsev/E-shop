@@ -1,6 +1,6 @@
 export { Card } from "./Card/Card";
 export { BannerItem } from "./BannerSlider/BannerItem/BannerItem";
-export { MyLink } from "./Link/Link";
+export { MyLink } from "./MyLink/MyLink";
 export { MenuCategories } from "./MenuCategories/MenuCategories";
 export { MenuCategoryItem } from "./MenuCategoryItem/MenuCategoryItem";
 export { PageHeader } from "./PageHeader/PageHeader";

@@ -1,13 +1,17 @@
+import { MainPage, CartPage, Layout, ProductListPage } from "module/Pages";
+import { Route, Routes } from "react-router-dom";
 import styles from "./App.module.css";
-import { MainPage } from "./module/MainPage/MainPage";
-import { BrowserRouter } from "react-router-dom";
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <div className={styles.App}>
-        <MainPage />
-      </div>
-    </BrowserRouter>
+    <div className={styles.App}>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<MainPage />} />
+          <Route path="cart" element={<CartPage />} />
+          <Route path="products" element={<ProductListPage />} />
+        </Route>
+      </Routes>
+    </div>
   );
 };

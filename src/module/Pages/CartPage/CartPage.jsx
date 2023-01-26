@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import cx from "classnames";
 import { Button } from "components";
 import { ReactComponent as Plus } from "icons/plus.svg";
@@ -12,14 +13,14 @@ export const CartPage = ({ className }) => {
 
   const [productsCart, setProductsCart] = useState([]);
 
+  async function fetchCart() {
+    const resp = await axios.get("http://localhost:3001/cart");
+    setProductsCart(resp.data);
+  }
+
   useEffect(() => {
     fetchCart();
   }, []);
-
-  async function fetchCart() {
-    const resp = await axios.get("http://localhost:3004/cart");
-    setProductsCart(resp.data);
-  }
 
   return (
     <div className={cart}>
@@ -28,30 +29,26 @@ export const CartPage = ({ className }) => {
       </div>
       <div className={styles.productBlock}>
         {productsCart ? (
-          productsCart.map((product) => (
-            <div className={styles.product} key={product.id}>
-              <div className={styles.wrapperDescription}>
+          productsCart.map(({ id, title, price, src, qty }) => (
+            <div className={styles.product} key={id}>
+              <div className={styles.descriptionContainer}>
                 <div className={styles.imgContainer}>
-                  <img
-                    className={styles.img}
-                    src={product.src}
-                    alt={product.title}
-                  />
+                  <img className={styles.img} src={src} alt={title} />
                 </div>
-                <span className={styles.title}>{product.title}</span>
+                <span className={styles.title}>{title}</span>
               </div>
-              <div className={styles.wrapperPrice}>
-                <div className={styles.qtyContainer}>
+              <div className={styles.priceContainer}>
+                <div className={styles.countContainer}>
                   <button className={styles.countBtn}>
                     <Minus />
                   </button>
-                  <span className={styles.qty}>{product.qty}</span>
+                  <span className={styles.count}>{qty}</span>
                   <button className={styles.countBtn}>
                     <Plus />
                   </button>
                 </div>
                 <div className={styles.price}>
-                  {product.price}
+                  {price}
                   <p>руб.</p>
                 </div>
                 <Button
@@ -70,17 +67,22 @@ export const CartPage = ({ className }) => {
         )}
       </div>
       <div className={styles.cartFooter}>
-        <Button className={styles.continueBtn} size="medium" color="tertiary">
-          Продолжить покупки
-        </Button>
+        <Link to="/" className={styles.linkToMain}>
+          <Button className={styles.continueBtn} size="medium" color="tertiary">
+            Продолжить покупки
+          </Button>
+        </Link>
         <div className={styles.confirmOrder}>
-          <span className={styles.totalPrice}>
-            {productsCart.reduce(
-              (acc, product) => acc + product.price * product.qty,
-              0
-            )}
-            <p>руб.</p>
-          </span>
+          <div className={styles.totalPriceContainer}>
+            <span className={styles.totalPriceText}>Итого:</span>
+            <span className={styles.totalPrice}>
+              {productsCart.reduce(
+                (acc, { price, qty }) => acc + price * qty,
+                0
+              )}
+              <p>руб.</p>
+            </span>
+          </div>
           <Button className={styles.confirmBtn} color="primary" size="medium">
             ОФОРМИТЬ ЗАКАЗ
           </Button>

@@ -16,20 +16,19 @@ export const BannerSlider = ({ className, autoPlay, autoPlayTime }) => {
     fetchBanners();
   }, []);
   async function fetchBanners() {
-    const response = await axios.get("http://localhost:3004/banners");
+    const response = await axios.get("http://localhost:3001/banners");
     setBanners(response.data);
   }
 
-  const preloadImages = () => {
-    const prevItemIndex = slide - 1 < 0 ? banners.length - 1 : slide - 1;
-    const nextItemIndex = (slide + 1) % banners.length;
-
-    new Image().src = banners[slide].src;
-    new Image().src = banners[prevItemIndex].src;
-    new Image().src = banners[nextItemIndex].src;
-  };
-
   useEffect(() => {
+    const preloadImages = () => {
+      const prevItemIndex = slide - 1 < 0 ? banners.length - 1 : slide - 1;
+      const nextItemIndex = (slide + 1) % banners.length;
+
+      new Image().src = banners[slide].src;
+      new Image().src = banners[prevItemIndex].src;
+      new Image().src = banners[nextItemIndex].src;
+    };
     if (banners.length) {
       preloadImages();
     }
@@ -61,27 +60,20 @@ export const BannerSlider = ({ className, autoPlay, autoPlayTime }) => {
 
   return (
     <div className={bannerSlider}>
-      <BannerSliderContext.Provider
-        value={{
-          slideNumber: slide,
-          banners,
-        }}
-      >
-        {banners.length ? <BannerItem data={banners[slide]} /> : null}
-        <div className={styles.dots}>
-          {banners.map((banner, index) => (
-            <div
-              className={`${[styles.dot]} ${
-                slide === index ? [styles.selectedDot] : ""
-              }`}
-              key={banner.id}
-              onClick={() => goToSlide(index)}
-            >
-              <Dot className={styles.dotIcon} />
-            </div>
-          ))}
-        </div>
-      </BannerSliderContext.Provider>
+      {banners.length ? <BannerItem data={banners[slide]} /> : null}
+      <div className={styles.dots}>
+        {banners.map((banner, index) => (
+          <div
+            className={`${[styles.dot]} ${
+              slide === index ? [styles.selectedDot] : ""
+            }`}
+            key={banner.id}
+            onClick={() => goToSlide(index)}
+          >
+            <Dot className={styles.dotIcon} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

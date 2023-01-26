@@ -1,23 +1,32 @@
 import cx from "classnames";
 import { Button } from "components/Button/Button";
-import styles from "./Card.module.css";
 import { ReactComponent as LikeIcon } from "icons/heart.svg";
 import { ReactComponent as ScalesIcon } from "icons/scales.svg";
 import { ReactComponent as StarIcon } from "icons/star.svg";
 import { ReactComponent as CartIcon } from "icons/cart.svg";
+import { ReactComponent as Checkmark } from "icons/checkmark.svg";
+import { Link } from "react-router-dom";
+import styles from "./Card.module.css";
 
-export const Card = ({ id, title, price, src, className }) => {
+export const Card = ({
+  id,
+  title,
+  price,
+  src,
+  className,
+  buyBtn,
+  goToCart,
+}) => {
   const cardClass = cx(styles.card, className);
   return (
     <div className={cardClass} id={id}>
       <div className={styles.label}>
-        <Button
-          className={styles.btn}
-          size="small"
-          color="tertiary"
-          iconLabel={ScalesIcon}
-        />
-        <Button size="small" color="tertiary" iconLabel={LikeIcon} />
+        <button className={styles.labelBtn}>
+          <ScalesIcon className={styles.icon} />
+        </button>
+        <button className={styles.labelBtn}>
+          <LikeIcon className={styles.icon} />
+        </button>
       </div>
       <div className={styles.imgWrap}>
         <img className={styles.img} src={src} alt={title} />
@@ -40,14 +49,28 @@ export const Card = ({ id, title, price, src, className }) => {
           {price}
           <p>руб.</p>
         </span>
-        <Button
-          className={styles.buyBtn}
-          color="primary"
-          size="large"
-          icon={CartIcon}
-        >
-          КУПИТЬ
-        </Button>
+        {buyBtn && (
+          <Button
+            className={styles.buyBtn}
+            color="primary"
+            size="large"
+            icon={CartIcon}
+          >
+            КУПИТЬ
+          </Button>
+        )}
+        {goToCart && (
+          <Link to="cart">
+            <Button
+              className={styles.buyBtn}
+              color="secondary"
+              size="large"
+              icon={Checkmark}
+            >
+              В КОРЗИНУ
+            </Button>
+          </Link>
+        )}
       </div>
     </div>
   );

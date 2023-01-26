@@ -1,12 +1,4 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { Button, Input } from "components";
-import { ReactComponent as MenuIcon } from "icons/menu.svg";
-import { ReactComponent as Cart } from "icons/cart.svg";
-import { ReactComponent as User } from "icons/user.svg";
-import { ReactComponent as SearchIcon } from "icons/search.svg";
-import { ReactComponent as Catalog } from "icons/catalog.svg";
-import { ReactComponent as DeleteIcon } from "icons/x-large.svg";
+import { Link } from "react-router-dom";
 import { ReactComponent as ArrowRight } from "icons/arrow-right.svg";
 import { ReactComponent as ArrowDown } from "icons/arrow-down.svg";
 import { ReactComponent as CpuIcon } from "icons/cpu.svg";
@@ -14,132 +6,21 @@ import { ReactComponent as Display } from "icons/display.svg";
 import { ReactComponent as Laptop } from "icons/laptop.svg";
 import { ReactComponent as Router } from "icons/router.svg";
 import { ReactComponent as PlayStation } from "icons/playstation.svg";
-import { ReactComponent as HeartIcon } from "icons/heart.svg";
-import { ReactComponent as ScalesIcon } from "icons/scales.svg";
+import { useGetGoodsQuery } from "store/services/goodsApi";
 import {
   MenuCategories,
   Card,
-  PageHeader,
-  PageFooter,
   MenuCategoryItem,
   MyLink,
-  NavBar,
-  BurgerMenu,
   BannerSlider,
 } from "module/components";
-import { CartPage } from "module/CartPage/CartPage";
 import styles from "./MainPage.module.css";
 
 export const MainPage = () => {
-  const [products, setProducts] = useState([]);
-  const [menuActive, setMenuActive] = useState(false);
-
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  async function fetchProducts() {
-    const response = await axios.get("http://localhost:3004/goods");
-    setProducts(response.data);
-  }
-
-  const [value, setValue] = useState("");
+  const { data = [] } = useGetGoodsQuery();
 
   return (
     <div className={styles.mainPage}>
-      <NavBar className={styles.navbar}>
-        <div className={styles.navItem}>
-          <Button
-            onClick={() => setMenuActive(!menuActive)}
-            className={styles.navBtnMenu}
-            size="large"
-            color="transparent"
-            icon={MenuIcon}
-          />
-          <MyLink className={styles.navMenuLink} color="primary">
-            Акции
-          </MyLink>
-          <MyLink className={styles.navMenuLink} color="primary">
-            Кредит
-          </MyLink>
-          <MyLink className={styles.navMenuLink} color="primary">
-            Помощь
-          </MyLink>
-          <MyLink className={styles.navMenuLink} color="primary">
-            Контакты
-          </MyLink>
-        </div>
-        <div className={styles.navItem}>
-          <div className={styles.navLogo}>E-SHOP</div>
-        </div>
-        <div className={styles.navItem}>
-          <Button
-            className={styles.navBtn}
-            size="large"
-            color="transparent"
-            icon={User}
-          />
-        </div>
-      </NavBar>
-      <BurgerMenu
-        active={menuActive}
-        setActive={setMenuActive}
-        header={"E-SHOP"}
-      />
-      <PageHeader className={styles.header}>
-        <div className={styles.logoWrapper}>
-          <div className={styles.logo}>E-SHOP</div>
-          <Button size="medium" color="primary" icon={Catalog}>
-            КАТАЛОГ ТОВАРОВ
-          </Button>
-        </div>
-        <div className={styles.inputWrapper}>
-          <Input
-            value={value}
-            onChange={(event) => {
-              setValue(event.target.value);
-            }}
-            iconRight={DeleteIcon}
-            className={styles.searchInput}
-            placeholder="Поиск..."
-          />
-          <Button
-            className={styles.searchBtn}
-            size="large"
-            color="secondary"
-            largeIcon={SearchIcon}
-          />
-        </div>
-        <div className={styles.headBtnWrapper}>
-          <div className={styles.btnWrapper}>
-            <Button
-              className={styles.headBtn}
-              size="large"
-              color="tertiary"
-              largeIcon={ScalesIcon}
-            />
-            <div className={styles.productQty}>15</div>
-          </div>
-          <div className={styles.btnWrapper}>
-            <Button
-              className={styles.headBtn}
-              size="large"
-              color="tertiary"
-              largeIcon={HeartIcon}
-            />
-            <div className={styles.productQty}>2</div>
-          </div>
-          <div className={styles.btnWrapper}>
-            <Button
-              className={styles.headBtn}
-              size="large"
-              color="tertiary"
-              largeIcon={Cart}
-            />
-            <div className={styles.productQty}>15</div>
-          </div>
-        </div>
-      </PageHeader>
       <div className={styles.pageContainer}>
         <div className={styles.menuWrapper}>
           <MenuCategories>
@@ -159,7 +40,7 @@ export const MainPage = () => {
           <h2 className={styles.productTitle}>Топ продаж</h2>
           <div className={styles.productBlockWrapper}>
             <div className={styles.productBlock}>
-              {products
+              {data
                 .map((product) => (
                   <Card
                     className={styles.product}
@@ -168,27 +49,29 @@ export const MainPage = () => {
                     title={product.title}
                     src={product.src}
                     price={product.price}
+                    buyBtn
                   />
                 ))
                 .slice(0, 6)}
             </div>
             <div className={styles.myLinks}>
-              <MyLink color="secondary" iconRight={ArrowDown}>
+              <MyLink
+                className={styles.secondLink}
+                color="secondary"
+                iconRight={ArrowDown}
+              >
                 Еще товары
               </MyLink>
-              <MyLink
-                href="http://localhost:3004/goods"
-                color="secondary"
-                iconRight={ArrowRight}
-              >
-                Смотреть все товары
-              </MyLink>
+              <Link to="products" className={styles.productLink}>
+                <span className={styles.linkText}>Смотреть все товары</span>
+                <ArrowRight className={styles.linkIcon} />
+              </Link>
             </div>
           </div>
           <h2 className={styles.productTitle}>Топ продаж</h2>
           <div className={styles.productBlockWrapper}>
             <div className={styles.productBlock}>
-              {products
+              {data
                 .map((product) => (
                   <Card
                     className={styles.product}
@@ -197,21 +80,23 @@ export const MainPage = () => {
                     title={product.title}
                     src={product.src}
                     price={product.price}
+                    buyBtn
                   />
                 ))
                 .slice(-6)}
             </div>
             <div className={styles.myLinks}>
-              <MyLink color="secondary" iconRight={ArrowDown}>
+              <MyLink
+                className={styles.secondLink}
+                color="secondary"
+                iconRight={ArrowDown}
+              >
                 Скрыть
               </MyLink>
-              <MyLink
-                href="http://localhost:3004/goods"
-                color="secondary"
-                iconRight={ArrowRight}
-              >
-                Смотреть все товары
-              </MyLink>
+              <Link to="products" className={styles.productLink}>
+                <span className={styles.linkText}>Смотреть все товары</span>
+                <ArrowRight className={styles.linkIcon} />
+              </Link>
             </div>
           </div>
         </div>
@@ -223,7 +108,7 @@ export const MainPage = () => {
           </div>
           <div className={styles.bgImg} />
           <div className={styles.productBlock}>
-            {products
+            {data
               .map((product) => (
                 <Card
                   className={styles.product}
@@ -232,21 +117,23 @@ export const MainPage = () => {
                   title={product.title}
                   src={product.src}
                   price={product.price}
+                  buyBtn
                 />
               ))
               .slice(11, 17)}
           </div>
           <div className={styles.myLinks}>
-            <MyLink color="primary" iconRight={ArrowDown}>
+            <MyLink
+              className={styles.secondLink}
+              color="primary"
+              iconRight={ArrowDown}
+            >
               Еще товары
             </MyLink>
-            <MyLink
-              href="http://localhost:3004/goods"
-              color="primary"
-              iconRight={ArrowRight}
-            >
-              Смотреть все товары
-            </MyLink>
+            <Link to="products" className={styles.productLink}>
+              <span className={styles.linkText}>Смотреть все товары</span>
+              <ArrowRight className={styles.linkIcon} />
+            </Link>
           </div>
           <span className={styles.headCategoryText}>
             Категории для геймеров
@@ -315,8 +202,6 @@ export const MainPage = () => {
           </div>
         </div>
       </div>
-      <CartPage />
-      <PageFooter></PageFooter>
     </div>
   );
 };

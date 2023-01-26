@@ -1,5 +1,5 @@
 import cx from "classnames";
-import styles from "./Link.module.css";
+import styles from "./MyLink.module.css";
 import { capitalize } from "helpers/helpers";
 
 export const MyLink = ({
