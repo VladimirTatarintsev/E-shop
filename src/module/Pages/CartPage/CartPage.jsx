@@ -1,6 +1,9 @@
-import axios from "axios";
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import {
+  useChangeProductQtyMutation,
+  useDeleteProductFromCartMutation,
+  useGetCartQuery,
+} from "store/services/goodsApi";
 import cx from "classnames";
 import { Button } from "components";
 import { ReactComponent as Plus } from "icons/plus.svg";
@@ -11,16 +14,28 @@ import styles from "./CartPage.module.css";
 export const CartPage = ({ className }) => {
   const cart = cx(styles.cart, className);
 
-  const [productsCart, setProductsCart] = useState([]);
+  const { data = [] } = useGetCartQuery();
+  const [deleteProduct] = useDeleteProductFromCartMutation();
+  const [changeQty] = useChangeProductQtyMutation();
 
-  async function fetchCart() {
-    const resp = await axios.get("http://localhost:3001/cart");
-    setProductsCart(resp.data);
-  }
+  const handleDeleteProduct = (id) => {
+    deleteProduct(id);
+  };
 
-  useEffect(() => {
-    fetchCart();
-  }, []);
+  const handleAddProduct = (id, qty) => {
+    changeQty({
+      id: id,
+      qty: qty + 1,
+    });
+  };
+  const handleRemoveProduct = (id, qty) => {
+    qty > 1
+      ? changeQty({
+          id: id,
+          qty: qty - 1,
+        })
+      : deleteProduct(id);
+  };
 
   return (
     <div className={cart}>
@@ -28,8 +43,8 @@ export const CartPage = ({ className }) => {
         <span className={styles.headerTitle}>Корзина</span>
       </div>
       <div className={styles.productBlock}>
-        {productsCart ? (
-          productsCart.map(({ id, title, price, src, qty }) => (
+        {data.length ? (
+          data.map(({ id, title, price, src, qty }) => (
             <div className={styles.product} key={id}>
               <div className={styles.descriptionContainer}>
                 <div className={styles.imgContainer}>
@@ -39,11 +54,21 @@ export const CartPage = ({ className }) => {
               </div>
               <div className={styles.priceContainer}>
                 <div className={styles.countContainer}>
-                  <button className={styles.countBtn}>
+                  <button
+                    className={styles.countBtn}
+                    onClick={() => {
+                      handleRemoveProduct(id, qty);
+                    }}
+                  >
                     <Minus />
                   </button>
                   <span className={styles.count}>{qty}</span>
-                  <button className={styles.countBtn}>
+                  <button
+                    className={styles.countBtn}
+                    onClick={() => {
+                      handleAddProduct(id, qty);
+                    }}
+                  >
                     <Plus />
                   </button>
                 </div>
@@ -56,6 +81,9 @@ export const CartPage = ({ className }) => {
                   size="small"
                   color="transparent"
                   icon={Delete}
+                  onClick={() => {
+                    handleDeleteProduct(id);
+                  }}
                 />
               </div>
             </div>
@@ -63,31 +91,45 @@ export const CartPage = ({ className }) => {
         ) : (
           <div className={styles.emptyCart}>
             <h2>Ваша корзина пуста</h2>
+            <Link to="/" className={styles.linkToMain}>
+              <Button
+                className={styles.continueBtn}
+                size="medium"
+                color="tertiary"
+              >
+                Вернуться к покупкам
+              </Button>
+            </Link>
           </div>
         )}
       </div>
-      <div className={styles.cartFooter}>
-        <Link to="/" className={styles.linkToMain}>
-          <Button className={styles.continueBtn} size="medium" color="tertiary">
-            Продолжить покупки
-          </Button>
-        </Link>
-        <div className={styles.confirmOrder}>
-          <div className={styles.totalPriceContainer}>
-            <span className={styles.totalPriceText}>Итого:</span>
-            <span className={styles.totalPrice}>
-              {productsCart.reduce(
-                (acc, { price, qty }) => acc + price * qty,
-                0
-              )}
-              <p>руб.</p>
-            </span>
+      {data.length ? (
+        <div className={styles.cartFooter}>
+          <Link to="/" className={styles.linkToMain}>
+            <Button
+              className={styles.continueBtn}
+              size="medium"
+              color="tertiary"
+            >
+              Продолжить покупки
+            </Button>
+          </Link>
+          <div className={styles.confirmOrder}>
+            <div className={styles.totalPriceContainer}>
+              <span className={styles.totalPriceText}>Итого:</span>
+              <span className={styles.totalPrice}>
+                {data.reduce((acc, { price, qty }) => acc + price * qty, 0)}
+                <p>руб.</p>
+              </span>
+            </div>
+            <Button className={styles.confirmBtn} color="primary" size="medium">
+              ОФОРМИТЬ ЗАКАЗ
+            </Button>
           </div>
-          <Button className={styles.confirmBtn} color="primary" size="medium">
-            ОФОРМИТЬ ЗАКАЗ
-          </Button>
         </div>
-      </div>
+      ) : (
+        ""
+      )}
     </div>
   );
 };

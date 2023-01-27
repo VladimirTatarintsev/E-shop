@@ -7,17 +7,11 @@ import { ReactComponent as CartIcon } from "icons/cart.svg";
 import { ReactComponent as Checkmark } from "icons/checkmark.svg";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
+import { useGetCartQuery } from "store/services/goodsApi";
 
-export const Card = ({
-  id,
-  title,
-  price,
-  src,
-  className,
-  buyBtn,
-  goToCart,
-}) => {
+export const Card = ({ id, title, price, src, className, onClick }) => {
   const cardClass = cx(styles.card, className);
+  const { data = [] } = useGetCartQuery();
   return (
     <div className={cardClass} id={id}>
       <div className={styles.label}>
@@ -49,17 +43,7 @@ export const Card = ({
           {price}
           <p>руб.</p>
         </span>
-        {buyBtn && (
-          <Button
-            className={styles.buyBtn}
-            color="primary"
-            size="large"
-            icon={CartIcon}
-          >
-            КУПИТЬ
-          </Button>
-        )}
-        {goToCart && (
+        {data.includes({ id }) ? (
           <Link to="cart">
             <Button
               className={styles.buyBtn}
@@ -70,6 +54,16 @@ export const Card = ({
               В КОРЗИНУ
             </Button>
           </Link>
+        ) : (
+          <Button
+            className={styles.buyBtn}
+            color="primary"
+            size="large"
+            icon={CartIcon}
+            onClick={onClick}
+          >
+            КУПИТЬ
+          </Button>
         )}
       </div>
     </div>

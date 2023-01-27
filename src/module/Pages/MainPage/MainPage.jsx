@@ -6,7 +6,10 @@ import { ReactComponent as Display } from "icons/display.svg";
 import { ReactComponent as Laptop } from "icons/laptop.svg";
 import { ReactComponent as Router } from "icons/router.svg";
 import { ReactComponent as PlayStation } from "icons/playstation.svg";
-import { useGetGoodsQuery } from "store/services/goodsApi";
+import {
+  useGetGoodsQuery,
+  useAddProductInCartMutation,
+} from "store/services/goodsApi";
 import {
   MenuCategories,
   Card,
@@ -18,6 +21,17 @@ import styles from "./MainPage.module.css";
 
 export const MainPage = () => {
   const { data = [] } = useGetGoodsQuery();
+  const [addProduct] = useAddProductInCartMutation();
+
+  const handleAddProduct = (product) => {
+    addProduct({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      src: product.src,
+      qty: 1,
+    });
+  };
 
   return (
     <div className={styles.mainPage}>
@@ -49,7 +63,9 @@ export const MainPage = () => {
                     title={product.title}
                     src={product.src}
                     price={product.price}
-                    buyBtn
+                    onClick={() => {
+                      handleAddProduct(product);
+                    }}
                   />
                 ))
                 .slice(0, 6)}
@@ -80,7 +96,9 @@ export const MainPage = () => {
                     title={product.title}
                     src={product.src}
                     price={product.price}
-                    buyBtn
+                    onClick={() => {
+                      handleAddProduct(product);
+                    }}
                   />
                 ))
                 .slice(-6)}
@@ -117,7 +135,9 @@ export const MainPage = () => {
                   title={product.title}
                   src={product.src}
                   price={product.price}
-                  buyBtn
+                  onClick={() => {
+                    handleAddProduct(product);
+                  }}
                 />
               ))
               .slice(11, 17)}

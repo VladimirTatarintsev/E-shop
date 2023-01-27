@@ -1,32 +1,37 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import { useAddProductInCartMutation } from "store/services/goodsApi";
 import { Card } from "module/components";
+import { useGetGoodsQuery } from "store/services/goodsApi";
 import styles from "./ProductListPage.module.css";
 
 export const ProductListPage = () => {
-  const [products, setProducts] = useState([]);
+  const { data = [] } = useGetGoodsQuery();
+  const [addProduct] = useAddProductInCartMutation();
 
-  useEffect(() => {
-    fetchProducts();
-  }, []);
-
-  async function fetchProducts() {
-    const response = await axios.get("http://localhost:3004/goods");
-    setProducts(response.data);
-  }
+  const handleAddProduct = (product) => {
+    addProduct({
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      src: product.src,
+      qty: 1,
+    });
+  };
   return (
     <div className={styles.container}>
       <h2 className={styles.pageTitle}>Страница товаров</h2>
       <div className={styles.productContainer}>
         <div className={styles.filters}>Фильтры</div>
         <div className={styles.productBlock}>
-          {products.map(({ id, title, src, price }) => (
+          {data.map((product) => (
             <Card
               className={styles.product}
-              key={id}
-              title={title}
-              src={src}
-              price={price}
+              key={product.id}
+              title={product.title}
+              src={product.src}
+              price={product.price}
+              onClick={() => {
+                handleAddProduct(product);
+              }}
             />
           ))}
         </div>

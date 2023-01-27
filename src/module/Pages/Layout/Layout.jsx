@@ -8,6 +8,7 @@ import {
 import { Button, Input } from "components";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useGetCartQuery } from "store/services/goodsApi";
 import { setBurgerMenu } from "store/slices/burgerMenuSlice";
 import { Outlet, Link } from "react-router-dom";
 import { ReactComponent as MenuIcon } from "icons/menu.svg";
@@ -23,6 +24,7 @@ import styles from "./Layout.module.css";
 export const Layout = () => {
   const [value, setValue] = useState("");
   const dispatch = useDispatch();
+  const { data = [] } = useGetCartQuery();
 
   const handleChangeInput = ({ target: { value } }) => {
     setValue(value);
@@ -105,7 +107,11 @@ export const Layout = () => {
           <div className={styles.btnWrapper}>
             <Link to="/cart" className={styles.headBtn}>
               <Cart className={styles.linkIcon} />
-              <div className={styles.cartLinkCounter}>7</div>
+              {data.length ? (
+                <div className={styles.cartLinkCounter}>{data.length}</div>
+              ) : (
+                ""
+              )}
             </Link>
           </div>
         </div>
