@@ -218,6 +218,7 @@
   }
   .title {
     font-size: 0.875rem;
+    padding-left: 0.25rem;
   }
   .priceContainer {
     flex: 0 0 30%;

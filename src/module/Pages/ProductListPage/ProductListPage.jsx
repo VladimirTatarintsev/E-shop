@@ -17,23 +17,26 @@ export const ProductListPage = () => {
     });
   };
   return (
-    <div className={styles.container}>
-      <h2 className={styles.pageTitle}>Страница товаров</h2>
+    <div className={styles.pageContainer}>
+      <h2 className={styles.pageTitle}>Все товары</h2>
       <div className={styles.productContainer}>
         <div className={styles.filters}>Фильтры</div>
-        <div className={styles.productBlock}>
-          {data.map((product) => (
-            <Card
-              className={styles.product}
-              key={product.id}
-              title={product.title}
-              src={product.src}
-              price={product.price}
-              onClick={() => {
-                handleAddProduct(product);
-              }}
-            />
-          ))}
+        <div className={styles.productBlockWrap}>
+          <div className={styles.productBlock}>
+            {data.map((product) => (
+              <Card
+                className={styles.product}
+                key={product.id}
+                id={product.id}
+                title={product.title}
+                src={product.src}
+                price={product.price}
+                onClick={() => {
+                  handleAddProduct(product);
+                }}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

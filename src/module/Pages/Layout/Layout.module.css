@@ -88,7 +88,7 @@
   height: 2.5rem;
   stroke: #060f42;
 }
-.cartLinkCounter {
+.linkCounter {
   position: absolute;
   top: 0;
   right: -4px;
@@ -103,7 +103,7 @@
   font-weight: 700;
   color: #060f42;
 }
-.btnWrapper:last-child .cartLinkCounter {
+.btnWrapper:last-child .linkCounter {
   position: absolute;
   top: 0;
   right: -4px;

@@ -59,6 +59,7 @@ export const MainPage = () => {
                   <Card
                     className={styles.product}
                     product={product}
+                    id={product.id}
                     key={product.id}
                     title={product.title}
                     src={product.src}
@@ -92,6 +93,7 @@ export const MainPage = () => {
                   <Card
                     className={styles.product}
                     product={product}
+                    id={product.id}
                     key={product.id}
                     title={product.title}
                     src={product.src}
@@ -131,6 +133,7 @@ export const MainPage = () => {
                 <Card
                   className={styles.product}
                   product={product}
+                  id={product.id}
                   key={product.id}
                   title={product.title}
                   src={product.src}

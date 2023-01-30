@@ -1,4 +1,4 @@
-.container {
+.pageContainer {
   width: 100%;
   padding: 0 1rem;
 }
@@ -10,18 +10,22 @@
   width: 100%;
 }
 .filters {
-  flex: 0 0 20%;
+  flex: 0 0 15%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: aquamarine;
 }
+.productBlockWrap {
+  display: flex;
+  flex-direction: column;
+}
 .productBlock {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 .product {
+  margin-right: 1rem;
   margin-bottom: 0.5rem;
 }
 

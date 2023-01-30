@@ -12,6 +12,9 @@ import { useGetCartQuery } from "store/services/goodsApi";
 export const Card = ({ id, title, price, src, className, onClick }) => {
   const cardClass = cx(styles.card, className);
   const { data = [] } = useGetCartQuery();
+
+  const isInCart = data.map((product) => product.id).includes(id);
+
   return (
     <div className={cardClass} id={id}>
       <div className={styles.label}>
@@ -43,15 +46,15 @@ export const Card = ({ id, title, price, src, className, onClick }) => {
           {price}
           <p>руб.</p>
         </span>
-        {data.includes({ id }) ? (
-          <Link to="cart">
+        {isInCart ? (
+          <Link to="/cart" className={styles.goToCart}>
             <Button
               className={styles.buyBtn}
               color="secondary"
               size="large"
               icon={Checkmark}
             >
-              В КОРЗИНУ
+              В КОРЗИНЕ
             </Button>
           </Link>
         ) : (

@@ -95,20 +95,20 @@ export const Layout = () => {
           <div className={styles.btnWrapper}>
             <Link to="/" className={styles.headBtn}>
               <ScalesIcon className={styles.linkIcon} />
-              <div className={styles.cartLinkCounter}>2</div>
+              <div className={styles.linkCounter}>2</div>
             </Link>
           </div>
           <div className={styles.btnWrapper}>
             <Link to="/" className={styles.headBtn}>
               <HeartIcon className={styles.linkIcon} />
-              <div className={styles.cartLinkCounter}>2</div>
+              <div className={styles.linkCounter}>2</div>
             </Link>
           </div>
           <div className={styles.btnWrapper}>
             <Link to="/cart" className={styles.headBtn}>
               <Cart className={styles.linkIcon} />
               {data.length ? (
-                <div className={styles.cartLinkCounter}>{data.length}</div>
+                <div className={styles.linkCounter}>{data.length}</div>
               ) : (
                 ""
               )}

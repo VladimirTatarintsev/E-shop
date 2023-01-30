@@ -163,7 +163,7 @@
       "src": "/image/card-image/Wi-Fi роутер Tenda AC6.jpg"
     },
     {
-      "id": 33,
+      "id": 34,
       "title": "Wi-Fi роутер TP-LINK Archer C20",
       "price": 1999,
       "src": "/image/card-image/Wi-Fi роутер TP-LINK Archer C20.jpg"
@@ -175,25 +175,13 @@
       "src": "/image/card-image/MSI G2412.jpg"
     },
     {
-      "id": 27,
-      "title": "Игровая консоль Microsoft Xbox Series X 1Tb",
-      "price": 61099,
-      "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X.jpg"
-    },
-    {
-      "id": 28,
-      "title": "Игровая консоль PlayStation 5 825Gb",
-      "price": 64999,
-      "src": "/image/card-image/Игровая консоль PlayStation 5 белая.jpg"
-    },
-    {
       "id": 29,
       "title": "Игровая консоль PlayStation 5 Digital Edition",
       "price": 59499,
       "src": "/image/card-image/Игровая консоль PlayStation 5 Digital Edition.jpg"
     },
     {
-      "id": 21,
+      "id": 39,
       "title": "Процессор AMD Ryzen 9 5950X OEM",
       "price": 29999,
       "src": "/image/card-image/Процессор AMD Ryzen 9 5950X OEM.jpg"
@@ -205,13 +193,7 @@
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X.jpg"
     },
     {
-      "id": 26,
-      "title": "Игровая консоль Microsoft Xbox Series X 1Tb Игры FIFA 22 и Call of Duty Vanguard",
-      "price": 64499,
-      "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X Игры FIFA 22 и Call of Duty Vanguard.jpg"
-    },
-    {
-      "id": 24,
+      "id": 38,
       "title": "Процессор Intel Core i9-10900F BOX",
       "price": 28899,
       "src": "/image/card-image/Процессор Intel Core i9-10900F BOX.jpg"
@@ -223,19 +205,19 @@
       "src": "/image/card-image/GIGABYTEGeForceRTX4080AORUSMASTER.jpg"
     },
     {
-      "id": 25,
+      "id": 37,
       "title": "Процессор Intel Core i9-12900K BOX",
       "price": 43999,
       "src": "/image/card-image/Процессор Intel Core i9-12900K BOX.jpg"
     },
     {
-      "id": 23,
+      "id": 36,
       "title": "24\" Монитор AOC_24G2U5",
       "price": 14799,
       "src": "/image/card-image/AOC_24G2U5.jpg"
     },
     {
-      "id": 22,
+      "id": 35,
       "title": "Процессор AMD Ryzen 9 7950X BOX",
       "price": 68799,
       "src": "/image/card-image/Процессор AMD Ryzen 9 7950X BOX.jpg"
