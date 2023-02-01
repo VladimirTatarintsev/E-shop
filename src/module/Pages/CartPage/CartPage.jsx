@@ -43,7 +43,7 @@ export const CartPage = ({ className }) => {
         <span className={styles.headerTitle}>Корзина</span>
       </div>
       <div className={styles.productBlock}>
-        {data.length !== 0 ? (
+        {data.length ? (
           data.map(({ id, title, price, src, qty }) => (
             <div className={styles.product} key={id}>
               <div className={styles.descriptionContainer}>

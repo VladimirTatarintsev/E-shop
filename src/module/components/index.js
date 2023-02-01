@@ -1,4 +1,5 @@
 export { Card } from "./Card/Card";
+export { Select } from "./Select/Select";
 export { BannerItem } from "./BannerSlider/BannerItem/BannerItem";
 export { MyLink } from "./MyLink/MyLink";
 export { MenuCategories } from "./MenuCategories/MenuCategories";

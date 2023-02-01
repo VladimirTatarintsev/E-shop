@@ -1,10 +1,12 @@
 import { useAddProductInCartMutation } from "store/services/goodsApi";
-import { Card } from "module/components";
+import { Card, Select } from "module/components";
 import { useGetGoodsQuery } from "store/services/goodsApi";
 import styles from "./ProductListPage.module.css";
+import { useSelector } from "react-redux";
 
 export const ProductListPage = () => {
-  const { data = [] } = useGetGoodsQuery();
+  const selectedSortValue = useSelector((state) => state.selectedSort.value);
+  const { data: products = [] } = useGetGoodsQuery(selectedSortValue);
   const [addProduct] = useAddProductInCartMutation();
 
   const handleAddProduct = (product) => {
@@ -22,8 +24,16 @@ export const ProductListPage = () => {
       <div className={styles.productContainer}>
         <div className={styles.filters}>Фильтры</div>
         <div className={styles.productBlockWrap}>
+          <Select
+            className={styles.sortProduct}
+            options={[
+              { value: "price", name: "по цене" },
+              { value: "title", name: "по наименованию" },
+              { value: "category", name: "по категориям" },
+            ]}
+          />
           <div className={styles.productBlock}>
-            {data.map((product) => (
+            {products.map((product) => (
               <Card
                 className={styles.product}
                 key={product.id}

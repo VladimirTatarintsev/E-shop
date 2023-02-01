@@ -6,8 +6,11 @@ export const goodsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (build) => ({
     getGoods: build.query({
-      query: () => `goods`,
+      query: (field) => ({
+        url: `goods?_sort=${field}&_order=asc`,
+      }),
     }),
+
     getCart: build.query({
       query: () => `cart`,
       providesTags: (result) =>
@@ -46,6 +49,7 @@ export const goodsApi = createApi({
 
 export const {
   useGetGoodsQuery,
+  //   useGetSortedGoodsMutation,
   useGetCartQuery,
   useAddProductInCartMutation,
   useDeleteProductFromCartMutation,
