@@ -13,12 +13,16 @@ export const Select = ({ className, options }) => {
   const handleShowOptions = () => {
     setIsShowOptions(!isShowOptions);
   };
+  const handleSetSort = (sort) => {
+    dispatch(setSelectedSort(sort));
+    setIsShowOptions(false);
+  };
 
   const selectClass = cx(styles.selectContainer, className);
   return (
     <div className={selectClass}>
       <div className={styles.customSelect} onClick={handleShowOptions}>
-        <span className={styles.text}>Сортировать:</span>
+        <span className={styles.text}>Отсортировать:</span>
         <p>{selectedSortName}</p>
         <SelectIcon
           className={isShowOptions ? [styles.turnIcon] : [styles.icon]}
@@ -32,10 +36,7 @@ export const Select = ({ className, options }) => {
               option={option}
               data-name={option.name}
               key={option.value}
-              onClick={() => {
-                dispatch(setSelectedSort(option));
-                setIsShowOptions(false);
-              }}
+              onClick={() => handleSetSort(option)}
             >
               {option.name}
             </div>

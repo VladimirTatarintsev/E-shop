@@ -6,8 +6,18 @@ export const goodsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (build) => ({
     getGoods: build.query({
-      query: (field) => ({
-        url: `goods?_sort=${field}&_order=asc`,
+      query: ({ sort, limit, page }) => ({
+        url: `goods`,
+        params: {
+          _limit: limit,
+          _sort: sort,
+          _page: page,
+        },
+      }),
+      transformResponse: (response, meta) => ({
+        response,
+        totalCount: Number(meta.response.headers.get("X-Total-Count")),
+        totalPages: response.totalPages,
       }),
     }),
 

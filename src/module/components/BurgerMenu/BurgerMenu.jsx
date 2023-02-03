@@ -19,58 +19,45 @@ import styles from "./BurgerMenu.module.css";
 export const BurgerMenu = ({ header }) => {
   const menuActive = useSelector((state) => state.burgerMenu.active);
   const dispatch = useDispatch();
+  const handleHideMenu = () => {
+    dispatch(setBurgerMenu(false));
+  };
   return (
     <div
       className={`${[styles.menu]} ${
         menuActive === true ? [styles.menuActive] : ""
       }`}
-      onClick={() => dispatch(setBurgerMenu(false))}
+      onClick={handleHideMenu}
     >
       <div className={styles.blur} />
       <div className={styles.menuContent} onClick={(e) => e.stopPropagation()}>
         <div className={styles.headerContainer}>
-          <Link
-            to="/"
-            className={styles.header}
-            onClick={() => dispatch(setBurgerMenu(false))}
-          >
+          <Link to="/" className={styles.header} onClick={handleHideMenu}>
             {header}
           </Link>
           <Button
             color="transparent"
             size="medium"
             icon={CloseIcon}
-            onClick={() => dispatch(setBurgerMenu(false))}
+            onClick={handleHideMenu}
           />
         </div>
-        <Link
-          className={styles.menuItem}
-          to="/signIn"
-          onClick={() => dispatch(setBurgerMenu(false))}
-        >
+        <Link className={styles.menuItem} to="/signIn" onClick={handleHideMenu}>
           <User className={styles.linkIcon} />
           <span className={styles.linkText}>Вход | Регистрация</span>
         </Link>
-        <Link
-          className={styles.menuItem}
-          to="/goods"
-          onClick={() => dispatch(setBurgerMenu(false))}
-        >
+        <Link className={styles.menuItem} to="/goods" onClick={handleHideMenu}>
           <Catalog className={styles.linkIcon} />
           <span className={styles.linkText}>Каталог товаров</span>
         </Link>
-        <Link
-          className={styles.menuItem}
-          to="/cart"
-          onClick={() => dispatch(setBurgerMenu(false))}
-        >
+        <Link className={styles.menuItem} to="/cart" onClick={handleHideMenu}>
           <Cart className={styles.linkIcon} />
           <span className={styles.linkText}>Корзина</span>
         </Link>
         <Link
           className={styles.menuItem}
           to="/compare"
-          onClick={() => dispatch(setBurgerMenu(false))}
+          onClick={handleHideMenu}
         >
           <ScalesIcon className={styles.linkIcon} />
           <span className={styles.linkText}>Сравнение</span>
@@ -78,7 +65,7 @@ export const BurgerMenu = ({ header }) => {
         <Link
           className={styles.menuItem}
           to="/wishList"
-          onClick={() => dispatch(setBurgerMenu(false))}
+          onClick={handleHideMenu}
         >
           <HeartIcon className={styles.linkIcon} />
           <span className={styles.linkText}>Избранное</span>

@@ -1,12 +1,27 @@
 import { useAddProductInCartMutation } from "store/services/goodsApi";
 import { Card, Select } from "module/components";
 import { useGetGoodsQuery } from "store/services/goodsApi";
-import styles from "./ProductListPage.module.css";
 import { useSelector } from "react-redux";
+import { getPagesCount } from "helpers/helpers";
+import styles from "./ProductListPage.module.css";
+import { Pagination } from "module/components/Pagination/Pagination";
 
 export const ProductListPage = () => {
   const selectedSortValue = useSelector((state) => state.selectedSort.value);
-  const { data: products = [] } = useGetGoodsQuery(selectedSortValue);
+  const currentPage = useSelector((state) => state.pagination.currentPage);
+  const pageLimit = useSelector((state) => state.pagination.limit);
+  const { products, totalCount } = useGetGoodsQuery(
+    { sort: selectedSortValue, limit: pageLimit, page: currentPage },
+    {
+      selectFromResult: ({ data }) => ({
+        products: data?.response,
+        totalCount: data?.totalCount,
+      }),
+    }
+  );
+
+  const totalPages = getPagesCount(totalCount, pageLimit);
+
   const [addProduct] = useAddProductInCartMutation();
 
   const handleAddProduct = (product) => {
@@ -33,7 +48,7 @@ export const ProductListPage = () => {
             ]}
           />
           <div className={styles.productBlock}>
-            {products.map((product) => (
+            {products?.map((product) => (
               <Card
                 className={styles.product}
                 key={product.id}
@@ -47,6 +62,11 @@ export const ProductListPage = () => {
               />
             ))}
           </div>
+          {totalPages >= 1 ? (
+            <Pagination className={styles.pagination} totalPages={totalPages} />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

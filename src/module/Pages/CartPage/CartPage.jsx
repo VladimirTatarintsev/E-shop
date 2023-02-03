@@ -91,7 +91,7 @@ export const CartPage = ({ className }) => {
         ) : (
           <div className={styles.emptyCart}>
             <h2>Ваша корзина пуста</h2>
-            <Link to="/" className={styles.linkToMain}>
+            <Link to="/products" className={styles.linkToBuy}>
               <Button
                 className={styles.continueBtn}
                 size="medium"
@@ -105,7 +105,7 @@ export const CartPage = ({ className }) => {
       </div>
       {data.length ? (
         <div className={styles.cartFooter}>
-          <Link to="/" className={styles.linkToMain}>
+          <Link to="/products" className={styles.linkToBuy}>
             <Button
               className={styles.continueBtn}
               size="medium"

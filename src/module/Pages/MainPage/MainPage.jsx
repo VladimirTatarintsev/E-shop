@@ -20,7 +20,11 @@ import {
 import styles from "./MainPage.module.css";
 
 export const MainPage = () => {
-  const { data = [] } = useGetGoodsQuery();
+  const { products } = useGetGoodsQuery("", {
+    selectFromResult: ({ data }) => ({
+      products: data?.response,
+    }),
+  });
   const [addProduct] = useAddProductInCartMutation();
 
   const handleAddProduct = (product) => {
@@ -54,8 +58,8 @@ export const MainPage = () => {
           <h2 className={styles.productTitle}>Топ продаж</h2>
           <div className={styles.productBlockWrapper}>
             <div className={styles.productBlock}>
-              {data
-                .map((product) => (
+              {products
+                ?.map((product) => (
                   <Card
                     className={styles.product}
                     product={product}
@@ -88,8 +92,8 @@ export const MainPage = () => {
           <h2 className={styles.productTitle}>Топ продаж</h2>
           <div className={styles.productBlockWrapper}>
             <div className={styles.productBlock}>
-              {data
-                .map((product) => (
+              {products
+                ?.map((product) => (
                   <Card
                     className={styles.product}
                     product={product}
@@ -128,8 +132,8 @@ export const MainPage = () => {
           </div>
           <div className={styles.bgImg} />
           <div className={styles.productBlock}>
-            {data
-              .map((product) => (
+            {products
+              ?.map((product) => (
                 <Card
                   className={styles.product}
                   product={product}

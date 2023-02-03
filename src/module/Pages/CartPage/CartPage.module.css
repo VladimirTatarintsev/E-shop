@@ -89,7 +89,7 @@
 .confirmOrder {
   display: flex;
 }
-.linkToMain {
+.linkToBuy {
   text-decoration: none;
 }
 .continueBtn {
@@ -184,7 +184,7 @@
   .emptyCart h2 {
     font-size: 1.5rem;
   }
-  .linkToMain {
+  .linkToBuy {
     width: 100%;
   }
   .continueBtn {
@@ -248,7 +248,7 @@
   .emptyCart h2 {
     font-size: 1.5rem;
   }
-  .linkToMain {
+  .linkToBuy {
     width: 100%;
   }
   .continueBtn {
