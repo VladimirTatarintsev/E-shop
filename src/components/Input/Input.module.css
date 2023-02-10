@@ -55,4 +55,5 @@
   height: 1rem;
   stroke: #686869;
   fill: #686869;
+  pointer-events: none;
 }

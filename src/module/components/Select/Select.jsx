@@ -1,14 +1,14 @@
 import cx from "classnames";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setSelectedSort } from "store/slices/selectedSortSlice";
+import { setSelectedSort } from "store/slices/sortSlice";
 import { ReactComponent as SelectIcon } from "icons/chevron-down.svg";
 import styles from "./Select.module.css";
 
 export const Select = ({ className, options }) => {
   const [isShowOptions, setIsShowOptions] = useState(false);
   const dispatch = useDispatch();
-  const selectedSortName = useSelector((state) => state.selectedSort.name);
+  const selectedSortName = useSelector((state) => state.sort.name);
 
   const handleShowOptions = () => {
     setIsShowOptions(!isShowOptions);

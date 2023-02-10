@@ -9,3 +9,6 @@ export { PageFooter } from "./PageFooter/PageFooter";
 export { NavBar } from "./NavBar/NavBar";
 export { BurgerMenu } from "./BurgerMenu/BurgerMenu";
 export { BannerSlider } from "./BannerSlider/BannerSlider";
+export { ProductFilter } from "./Filters/ProductFilter/ProductFilter";
+export { PriceFilter } from "./Filters/PriceFilter/PriceFilter";
+export { Pagination } from "./Pagination/Pagination";

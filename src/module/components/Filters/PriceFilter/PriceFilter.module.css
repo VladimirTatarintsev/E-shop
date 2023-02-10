@@ -1,0 +1,24 @@
+.filterContainer {
+  padding: 0.5rem;
+}
+.area {
+  display: flex;
+  flex-direction: column;
+}
+.label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.inputContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.inputContainer span {
+  padding: 0 0.5rem;
+}
+.priceInput {
+  border: 1px solid #cccccc;
+  height: 2rem;
+}

@@ -12,6 +12,9 @@
   justify-content: center;
   white-space: nowrap;
 }
+.button:active {
+  transform: scale(0.98);
+}
 .text {
   font-size: 0.75rem;
   line-height: 1rem;

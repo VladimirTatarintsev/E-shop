@@ -6,18 +6,23 @@ export const goodsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (build) => ({
     getGoods: build.query({
-      query: ({ sort, limit, page }) => ({
-        url: `goods`,
+      query: () => `goods`,
+    }),
+
+    getFilteredAndSortedGoods: build.query({
+      query: ({ sort, limit, page, brand = "", priceTo, priceFrom }) => ({
+        url: `goods${brand}`,
         params: {
           _limit: limit,
           _sort: sort,
           _page: page,
+          price_gte: priceFrom,
+          price_lte: priceTo,
         },
       }),
       transformResponse: (response, meta) => ({
         response,
         totalCount: Number(meta.response.headers.get("X-Total-Count")),
-        totalPages: response.totalPages,
       }),
     }),
 
@@ -59,7 +64,7 @@ export const goodsApi = createApi({
 
 export const {
   useGetGoodsQuery,
-  //   useGetSortedGoodsMutation,
+  useGetFilteredAndSortedGoodsQuery,
   useGetCartQuery,
   useAddProductInCartMutation,
   useDeleteProductFromCartMutation,

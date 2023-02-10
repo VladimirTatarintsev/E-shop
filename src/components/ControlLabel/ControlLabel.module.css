@@ -1,0 +1,17 @@
+.label {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+}
+.controlLabel {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+.checked {
+  color: #01579b;
+}
+.withOutIcon {
+  margin-left: 0px;
+}

@@ -1,5 +1,5 @@
 import cx from "classnames";
-import { capitalize } from "../../helpers/helpers";
+import { capitalize } from "../../utils/utils";
 import styles from "./Button.module.css";
 
 export const Button = ({

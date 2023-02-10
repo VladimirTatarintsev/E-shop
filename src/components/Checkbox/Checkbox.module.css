@@ -1,0 +1,39 @@
+.checkboxWrapper {
+  display: flex;
+  justify-content: center;
+  height: 1rem;
+}
+.label {
+  display: flex;
+}
+.label > .checkbox {
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+.label > .customCheckbox {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+.label > .customCheckbox::before {
+  content: "";
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+  box-sizing: border-box;
+}
+.label > .checkbox:checked + .customCheckbox::before {
+  border-color: #01579b;
+  background-color: #fff;
+  background-image: url(../../icons/checkmark.svg);
+}
+.label > .checkbox:checked + .customCheckbox {
+  color: #01579b;
+}

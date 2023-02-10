@@ -21,7 +21,7 @@
 .input {
   height: 2rem;
 }
-Label {
+.inputContainer Label {
   margin-bottom: 0.5rem;
 }
 .inputContainer {

@@ -20,11 +20,7 @@ import {
 import styles from "./MainPage.module.css";
 
 export const MainPage = () => {
-  const { products } = useGetGoodsQuery("", {
-    selectFromResult: ({ data }) => ({
-      products: data?.response,
-    }),
-  });
+  const { data: products = [] } = useGetGoodsQuery();
   const [addProduct] = useAddProductInCartMutation();
 
   const handleAddProduct = (product) => {

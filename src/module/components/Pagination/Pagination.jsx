@@ -1,4 +1,4 @@
-import { createPages } from "helpers/helpers";
+import { createPages } from "utils/utils";
 import { useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setCurrentPage } from "store/slices/paginationSlice";

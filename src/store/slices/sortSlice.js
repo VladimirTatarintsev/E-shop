@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const selectedSortSlice = createSlice({
-  name: "selectedSort",
+const sortSlice = createSlice({
+  name: "sort",
   initialState: {
     value: "price",
     name: "по цене",
@@ -14,6 +14,6 @@ const selectedSortSlice = createSlice({
   },
 });
 
-export const { setSelectedSort } = selectedSortSlice.actions;
+export const { setSelectedSort } = sortSlice.actions;
 
-export default selectedSortSlice.reducer;
+export default sortSlice.reducer;
