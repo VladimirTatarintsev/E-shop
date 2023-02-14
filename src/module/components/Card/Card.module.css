@@ -34,6 +34,9 @@
 .goToCart {
   text-decoration: none;
 }
+.goToCartBtn svg {
+  display: none;
+}
 .img {
   display: flex;
   align-self: center;
@@ -44,12 +47,22 @@
   width: 200px;
   height: 200px;
   align-self: center;
+  margin-bottom: 0.5rem;
 }
 .title {
-  font-weight: 500;
-  font-size: 0.875rem;
   margin-bottom: 1rem;
   height: 3.75rem;
+  line-height: 1.125rem;
+  text-decoration: none;
+  color: #333333;
+}
+.titleText {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.title:hover {
+  cursor: pointer;
+  color: #01579b;
 }
 .wrapper {
   display: flex;
@@ -131,9 +144,19 @@
     padding: 0.25rem 0.5rem;
   }
   .buyBtn svg {
-    display: block;
+    display: flex;
   }
   .buyBtn span {
+    display: none;
+  }
+  .goToCartBtn {
+    padding: 0.25rem 0.5rem;
+  }
+  .goToCartBtn svg {
+    display: flex;
+    fill: #fff;
+  }
+  .goToCartBtn span {
     display: none;
   }
 }
@@ -171,9 +194,19 @@
     padding: 0.25rem 0.5rem;
   }
   .buyBtn svg {
-    display: block;
+    display: flex;
   }
   .buyBtn span {
+    display: none;
+  }
+  .goToCartBtn {
+    padding: 0.25rem 0.5rem;
+  }
+  .goToCartBtn svg {
+    display: flex;
+    fill: #fff;
+  }
+  .goToCartBtn span {
     display: none;
   }
 }

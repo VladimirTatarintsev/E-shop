@@ -1,9 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  brands: [],
-  priceFrom: "0",
-  priceTo: "999999",
+  selectedBrands: [],
+  selectedPriceFrom: "0",
+  selectedPriceTo: "999999",
 };
 
 const productFiltersSlice = createSlice({
@@ -11,17 +11,17 @@ const productFiltersSlice = createSlice({
   initialState,
   reducers: {
     setSelectedFilters(state, { payload }) {
-      state.brands = payload;
+      state.selectedBrands = payload;
     },
     setFilterPriceFrom(state, { payload }) {
       if (payload === "") {
-        return initialState;
-      } else state.priceFrom = payload;
+        return { ...state, selectedPriceFrom: "0" };
+      } else state.selectedPriceFrom = payload;
     },
     setFilterPriceTo(state, { payload }) {
       if (payload === "") {
-        return initialState;
-      } else state.priceTo = payload;
+        return { ...state, selectedPriceTo: "999999" };
+      } else state.selectedPriceTo = payload;
     },
     setClearAllFilters() {
       return initialState;

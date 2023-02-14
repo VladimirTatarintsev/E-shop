@@ -9,6 +9,9 @@
 }
 @media (max-width: 1201px) and (min-width: 768px) {
   .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
     border-radius: 0;
     height: 4rem;
     padding: 0.5rem 0.625rem;

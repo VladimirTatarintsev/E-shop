@@ -122,9 +122,15 @@ export const CartPage = ({ className }) => {
                 <p>руб.</p>
               </span>
             </div>
-            <Button className={styles.confirmBtn} color="primary" size="medium">
-              ОФОРМИТЬ ЗАКАЗ
-            </Button>
+            <Link to="/cart/order" className={styles.linkToBuy}>
+              <Button
+                className={styles.confirmBtn}
+                color="primary"
+                size="medium"
+              >
+                ОФОРМИТЬ ЗАКАЗ
+              </Button>
+            </Link>
           </div>
         </div>
       ) : (

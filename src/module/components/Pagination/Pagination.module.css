@@ -1,8 +1,9 @@
 .pagination {
   height: 3rem;
+  width: 100%;
   display: flex;
   align-items: center;
-  align-self: center;
+  justify-content: center;
 }
 .pageNum {
   font-size: 1.25rem;
@@ -22,4 +23,21 @@
 .currentPage {
   font-weight: 600;
   border-bottom: 1px solid #01579b;
+}
+.prevPage {
+  display: flex;
+  margin-right: 0.5rem;
+  height: 100%;
+  cursor: pointer;
+}
+.nextPage {
+  display: flex;
+  margin-left: 0.5rem;
+  height: 100%;
+  cursor: pointer;
+}
+.arrowsBtn {
+  display: flex;
+  stroke: #01579b;
+  align-self: center;
 }

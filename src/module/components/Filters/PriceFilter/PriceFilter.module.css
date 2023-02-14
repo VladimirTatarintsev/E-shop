@@ -1,9 +1,7 @@
-.filterContainer {
-  padding: 0.5rem;
-}
 .area {
   display: flex;
   flex-direction: column;
+  margin-bottom: 1rem;
 }
 .label {
   font-size: 1.125rem;
@@ -20,5 +18,10 @@
 }
 .priceInput {
   border: 1px solid #cccccc;
-  height: 2rem;
+  border-radius: 4px;
+}
+@media (max-width: 767px) {
+  .area {
+    margin-bottom: 0.5rem;
+  }
 }

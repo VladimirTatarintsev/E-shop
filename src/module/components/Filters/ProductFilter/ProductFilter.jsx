@@ -12,7 +12,7 @@ export const ProductFilter = ({
   className,
   children,
 }) => {
-  const [showFilter, setShowFilter] = useState(false);
+  const [showFilter, setShowFilter] = useState(true);
   const [showAllItem, setShowAllItem] = useState(false);
 
   let searchQueryArr = [];

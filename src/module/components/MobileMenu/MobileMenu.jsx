@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setBurgerMenu } from "store/slices/burgerMenuSlice";
+import { setMobileMenu } from "store/slices/mobileMenuSlice";
 import { Button } from "components";
 import { MyLink } from "..";
 import { ReactComponent as Cart } from "icons/cart.svg";
@@ -14,19 +14,18 @@ import { ReactComponent as LinkedIn } from "icons/linkedIn.svg";
 import { ReactComponent as Viber } from "icons/viber.svg";
 import { ReactComponent as YouTube } from "icons/youTube.svg";
 import { ReactComponent as CloseIcon } from "icons/x-large.svg";
-import styles from "./BurgerMenu.module.css";
+import { getIsMenuActive } from "store/selectors/mobileMenuSelector";
+import styles from "./MobileMenu.module.css";
 
-export const BurgerMenu = ({ header }) => {
-  const menuActive = useSelector((state) => state.burgerMenu.active);
+export const MobileMenu = ({ header }) => {
+  const { active } = useSelector(getIsMenuActive);
   const dispatch = useDispatch();
   const handleHideMenu = () => {
-    dispatch(setBurgerMenu(false));
+    dispatch(setMobileMenu(false));
   };
   return (
     <div
-      className={`${[styles.menu]} ${
-        menuActive === true ? [styles.menuActive] : ""
-      }`}
+      className={`${[styles.menu]} ${active ? [styles.menuActive] : ""}`}
       onClick={handleHideMenu}
     >
       <div className={styles.blur} />

@@ -1,6 +1,7 @@
 .pageContainer {
   width: 100%;
   padding: 0 1rem;
+  position: relative;
 }
 .pageTitle {
   margin-bottom: 1rem;
@@ -15,14 +16,32 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 2rem;
+  padding: 0 0.5rem;
 }
-
+.filtersHeader {
+  display: flex;
+  height: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.filtersTitle {
+  font-weight: 600;
+}
+.closeBtn {
+  display: none;
+  border: none;
+  padding: 0;
+}
+.closeBtnIcon {
+  width: 1rem;
+  height: 1rem;
+  stroke: red;
+}
 .filterBtns {
   margin-top: 1rem;
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
-  padding: 0 0.5rem;
 }
 .confirmBtn {
   margin-bottom: 0.5rem;
@@ -34,16 +53,25 @@
   font-size: 0.75rem !important;
   color: #01579b;
 }
-
 .productBlockWrap {
   display: flex;
   flex: 1 0 85%;
   flex-direction: column;
 }
+.sortContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+.mobileFilterBtn {
+  display: none;
+}
+.mobileFilterBtn svg {
+  height: 1.5rem;
+  width: 1.5rem;
+}
 .sortProduct {
   margin-right: 2rem;
   margin-bottom: 0.5rem;
-  align-self: flex-end;
 }
 .productBlock {
   display: flex;
@@ -62,8 +90,12 @@
   .pageTitle {
     margin-bottom: 0.5rem;
   }
-  .filters {
-    flex: 0 0 25%;
+  .sortContainer {
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+  .sortProduct {
+    margin-right: 0;
   }
   .productBlock {
     padding: 0 0.75rem;
@@ -71,16 +103,90 @@
   .product {
     margin-right: 0.75rem;
   }
+  .closeBtn {
+    display: flex;
+  }
+  .mobileFilterBtn {
+    display: flex;
+  }
+  .filtersHeader {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .filterPanel {
+    position: fixed;
+    width: 40%;
+    opacity: 0;
+    padding: 0.5rem;
+    top: 7.75rem;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    z-index: 3;
+  }
+  .activeFilterPanel {
+    width: 40%;
+    position: fixed;
+    top: 7.75rem;
+    z-index: 3;
+    background-color: #fff;
+    height: 100%;
+    padding: 0.5rem;
+    transform: translateX(-5.2%);
+    transition: all 0.5s;
+  }
 }
 @media (width: 768px) {
-  .filters {
-    flex: 0 0 25%;
-  }
   .productBlock {
     padding: 0;
   }
   .product {
     margin-right: 0.5rem;
+  }
+  .sortContainer {
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
+  .sortProduct {
+    margin-right: 0;
+  }
+  .filterPanel {
+    position: fixed;
+    width: 40%;
+    opacity: 0;
+    padding: 0.5rem;
+    top: 7.75rem;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+    z-index: 3;
+  }
+  .activeFilterPanel {
+    width: 40%;
+    position: fixed;
+    top: 7.75rem;
+    z-index: 3;
+    background-color: #fff;
+    height: 100%;
+    padding: 0.5rem;
+    transform: translateX(-5.2%);
+    transition: all 0.5s;
+  }
+  .filtersHeader {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .closeBtn {
+    display: flex;
+  }
+  .mobileFilterBtn {
+    display: flex;
+  }
+  .mobileFilterBtn svg {
+    height: 1.5rem;
+    width: 1.5rem;
   }
 }
 @media (max-width: 767px) {
@@ -93,8 +199,50 @@
   .product {
     margin-right: 0.875rem;
   }
+  .sortContainer {
+    justify-content: space-between;
+    padding: 0 0.5rem;
+  }
   .sortProduct {
     margin-right: 0.5rem;
+  }
+  .filterPanel {
+    position: fixed;
+    opacity: 0;
+    padding: 0.5rem;
+    top: 6.75rem;
+    height: 100%;
+    background-color: #fff;
+    transform: translateX(-110%);
+    transition: all 0.5s;
+    z-index: 3;
+  }
+  .activeFilterPanel {
+    width: 100%;
+    position: fixed;
+    top: 6.75rem;
+    z-index: 3;
+    background-color: #fff;
+    height: 100%;
+    padding: 0.5rem;
+    transform: translateX(-4%);
+    transition: all 0.5s;
+  }
+  .filtersHeader {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .closeBtn {
+    display: flex;
+    border: none;
+    padding: 0;
+  }
+  .closeBtnIcon {
+    stroke: red;
+  }
+  .mobileFilterBtn {
+    display: flex;
+    padding: 0.25rem 1rem;
   }
 }
 @media (max-width: 413px) {
@@ -104,5 +252,9 @@
   }
   .product {
     margin-right: 0;
+  }
+  .mobileFilterBtn {
+    display: flex;
+    padding: 0.25rem 0.75rem;
   }
 }

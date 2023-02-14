@@ -3,13 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 const sortSlice = createSlice({
   name: "sort",
   initialState: {
-    value: "price",
-    name: "по цене",
+    selectedValue: "price",
+    selectedName: "по цене",
   },
   reducers: {
     setSelectedSort(state, action) {
-      state.value = action.payload.value;
-      state.name = action.payload.name;
+      state.selectedValue = action.payload.value;
+      state.selectedName = action.payload.name;
     },
   },
 });

@@ -28,7 +28,9 @@ export const Card = ({ id, title, price, src, className, onClick }) => {
       <div className={styles.imgWrap}>
         <img className={styles.img} src={src} alt={title} />
       </div>
-      <div className={styles.title}>{title}</div>
+      <Link to={`/products/${id}`} className={styles.title}>
+        <span className={styles.titleText}>{title}</span>
+      </Link>
       <div className={styles.reviewBlock}>
         <div className={styles.rating}>
           <StarIcon className={styles.ratingStar} />
@@ -49,7 +51,7 @@ export const Card = ({ id, title, price, src, className, onClick }) => {
         {isInCart ? (
           <Link to="/cart" className={styles.goToCart}>
             <Button
-              className={styles.buyBtn}
+              className={styles.goToCartBtn}
               color="secondary"
               size="large"
               icon={Checkmark}

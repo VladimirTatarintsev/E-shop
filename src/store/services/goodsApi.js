@@ -8,7 +8,6 @@ export const goodsApi = createApi({
     getGoods: build.query({
       query: () => `goods`,
     }),
-
     getFilteredAndSortedGoods: build.query({
       query: ({ sort, limit, page, brand = "", priceTo, priceFrom }) => ({
         url: `goods${brand}`,
@@ -24,6 +23,9 @@ export const goodsApi = createApi({
         response,
         totalCount: Number(meta.response.headers.get("X-Total-Count")),
       }),
+    }),
+    getGood: build.query({
+      query: (id) => `goods/${id}`,
     }),
 
     getCart: build.query({
@@ -64,6 +66,7 @@ export const goodsApi = createApi({
 
 export const {
   useGetGoodsQuery,
+  useGetGoodQuery,
   useGetFilteredAndSortedGoodsQuery,
   useGetCartQuery,
   useAddProductInCartMutation,

@@ -1,27 +1,27 @@
 .input {
   width: 100%;
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-.field {
-  width: 100%;
   border: none;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 8px 30px 8px 8px;
 }
-.field:focus {
+.field {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input:focus {
   box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.2);
 }
-.field::placeholder {
+.input::placeholder {
   color: #868687;
 }
-.fieldIncorrect {
+.inputIncorrect {
   border: 1px solid #f53152;
   padding: 8px 32px 8px 8px;
 }
-.fieldIncorrect:focus {
+.inputIncorrect:focus {
   border: 1px solid #459df5;
 }
 .button {

@@ -3,13 +3,13 @@ import {
   PageHeader,
   PageFooter,
   MyLink,
-  BurgerMenu,
+  MobileMenu,
 } from "module/components";
 import { Button, Input } from "components";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useGetCartQuery } from "store/services/goodsApi";
-import { setBurgerMenu } from "store/slices/burgerMenuSlice";
+import { setMobileMenu } from "store/slices/mobileMenuSlice";
 import { Outlet, Link } from "react-router-dom";
 import { ReactComponent as MenuIcon } from "icons/menu.svg";
 import { ReactComponent as Cart } from "icons/cart.svg";
@@ -35,7 +35,7 @@ export const Layout = () => {
       <NavBar className={styles.navbar}>
         <div className={styles.navItem}>
           <Button
-            onClick={() => dispatch(setBurgerMenu(true))}
+            onClick={() => dispatch(setMobileMenu(true))}
             className={styles.navBtnMenu}
             size="large"
             color="transparent"
@@ -66,7 +66,7 @@ export const Layout = () => {
           />
         </div>
       </NavBar>
-      <BurgerMenu header={"E-SHOP"} />
+      <MobileMenu header={"E-SHOP"} />
       <PageHeader className={styles.header}>
         <div className={styles.logoWrapper}>
           <Link to="/" className={styles.logo}>

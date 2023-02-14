@@ -19,40 +19,39 @@ import {
   setFilterPriceTo,
   setClearAllFilters,
 } from "store/slices/productFilterSlice";
+import { getSort } from "store/selectors/sortSelector";
+import { getPagination } from "store/selectors/paginationSelector";
+import { getProductsFilter } from "store/selectors/productFilterSelector";
 import { useState } from "react";
+import { ReactComponent as FilterIcon } from "icons/filter.svg";
+import { ReactComponent as CloseIcon } from "icons/x-large.svg";
 import styles from "./ProductListPage.module.css";
+import { setCurrentPage, setTotalPages } from "store/slices/paginationSlice";
 
 export const ProductListPage = () => {
   const dispatch = useDispatch();
-  const selectedSortValue = useSelector(({ sort: { value } }) => value);
-  const currentPage = useSelector(
-    ({ pagination: { currentPage } }) => currentPage
-  );
-  const pageLimit = useSelector(({ pagination: { limit } }) => limit);
-  const selectedFilters = useSelector(
-    ({ productFilters: { brands } }) => brands
-  );
-  const PriceFrom = useSelector(
-    ({ productFilters: { priceFrom } }) => priceFrom
-  );
-  const PriceTo = useSelector(({ productFilters: { priceTo } }) => priceTo);
+  const { selectedValue } = useSelector(getSort);
+  const { currentPage, limit, totalPages } = useSelector(getPagination);
+  const { selectedBrands, selectedPriceFrom, selectedPriceTo } =
+    useSelector(getProductsFilter);
 
   const [priceFiltersOnClick, setPriceFilterOnClick] = useState({
     priceFrom: "",
     priceTo: "",
   });
   const [isChecked, setIsChecked] = useState([]);
+  const [activeMobileFilters, setActiveMobileFilters] = useState(false);
 
-  const brandFilters = getFilteredBrandsToString(selectedFilters);
+  const brandFilters = getFilteredBrandsToString(selectedBrands);
   const { data = [] } = useGetGoodsQuery();
   const { products, totalCount } = useGetFilteredAndSortedGoodsQuery(
     {
-      sort: selectedSortValue,
-      limit: pageLimit,
+      sort: selectedValue,
+      limit: limit,
       page: currentPage,
       brand: brandFilters,
-      priceFrom: PriceFrom,
-      priceTo: PriceTo,
+      priceFrom: selectedPriceFrom,
+      priceTo: selectedPriceTo,
     },
     {
       selectFromResult: ({ data }) => ({
@@ -61,6 +60,9 @@ export const ProductListPage = () => {
       }),
     }
   );
+  const handleSetActiveMobileFilters = () => {
+    setActiveMobileFilters(!activeMobileFilters);
+  };
   const handleSetSelectedBrands = ({ target: { value } }) => {
     setIsChecked(xor(isChecked, value));
   };
@@ -74,14 +76,15 @@ export const ProductListPage = () => {
     dispatch(setFilterPriceFrom(priceFiltersOnClick.priceFrom));
     dispatch(setFilterPriceTo(priceFiltersOnClick.priceTo));
     dispatch(setSelectedFilters(isChecked));
+    dispatch(setCurrentPage(1));
+    setActiveMobileFilters(false);
   };
   const handleClearAllFilter = () => {
     setPriceFilterOnClick({ priceFrom: "", priceTo: "" });
     setIsChecked([]);
     dispatch(setClearAllFilters());
   };
-
-  const totalPages = getPagesCount(totalCount, pageLimit);
+  dispatch(setTotalPages(getPagesCount(totalCount, limit)));
 
   const [addProduct] = useAddProductInCartMutation();
 
@@ -98,7 +101,22 @@ export const ProductListPage = () => {
     <div className={styles.pageContainer}>
       <h2 className={styles.pageTitle}>Все товары</h2>
       <div className={styles.productContainer}>
-        <div className={styles.filterPanel}>
+        <div
+          className={`${
+            activeMobileFilters
+              ? [styles.activeFilterPanel]
+              : [styles.filterPanel]
+          }`}
+        >
+          <div className={styles.filtersHeader}>
+            <span className={styles.filtersTitle}>Фильтры</span>
+            <button
+              className={styles.closeBtn}
+              onClick={() => setActiveMobileFilters(false)}
+            >
+              <CloseIcon className={styles.closeBtnIcon} />
+            </button>
+          </div>
           <PriceFilter
             priceFrom={priceFiltersOnClick.priceFrom}
             priceTo={priceFiltersOnClick.priceTo}
@@ -134,14 +152,23 @@ export const ProductListPage = () => {
           </div>
         </div>
         <div className={styles.productBlockWrap}>
-          <Select
-            className={styles.sortProduct}
-            options={[
-              { value: "price", name: "по цене" },
-              { value: "title", name: "по наименованию" },
-              { value: "category", name: "по категориям" },
-            ]}
-          />
+          <div className={styles.sortContainer}>
+            <Button
+              className={styles.mobileFilterBtn}
+              color="secondary"
+              size="medium"
+              icon={FilterIcon}
+              onClick={handleSetActiveMobileFilters}
+            />
+            <Select
+              className={styles.sortProduct}
+              options={[
+                { value: "price", name: "по цене" },
+                { value: "title", name: "по наименованию" },
+                { value: "category", name: "по категориям" },
+              ]}
+            />
+          </div>
           <div className={styles.productBlock}>
             {products?.map((product) => (
               <Card

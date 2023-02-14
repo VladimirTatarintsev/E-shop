@@ -22,9 +22,9 @@ export const Input = ({
     [styles.fieldIncorrect]: isError,
   });
   return (
-    <div className={styles.input}>
+    <div className={inputClass}>
       <input
-        className={inputClass}
+        className={styles.input}
         type={type}
         id={id}
         name={name}

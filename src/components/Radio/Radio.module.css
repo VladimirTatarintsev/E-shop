@@ -1,0 +1,49 @@
+.radioBlock {
+  width: 6.5rem;
+  height: 4rem;
+  border: 1px dashed #8055ff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.radioWrapper {
+  display: flex;
+  justify-content: center;
+  height: 1rem;
+}
+.label {
+  display: flex;
+}
+.label > .radio {
+  z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+.label > .customRadio {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  margin-right: 0.5rem;
+}
+.label > .customRadio::before {
+  content: "";
+  display: inline-block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 110%;
+}
+.label > .radio:checked + .customRadio::before {
+  border-color: #01579b;
+  background-color: #01579b;
+  background-image: url(../../icons/dot.svg);
+}
+.label > .radio:checked + .customRadio {
+  color: #01579b;
+}

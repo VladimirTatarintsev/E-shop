@@ -6,7 +6,20 @@
       "price": 109999,
       "src": "/image/card-image/MSIGeForceRTX3090TiSUPRIMX.jpg",
       "category": "Видеокарты",
-      "brand": "MSI"
+      "brand": "MSI",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное-воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 21,
@@ -14,7 +27,20 @@
       "price": 19299,
       "src": "/image/card-image/27 Монитор MSI Optix MAG273.jpg",
       "category": "Мониторы",
-      "brand": "MSI"
+      "brand": "MSI",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 19,
@@ -22,7 +48,20 @@
       "price": 193999,
       "src": "/image/card-image/16.2 Ноутбук Apple MacBook Pro серебристый.jpg",
       "category": "Ноутбуки",
-      "brand": "Apple"
+      "brand": "Apple",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 25,
@@ -30,7 +69,20 @@
       "price": 53799,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series S.jpg",
       "category": "Игровые консоли",
-      "brand": "Microsoft"
+      "brand": "Microsoft",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 23,
@@ -38,7 +90,20 @@
       "price": 45299,
       "src": "/image/card-image/Процессор Intel Core i7-13700K BOX.jpg",
       "category": "Процессоры",
-      "brand": "Intel"
+      "brand": "Intel",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 2,
@@ -46,7 +111,20 @@
       "price": 106499,
       "src": "/image/card-image/GIGABYTEGeForceRTX3090GamingOC.jpg",
       "category": "Видеокарты",
-      "brand": "GIGABYTE"
+      "brand": "GIGABYTE",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 9,
@@ -54,7 +132,20 @@
       "price": 98999,
       "src": "/image/card-image/PalitGeForceRTX3080TiGamingPro.jpg",
       "category": "Видеокарты",
-      "brand": "Palit"
+      "brand": "Palit",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 5,
@@ -62,7 +153,20 @@
       "price": 123999,
       "src": "/image/card-image/GIGABYTEAORUSGeForceRTX4080XTREMEWATERFORCE.jpg",
       "category": "Видеокарты",
-      "brand": "GIGABYTE"
+      "brand": "GIGABYTE",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 6,
@@ -70,7 +174,20 @@
       "price": 94299,
       "src": "/image/card-image/ASUSROGStrixGeForceRTX3080V2OCEdition.jpg",
       "category": "Видеокарты",
-      "brand": "ASUS"
+      "brand": "ASUS",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 7,
@@ -78,7 +195,20 @@
       "price": 84299,
       "src": "/image/card-image/GIGABYTEGeForceRTX3080GAMINGOC(LHR).jpg",
       "category": "Видеокарты",
-      "brand": "GIGABYTE"
+      "brand": "GIGABYTE",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 15,
@@ -86,7 +216,20 @@
       "price": 84999,
       "src": "/image/card-image/14 Ультрабук MSI Prestige 14 A12SC-246RU серый.jpg",
       "category": "Ноутбуки",
-      "brand": "MSI"
+      "brand": "MSI",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 16,
@@ -94,7 +237,20 @@
       "price": 93199,
       "src": "/image/card-image/15.6 Ноутбук AORUS 15 XE4 черный.jpg",
       "category": "Ноутбуки",
-      "brand": "GIGABYTE"
+      "brand": "GIGABYTE",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 3,
@@ -102,7 +258,20 @@
       "price": 106999,
       "src": "/image/card-image/PalitGeForceRTX4080GameRock.jpg",
       "category": "Видеокарты",
-      "brand": "Palit"
+      "brand": "Palit",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 30,
@@ -110,7 +279,20 @@
       "price": 64799,
       "src": "/image/card-image/Процессор Intel Core i9-13900KF BOX.jpg",
       "category": "Процессоры",
-      "brand": "Intel"
+      "brand": "Intel",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 26,
@@ -118,7 +300,20 @@
       "price": 64499,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X Игры FIFA 22 и Call of Duty Vanguard.jpg",
       "category": "Игровые консоли",
-      "brand": "Microsoft"
+      "brand": "Microsoft",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 22,
@@ -126,7 +321,20 @@
       "price": 16999,
       "src": "/image/card-image/Acer Nitro VG270Sbmiipx.jpg",
       "category": "Мониторы",
-      "brand": "Acer"
+      "brand": "Acer",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 17,
@@ -134,7 +342,20 @@
       "price": 144599,
       "src": "/image/card-image/15.6 Ноутбук MSI Raider GE66 12UGS-664XRU синий.jpg",
       "category": "Ноутбуки",
-      "brand": "MSI"
+      "brand": "MSI",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 10,
@@ -142,7 +363,20 @@
       "price": 98999,
       "src": "/image/card-image/GIGABYTEGeForceRTX3080TiEAGLEOC.jpg",
       "category": "Видеокарты",
-      "brand": "GIGABYTE"
+      "brand": "GIGABYTE",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 11,
@@ -150,7 +384,20 @@
       "price": 73799,
       "src": "/image/card-image/PowerColorAMDRadeonRX6900XTRedDevil.jpg",
       "category": "Видеокарты",
-      "brand": "PowerColor"
+      "brand": "PowerColor",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 12,
@@ -158,7 +405,20 @@
       "price": 74499,
       "src": "/image/card-image/SapphireTOXICAMDRadeonRX6900XTAirCooled.jpg",
       "category": "Видеокарты",
-      "brand": "Sapphire"
+      "brand": "Sapphire",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 13,
@@ -166,7 +426,20 @@
       "price": 89999,
       "src": "/image/card-image/MSIAMDRadeonRX6950XTGAMINGXTRIO.jpg",
       "category": "Видеокарты",
-      "brand": "MSI"
+      "brand": "MSI",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 14,
@@ -174,7 +447,20 @@
       "price": 112999,
       "src": "/image/card-image/GIGABYTEAMDRadeonRX6950XTGAMINGOC.jpg",
       "category": "Видеокарты",
-      "brand": "GIGABYTE"
+      "brand": "GIGABYTE",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 8,
@@ -182,7 +468,20 @@
       "price": 97799,
       "src": "/image/card-image/ColorFuliGameGeForceRTX3080AdvancedOCLHR-V.jpg",
       "category": "Видеокарты",
-      "brand": "ColorFul"
+      "brand": "ColorFul",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 18,
@@ -190,7 +489,20 @@
       "price": 43999,
       "src": "/image/card-image/15.6 Ультрабук HUAWEI MateBook D 15 BoM-WFQ9 серебристый.jpg",
       "category": "Ноутбуки",
-      "brand": "HUAWEI"
+      "brand": "HUAWEI",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 32,
@@ -198,7 +510,20 @@
       "price": 7899,
       "src": "/image/card-image/Wi-Fi роутер ASUS RT-AC88U.jpg",
       "category": "Сетевое оборудование",
-      "brand": "ASUS"
+      "brand": "ASUS",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 20,
@@ -206,7 +531,20 @@
       "price": 16899,
       "src": "/image/card-image/23.6 Монитор ASUS TUF Gaming VG24VQE черный.jpg",
       "category": "Мониторы",
-      "brand": "ASUS"
+      "brand": "ASUS",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 33,
@@ -214,7 +552,20 @@
       "price": 2699,
       "src": "/image/card-image/Wi-Fi роутер Tenda AC6.jpg",
       "category": "Сетевое оборудование",
-      "brand": "Tenda"
+      "brand": "Tenda",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 34,
@@ -222,7 +573,20 @@
       "price": 1999,
       "src": "/image/card-image/Wi-Fi роутер TP-LINK Archer C20.jpg",
       "category": "Сетевое оборудование",
-      "brand": "TP-LINK"
+      "brand": "TP-LINK",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 24,
@@ -230,7 +594,20 @@
       "price": 15499,
       "src": "/image/card-image/MSI G2412.jpg",
       "category": "Мониторы",
-      "brand": "MSI"
+      "brand": "MSI",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 29,
@@ -238,7 +615,20 @@
       "price": 59499,
       "src": "/image/card-image/Игровая консоль PlayStation 5 Digital Edition.jpg",
       "category": "Игровые консоли",
-      "brand": "PlayStation"
+      "brand": "PlayStation",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 39,
@@ -246,7 +636,20 @@
       "price": 29999,
       "src": "/image/card-image/Процессор AMD Ryzen 9 5950X OEM.jpg",
       "category": "Процессоры",
-      "brand": "AMD"
+      "brand": "AMD",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 27,
@@ -254,7 +657,20 @@
       "price": 61099,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X.jpg",
       "category": "Игровые консоли",
-      "brand": "Microsoft"
+      "brand": "Microsoft",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 38,
@@ -262,7 +678,20 @@
       "price": 28899,
       "src": "/image/card-image/Процессор Intel Core i9-10900F BOX.jpg",
       "category": "Процессоры",
-      "brand": "Intel"
+      "brand": "Intel",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 4,
@@ -270,7 +699,20 @@
       "price": 119999,
       "src": "/image/card-image/GIGABYTEGeForceRTX4080AORUSMASTER.jpg",
       "category": "Видеокарты",
-      "brand": "GIGABYTE"
+      "brand": "GIGABYTE",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 37,
@@ -278,7 +720,20 @@
       "price": 43999,
       "src": "/image/card-image/Процессор Intel Core i9-12900K BOX.jpg",
       "category": "Процессоры",
-      "brand": "Intel"
+      "brand": "Intel",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 36,
@@ -286,7 +741,20 @@
       "price": 14799,
       "src": "/image/card-image/AOC_24G2U5.jpg",
       "category": "Мониторы",
-      "brand": "AOC"
+      "brand": "AOC",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 35,
@@ -294,7 +762,20 @@
       "price": 68799,
       "src": "/image/card-image/Процессор AMD Ryzen 9 7950X BOX.jpg",
       "category": "Процессоры",
-      "brand": "AMD"
+      "brand": "AMD",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     },
     {
       "id": 28,
@@ -302,7 +783,20 @@
       "price": 64999,
       "src": "/image/card-image/Игровая консоль PlayStation 5 белая.jpg",
       "category": "Игровые консоли",
-      "brand": "PlayStation"
+      "brand": "PlayStation",
+      "characteristics": {
+        "model": "GeForce RTX 3090Ti SUPRIM X",
+        "memoryType": "GDDR6X",
+        "memory": "16Гб",
+        "memoryBusWidth": "256 бит",
+        "memoryFrequency": "22400 МГц",
+        "microArchitect": "NVIDIA Ada Lovelace",
+        "techProcess": "5 Нм",
+        "cooling": "активное - воздушное",
+        "cpu": "GP104",
+        "maxResolution": "Ultra HD 8K 7680x4320"
+      },
+      "description": "Погрузитесь в свои игровые фантазии с помощью Midnight Kaleidoscope. Palit GeForce RTX 4080 GameRock основана на графическом процессоре с архитектурой NVIDIA Ada Lovelace для продвинутых игроков и создателей контента, чтобы наслаждаться потрясающими игровыми возможностями и производительностью в мультимедийных приложениях."
     }
   ],
   "banners": [
@@ -337,5 +831,6 @@
       "src": "/image/banner-image/5.jpg"
     }
   ],
-  "cart": []
+  "cart": [],
+  "orders": []
 }
