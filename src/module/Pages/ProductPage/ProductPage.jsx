@@ -18,7 +18,6 @@ export const ProductPage = ({ className }) => {
   const { data = [] } = useGetCartQuery();
   const { title, brand, src, price, characteristics, description } = product;
   const isInCart = data.map((product) => product.id).includes(Number(id));
-  console.log(isInCart);
 
   const [addProduct] = useAddProductInCartMutation();
 

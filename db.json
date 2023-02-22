@@ -5,7 +5,9 @@
       "title": "Видеокарта MSI GeForce RTX 3090 Ti SUPRIM X 24Gb",
       "price": 109999,
       "src": "/image/card-image/MSIGeForceRTX3090TiSUPRIMX.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "MSI",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -27,6 +29,7 @@
       "price": 19299,
       "src": "/image/card-image/27 Монитор MSI Optix MAG273.jpg",
       "category": "Мониторы",
+      "categoryImg": "image/category-img/monitors.jpg",
       "brand": "MSI",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -48,6 +51,7 @@
       "price": 193999,
       "src": "/image/card-image/16.2 Ноутбук Apple MacBook Pro серебристый.jpg",
       "category": "Ноутбуки",
+      "categoryImg": "image/category-img/laptops.jpg",
       "brand": "Apple",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -69,6 +73,7 @@
       "price": 53799,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series S.jpg",
       "category": "Игровые консоли",
+      "categoryImg": "image/category-img/console.jpg",
       "brand": "Microsoft",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -89,7 +94,9 @@
       "title": "Процессор Intel Core i7-13700K BOX",
       "price": 45299,
       "src": "/image/card-image/Процессор Intel Core i7-13700K BOX.jpg",
-      "category": "Процессоры",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Процессоры",
       "brand": "Intel",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -110,7 +117,9 @@
       "title": "Видеокарта GIGABYTE GeForce RTX 3090 24Gb",
       "price": 106499,
       "src": "/image/card-image/GIGABYTEGeForceRTX3090GamingOC.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -131,7 +140,9 @@
       "title": "Видеокарта Palit GeForce RTX 3080 Ti GamingPro 12Gb",
       "price": 98999,
       "src": "/image/card-image/PalitGeForceRTX3080TiGamingPro.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "Palit",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -152,7 +163,9 @@
       "title": "Видеокарта GIGABYTE AORUS GeForce RTX 4080 XTREME WATERFORCE 16Gb",
       "price": 123999,
       "src": "/image/card-image/GIGABYTEAORUSGeForceRTX4080XTREMEWATERFORCE.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -173,7 +186,9 @@
       "title": "Видеокарта ASUS ROG Strix GeForce RTX 3080 V2 OC Edition 10Gb",
       "price": 94299,
       "src": "/image/card-image/ASUSROGStrixGeForceRTX3080V2OCEdition.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "ASUS",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -194,7 +209,9 @@
       "title": "Видеокарта GIGABYTE GeForce RTX 3080 GAMING OC (LHR) 10Gb",
       "price": 84299,
       "src": "/image/card-image/GIGABYTEGeForceRTX3080GAMINGOC(LHR).jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -216,6 +233,7 @@
       "price": 84999,
       "src": "/image/card-image/14 Ультрабук MSI Prestige 14 A12SC-246RU серый.jpg",
       "category": "Ноутбуки",
+      "categoryImg": "image/category-img/laptops.jpg",
       "brand": "MSI",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -237,6 +255,7 @@
       "price": 93199,
       "src": "/image/card-image/15.6 Ноутбук AORUS 15 XE4 черный.jpg",
       "category": "Ноутбуки",
+      "categoryImg": "image/category-img/laptops.jpg",
       "brand": "GIGABYTE",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -257,7 +276,9 @@
       "title": "Видеокарта Palit GeForce RTX 4080 GameRock 16Gb",
       "price": 106999,
       "src": "/image/card-image/PalitGeForceRTX4080GameRock.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "Palit",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -278,7 +299,9 @@
       "title": "Процессор Intel Core i9-13900KF BOX",
       "price": 64799,
       "src": "/image/card-image/Процессор Intel Core i9-13900KF BOX.jpg",
-      "category": "Процессоры",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Процессоры",
       "brand": "Intel",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -300,6 +323,7 @@
       "price": 64499,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X Игры FIFA 22 и Call of Duty Vanguard.jpg",
       "category": "Игровые консоли",
+      "categoryImg": "image/category-img/console.jpg",
       "brand": "Microsoft",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -321,6 +345,7 @@
       "price": 16999,
       "src": "/image/card-image/Acer Nitro VG270Sbmiipx.jpg",
       "category": "Мониторы",
+      "categoryImg": "image/category-img/monitors.jpg",
       "brand": "Acer",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -342,6 +367,7 @@
       "price": 144599,
       "src": "/image/card-image/15.6 Ноутбук MSI Raider GE66 12UGS-664XRU синий.jpg",
       "category": "Ноутбуки",
+      "categoryImg": "image/category-img/laptops.jpg",
       "brand": "MSI",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -362,7 +388,9 @@
       "title": "Видеокарта GIGABYTE GeForce RTX 3080 Ti EAGLE OC 12Gb",
       "price": 98999,
       "src": "/image/card-image/GIGABYTEGeForceRTX3080TiEAGLEOC.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -383,7 +411,9 @@
       "title": "Видеокарта PowerColor AMD Radeon RX 6900 XT Red Devil 24Gb",
       "price": 73799,
       "src": "/image/card-image/PowerColorAMDRadeonRX6900XTRedDevil.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "PowerColor",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -404,7 +434,9 @@
       "title": "Видеокарта Sapphire TOXIC AMD Radeon RX 6900 XT Air Cooled 24Gb",
       "price": 74499,
       "src": "/image/card-image/SapphireTOXICAMDRadeonRX6900XTAirCooled.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "Sapphire",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -425,7 +457,9 @@
       "title": "Видеокарта MSI AMD Radeon RX 6950 XT GAMING X TRIO 24Gb",
       "price": 89999,
       "src": "/image/card-image/MSIAMDRadeonRX6950XTGAMINGXTRIO.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "MSI",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -446,7 +480,9 @@
       "title": "Видеокарта GIGABYTE AMD Radeon RX 6950 XT GAMING OC 24Gb",
       "price": 112999,
       "src": "/image/card-image/GIGABYTEAMDRadeonRX6950XTGAMINGOC.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -467,7 +503,9 @@
       "title": "Видеокарта ColorFul iGame GeForce RTX 3080 Advanced OC LHR-V 10Gb",
       "price": 97799,
       "src": "/image/card-image/ColorFuliGameGeForceRTX3080AdvancedOCLHR-V.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "ColorFul",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -489,6 +527,7 @@
       "price": 43999,
       "src": "/image/card-image/15.6 Ультрабук HUAWEI MateBook D 15 BoM-WFQ9 серебристый.jpg",
       "category": "Ноутбуки",
+      "categoryImg": "image/category-img/laptops.jpg",
       "brand": "HUAWEI",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -510,6 +549,7 @@
       "price": 7899,
       "src": "/image/card-image/Wi-Fi роутер ASUS RT-AC88U.jpg",
       "category": "Сетевое оборудование",
+      "categoryImg": "image/category-img/network.jpg",
       "brand": "ASUS",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -531,6 +571,7 @@
       "price": 16899,
       "src": "/image/card-image/23.6 Монитор ASUS TUF Gaming VG24VQE черный.jpg",
       "category": "Мониторы",
+      "categoryImg": "image/category-img/monitors.jpg",
       "brand": "ASUS",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -552,6 +593,7 @@
       "price": 2699,
       "src": "/image/card-image/Wi-Fi роутер Tenda AC6.jpg",
       "category": "Сетевое оборудование",
+      "categoryImg": "image/category-img/network.jpg",
       "brand": "Tenda",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -573,6 +615,7 @@
       "price": 1999,
       "src": "/image/card-image/Wi-Fi роутер TP-LINK Archer C20.jpg",
       "category": "Сетевое оборудование",
+      "categoryImg": "image/category-img/network.jpg",
       "brand": "TP-LINK",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -594,6 +637,7 @@
       "price": 15499,
       "src": "/image/card-image/MSI G2412.jpg",
       "category": "Мониторы",
+      "categoryImg": "image/category-img/monitors.jpg",
       "brand": "MSI",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -615,6 +659,7 @@
       "price": 59499,
       "src": "/image/card-image/Игровая консоль PlayStation 5 Digital Edition.jpg",
       "category": "Игровые консоли",
+      "categoryImg": "image/category-img/console.jpg",
       "brand": "PlayStation",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -635,7 +680,9 @@
       "title": "Процессор AMD Ryzen 9 5950X OEM",
       "price": 29999,
       "src": "/image/card-image/Процессор AMD Ryzen 9 5950X OEM.jpg",
-      "category": "Процессоры",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Процессоры",
       "brand": "AMD",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -657,6 +704,7 @@
       "price": 61099,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X.jpg",
       "category": "Игровые консоли",
+      "categoryImg": "image/category-img/console.jpg",
       "brand": "Microsoft",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -677,7 +725,9 @@
       "title": "Процессор Intel Core i9-10900F BOX",
       "price": 28899,
       "src": "/image/card-image/Процессор Intel Core i9-10900F BOX.jpg",
-      "category": "Процессоры",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Процессоры",
       "brand": "Intel",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -698,7 +748,9 @@
       "title": "Видеокарта GIGABYTE GeForce RTX 4080 AORUS MASTER 16Gb",
       "price": 119999,
       "src": "/image/card-image/GIGABYTEGeForceRTX4080AORUSMASTER.jpg",
-      "category": "Видеокарты",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -719,7 +771,9 @@
       "title": "Процессор Intel Core i9-12900K BOX",
       "price": 43999,
       "src": "/image/card-image/Процессор Intel Core i9-12900K BOX.jpg",
-      "category": "Процессоры",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Процессоры",
       "brand": "Intel",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -737,10 +791,11 @@
     },
     {
       "id": 36,
-      "title": "24\" Монитор AOC_24G2U5",
+      "title": "24\" Монитор AOC 24G2U5",
       "price": 14799,
       "src": "/image/card-image/AOC_24G2U5.jpg",
       "category": "Мониторы",
+      "categoryImg": "image/category-img/monitors.jpg",
       "brand": "AOC",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -761,7 +816,9 @@
       "title": "Процессор AMD Ryzen 9 7950X BOX",
       "price": 68799,
       "src": "/image/card-image/Процессор AMD Ryzen 9 7950X BOX.jpg",
-      "category": "Процессоры",
+      "category": "Комплектующие ПК",
+      "categoryImg": "image/category-img/cpu.jpg",
+      "subCategory": "Процессоры",
       "brand": "AMD",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -783,6 +840,7 @@
       "price": 64999,
       "src": "/image/card-image/Игровая консоль PlayStation 5 белая.jpg",
       "category": "Игровые консоли",
+      "categoryImg": "image/category-img/console.jpg",
       "brand": "PlayStation",
       "characteristics": {
         "model": "GeForce RTX 3090Ti SUPRIM X",
@@ -832,5 +890,7 @@
     }
   ],
   "cart": [],
+  "wishList": [],
+  "compare": [],
   "orders": []
 }

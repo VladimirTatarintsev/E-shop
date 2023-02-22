@@ -16,9 +16,9 @@
 .inputContainer span {
   padding: 0 0.5rem;
 }
-.priceInput {
-  border: 1px solid #cccccc;
-  border-radius: 4px;
+.priceInput input {
+  height: 2rem;
+  line-height: 1rem;
 }
 @media (max-width: 767px) {
   .area {

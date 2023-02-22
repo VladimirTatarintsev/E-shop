@@ -25,8 +25,23 @@ export const getPrice = (name, value) => {
   } else str += "price_gte=" + value;
 };
 
+export const isIn = (arr, id) => {
+  return arr.map((product) => product.id).includes(id);
+};
 export const createPages = (pages, totalPages) => {
   for (let i = 0; i < totalPages; i++) {
     pages.push(i + 1);
   }
+};
+export const getSum = (price, qty) => {
+  return price * qty;
+};
+export const getCorrectWard = (qty) => {
+  let str = "";
+  if (qty === 1) {
+    str += "товар";
+  } else if (qty > 1 && qty < 5) {
+    str += "товара";
+  } else str += "товаров";
+  return str;
 };

@@ -50,7 +50,9 @@ export const CartPage = ({ className }) => {
                 <div className={styles.imgContainer}>
                   <img className={styles.img} src={src} alt={title} />
                 </div>
-                <span className={styles.title}>{title}</span>
+                <Link to={`/products/${id}`} className={styles.title}>
+                  <span className={styles.titleText}>{title}</span>
+                </Link>
               </div>
               <div className={styles.priceContainer}>
                 <div className={styles.countContainer}>
@@ -122,7 +124,7 @@ export const CartPage = ({ className }) => {
                 <p>руб.</p>
               </span>
             </div>
-            <Link to="/cart/order" className={styles.linkToBuy}>
+            <Link to="/cart/ordering" className={styles.linkToBuy}>
               <Button
                 className={styles.confirmBtn}
                 color="primary"

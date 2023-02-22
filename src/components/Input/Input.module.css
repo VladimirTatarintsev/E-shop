@@ -1,28 +1,25 @@
-.input {
+.inputWrap {
   width: 100%;
-  border: none;
-  box-sizing: border-box;
-  border-radius: 4px;
-  padding: 8px 30px 8px 8px;
 }
-.field {
+.input {
   width: 100%;
   position: relative;
   display: flex;
   align-items: center;
 }
-.input:focus {
-  box-shadow: 0 0.3em 1em rgba(0, 0, 0, 0.2);
+.field {
+  width: 100%;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 1.75rem 8px 8px;
 }
 .input::placeholder {
   color: #868687;
 }
-.inputIncorrect {
-  border: 1px solid #f53152;
-  padding: 8px 32px 8px 8px;
-}
-.inputIncorrect:focus {
-  border: 1px solid #459df5;
+.fieldIncorrect {
+  border: 1px solid #f53152 !important;
+  border-radius: 4px;
 }
 .button {
   border: none;

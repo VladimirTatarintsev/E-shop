@@ -1,6 +1,5 @@
 .mainPage {
   width: 100%;
-
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -13,9 +12,6 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  backdrop-filter: blur(3px);
-  background: rgba(0, 0, 0, 0.306);
-  z-index: 50;
 }
 .pageContainer {
   display: flex;
@@ -27,13 +23,15 @@
   display: flex;
   height: 35rem;
   width: 100%;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
 }
 .productTitle {
   font-size: 1.5rem;
   color: #333333;
   width: 100%;
   height: 2rem;
+  margin-bottom: 1rem;
 }
 .productContainer {
   display: flex;
@@ -48,14 +46,11 @@
   flex-direction: column;
 }
 .productBlock {
-  display: flex;
-  justify-content: flex-start;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-rows: auto;
   margin-bottom: 1rem;
-  overflow: hidden;
-}
-.product {
-  display: flex;
-  margin-right: 1rem;
 }
 .product:last-child {
   margin: 0;
@@ -64,7 +59,6 @@
   display: flex;
   justify-content: flex-end;
 }
-
 .productLink {
   text-decoration: none;
   display: flex;
@@ -80,10 +74,14 @@
   stroke: #01579b;
   width: 0.75rem;
   height: 0.75rem;
+  stroke-width: 0.5;
 }
-
 .secondLink {
   display: none;
+}
+.secondLink svg {
+  stroke: #01579b;
+  stroke-width: 0.5;
 }
 .gameZoneContainer {
   width: 100%;
@@ -183,14 +181,15 @@
     font-size: 1.25rem;
   }
   .productBlock {
-    margin-bottom: 0.5rem;
-    overflow: scroll;
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    height: 22rem;
+    overflow: hidden;
   }
-  .productBlockWrapper:last-of-type .productBlock {
-    flex-wrap: wrap;
-  }
-  .product {
-    margin: 0 0.5rem 0.5rem 0;
+  .productBlockFullHeight {
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    height: 100%;
   }
   .myLinks {
     justify-content: space-between;
@@ -206,10 +205,6 @@
   }
   .gameZoneLine {
     flex: 6 0 auto;
-  }
-  .gameZoneContainer .productBlock {
-    height: 20rem;
-    overflow: scroll;
   }
   .gameZoneContainer .myLinks {
     margin-bottom: 1rem;
@@ -248,16 +243,15 @@
     font-size: 1.25rem;
   }
   .productBlock {
-    flex-wrap: wrap;
-    margin-bottom: 0.5rem;
-    justify-content: space-around;
-  }
-  .productBlockWrapper:first-of-type .productBlock {
-    height: 20rem;
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    height: 22rem;
     overflow: hidden;
   }
-  .product {
-    margin: 0 0 0.5rem 0;
+  .productBlockFullHeight {
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    height: 100%;
   }
   .menuWrapper {
     height: 100%;
@@ -274,11 +268,6 @@
   }
   .gameZoneContainer {
     height: 100%;
-  }
-  .gameZoneContainer .productBlock {
-    height: 20rem;
-    flex-wrap: wrap;
-    overflow: hidden;
   }
   .gameZoneContainer .myLinks {
     margin-bottom: 1rem;

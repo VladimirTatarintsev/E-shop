@@ -4,7 +4,6 @@ import { setMobileMenu } from "store/slices/mobileMenuSlice";
 import { Button } from "components";
 import { MyLink } from "..";
 import { ReactComponent as Cart } from "icons/cart.svg";
-import { ReactComponent as User } from "icons/user.svg";
 import { ReactComponent as Catalog } from "icons/catalog.svg";
 import { ReactComponent as HeartIcon } from "icons/heart.svg";
 import { ReactComponent as ScalesIcon } from "icons/scales.svg";
@@ -17,7 +16,7 @@ import { ReactComponent as CloseIcon } from "icons/x-large.svg";
 import { getIsMenuActive } from "store/selectors/mobileMenuSelector";
 import styles from "./MobileMenu.module.css";
 
-export const MobileMenu = ({ header }) => {
+export const MobileMenu = ({ header, data: { cart, compare, wishList } }) => {
   const { active } = useSelector(getIsMenuActive);
   const dispatch = useDispatch();
   const handleHideMenu = () => {
@@ -41,16 +40,23 @@ export const MobileMenu = ({ header }) => {
             onClick={handleHideMenu}
           />
         </div>
-        <Link className={styles.menuItem} to="/signIn" onClick={handleHideMenu}>
-          <User className={styles.linkIcon} />
-          <span className={styles.linkText}>Вход | Регистрация</span>
-        </Link>
-        <Link className={styles.menuItem} to="/goods" onClick={handleHideMenu}>
+        <Link
+          className={styles.menuItem}
+          to="/catalog"
+          onClick={handleHideMenu}
+        >
           <Catalog className={styles.linkIcon} />
           <span className={styles.linkText}>Каталог товаров</span>
         </Link>
         <Link className={styles.menuItem} to="/cart" onClick={handleHideMenu}>
-          <Cart className={styles.linkIcon} />
+          <div className={styles.iconWrap}>
+            <Cart className={styles.linkIcon} />
+            {cart.length ? (
+              <div className={styles.linkCounter}>{cart.length}</div>
+            ) : (
+              ""
+            )}
+          </div>
           <span className={styles.linkText}>Корзина</span>
         </Link>
         <Link
@@ -58,7 +64,14 @@ export const MobileMenu = ({ header }) => {
           to="/compare"
           onClick={handleHideMenu}
         >
-          <ScalesIcon className={styles.linkIcon} />
+          <div className={styles.iconWrap}>
+            <ScalesIcon className={styles.linkIcon} />
+            {compare.length ? (
+              <div className={styles.linkCounter}>{compare.length}</div>
+            ) : (
+              ""
+            )}
+          </div>
           <span className={styles.linkText}>Сравнение</span>
         </Link>
         <Link
@@ -66,7 +79,14 @@ export const MobileMenu = ({ header }) => {
           to="/wishList"
           onClick={handleHideMenu}
         >
-          <HeartIcon className={styles.linkIcon} />
+          <div className={styles.iconWrap}>
+            <HeartIcon className={styles.linkIcon} />
+            {wishList.length ? (
+              <div className={styles.linkCounter}>{wishList.length}</div>
+            ) : (
+              ""
+            )}
+          </div>
           <span className={styles.linkText}>Избранное</span>
         </Link>
         <div className={styles.followUs}>

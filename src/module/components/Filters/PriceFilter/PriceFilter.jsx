@@ -8,6 +8,8 @@ export const PriceFilter = ({
   className,
   onChangePriceFrom,
   onChangePriceTo,
+  onClearPriceFrom,
+  onClearPriceTo,
   priceFrom,
   priceTo,
 }) => {
@@ -26,6 +28,7 @@ export const PriceFilter = ({
             id="price"
             placeholder="₽"
             onChange={onChangePriceFrom}
+            onClick={onClearPriceFrom}
             value={priceFrom}
           />
           <span>-</span>
@@ -35,6 +38,7 @@ export const PriceFilter = ({
             iconRight={DeleteIcon}
             placeholder="₽"
             onChange={onChangePriceTo}
+            onClick={onClearPriceTo}
             value={priceTo}
           />
         </div>

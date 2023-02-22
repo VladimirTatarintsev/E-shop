@@ -13,33 +13,30 @@ export const Input = ({
   iconRight: IconRight,
   onChange,
   onClick,
-  text = "",
-  ...props
 }) => {
-  const inputClass = cx(styles.field, className, {
+  const inputClass = cx(styles.field, {
     [styles.iconInput]: IconInput,
-    [styles.textInput]: text,
     [styles.fieldIncorrect]: isError,
   });
   return (
-    <div className={inputClass}>
-      <input
-        className={styles.input}
-        type={type}
-        id={id}
-        name={name}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        {...props}
-      />
-      {IconInput && <IconInput className={styles.searchIconInput} />}
-
-      {value && (
-        <button onClick={onClick} className={styles.button} name={name}>
-          <IconRight className={styles.buttonIcon} />
-        </button>
-      )}
+    <div className={cx(styles.inputWrap, className)}>
+      <div className={styles.input}>
+        <input
+          className={inputClass}
+          type={type}
+          id={id}
+          name={name}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+        />
+        {IconInput && <IconInput className={styles.searchIconInput} />}
+        {value && (
+          <button onClick={onClick} className={styles.button} name={name}>
+            <IconRight className={styles.buttonIcon} />
+          </button>
+        )}
+      </div>
     </div>
   );
 };

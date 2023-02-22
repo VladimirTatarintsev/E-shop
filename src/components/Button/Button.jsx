@@ -10,6 +10,8 @@ export const Button = ({
   onClick,
   children,
   className,
+  disabled = false,
+  ...props
 }) => {
   const buttonClass = cx(styles.button, className, {
     [styles[`color${capitalize(color)}`]]: true,
@@ -17,7 +19,12 @@ export const Button = ({
     [styles.iconOnly]: !children,
   });
   return (
-    <button className={buttonClass} onClick={onClick}>
+    <button
+      className={buttonClass}
+      disabled={disabled}
+      onClick={onClick}
+      {...props}
+    >
       {Icon && <Icon className={styles.icon} />}
       {LargeIcon && <LargeIcon className={styles.largeIcon} />}
       {children && <span className={styles.text}>{children}</span>}

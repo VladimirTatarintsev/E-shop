@@ -8,6 +8,7 @@ export const Radio = ({
   onChange = () => {},
   value,
   withIcon = true,
+  ...props
 }) => {
   const radioClass = cx(styles.radioWrapper, className);
   return (
@@ -20,6 +21,7 @@ export const Radio = ({
           checked={checked}
           value={value}
           onChange={onChange}
+          {...props}
         />
         {withIcon && <span className={styles.customRadio} />}
       </label>

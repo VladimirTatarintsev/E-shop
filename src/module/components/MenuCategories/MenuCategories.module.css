@@ -1,8 +1,19 @@
 .menuCat {
   max-height: 100%;
+  display: flex;
+  flex: 0 0 20rem;
+}
+.categoriesBlock {
+  width: 100%;
+}
+.categories {
   width: 20rem;
+  position: absolute;
   display: flex;
   flex-direction: column;
+  background-color: #fff;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
 }
 
 @media (max-width: 1250px) {

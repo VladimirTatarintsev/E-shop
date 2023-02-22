@@ -34,7 +34,6 @@ export const Select = ({ className, options }) => {
           {options.map((option) => (
             <div
               className={styles.option}
-              option={option}
               data-name={option.name}
               key={option.value}
               onClick={() => handleSetSort(option)}

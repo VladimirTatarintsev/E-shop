@@ -1,30 +1,40 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 import { ReactComponent as ArrowRight } from "icons/arrow-right.svg";
+import { ReactComponent as ArrowUp } from "icons/arrow-up.svg";
 import { ReactComponent as ArrowDown } from "icons/arrow-down.svg";
-import { ReactComponent as CpuIcon } from "icons/cpu.svg";
-import { ReactComponent as Display } from "icons/display.svg";
-import { ReactComponent as Laptop } from "icons/laptop.svg";
-import { ReactComponent as Router } from "icons/router.svg";
-import { ReactComponent as PlayStation } from "icons/playstation.svg";
+import { isIn } from "utils/utils";
 import {
   useGetGoodsQuery,
+  useGetCartQuery,
+  useGetWishListQuery,
+  useGetCompareQuery,
   useAddProductInCartMutation,
+  useAddInWishListMutation,
+  useAddInCompareMutation,
+  useDeleteFromWishListMutation,
+  useDeleteFromCompareMutation,
 } from "store/services/goodsApi";
-import {
-  MenuCategories,
-  Card,
-  MenuCategoryItem,
-  MyLink,
-  BannerSlider,
-} from "module/components";
+import { MenuCategories, Card, MyLink, BannerSlider } from "module/components";
 import styles from "./MainPage.module.css";
 
 export const MainPage = () => {
   const { data: products = [] } = useGetGoodsQuery();
-  const [addProduct] = useAddProductInCartMutation();
+  const { data: cart = [] } = useGetCartQuery();
+  const { data: wishList = [] } = useGetWishListQuery();
+  const { data: compare = [] } = useGetCompareQuery();
+  const [addInCart] = useAddProductInCartMutation();
+  const [addInWishList] = useAddInWishListMutation();
+  const [addInCompare] = useAddInCompareMutation();
+  const [deleteFromWishList] = useDeleteFromWishListMutation();
+  const [deleteFromCompare] = useDeleteFromCompareMutation();
 
-  const handleAddProduct = (product) => {
-    addProduct({
+  const [showMoreBestSeller, setShowMoreBestSeller] = useState(false);
+  const [showMoreTopSeller, setShowMoreTopSeller] = useState(true);
+  const [showMoreGameBestSeller, setShowMoreGameBestSeller] = useState(false);
+
+  const handleAddInCart = (product) => {
+    addInCart({
       id: product.id,
       title: product.title,
       price: product.price,
@@ -32,53 +42,87 @@ export const MainPage = () => {
       qty: 1,
     });
   };
+  const handleClickOnWishList = (product) => {
+    const isInWishList = isIn(wishList, product.id);
+    isInWishList
+      ? deleteFromWishList(product.id)
+      : addInWishList({
+          id: product.id,
+          title: product.title,
+          price: product.price,
+          src: product.src,
+        });
+  };
+  const handleClickOnCompare = (product) => {
+    const isInCompare = isIn(compare, product.id);
+    isInCompare
+      ? deleteFromCompare(product.id)
+      : addInCompare({
+          id: product.id,
+          title: product.title,
+          price: product.price,
+          src: product.src,
+          category: product.category,
+        });
+  };
 
   return (
     <div className={styles.mainPage}>
       <div className={styles.pageContainer}>
         <div className={styles.menuWrapper}>
-          <MenuCategories>
-            <MenuCategoryItem icon={CpuIcon}>Комплектующие ПК</MenuCategoryItem>
-            <MenuCategoryItem icon={Display}>Мониторы</MenuCategoryItem>
-            <MenuCategoryItem icon={Laptop}>Ноутбуки</MenuCategoryItem>
-            <MenuCategoryItem icon={PlayStation}>
-              Игровые консоли
-            </MenuCategoryItem>
-            <MenuCategoryItem icon={Router}>
-              Сетевое оборудование
-            </MenuCategoryItem>
-          </MenuCategories>
+          <MenuCategories />
           <BannerSlider />
         </div>
         <div className={styles.productContainer}>
           <h2 className={styles.productTitle}>Топ продаж</h2>
           <div className={styles.productBlockWrapper}>
-            <div className={styles.productBlock}>
+            <div
+              className={`${styles.productBlock} ${
+                showMoreBestSeller ? [styles.productBlockFullHeight] : ""
+              }`}
+            >
               {products
                 ?.map((product) => (
                   <Card
                     className={styles.product}
                     product={product}
+                    cart={cart}
+                    wishList={wishList}
+                    compare={compare}
                     id={product.id}
                     key={product.id}
                     title={product.title}
                     src={product.src}
                     price={product.price}
                     onClick={() => {
-                      handleAddProduct(product);
+                      handleAddInCart(product);
                     }}
+                    onWishListClick={() => handleClickOnWishList(product)}
+                    onCompareClick={() => handleClickOnCompare(product)}
                   />
                 ))
                 .slice(0, 6)}
             </div>
             <div className={styles.myLinks}>
-              <MyLink
-                className={styles.secondLink}
-                color="secondary"
-                iconRight={ArrowDown}
-              >
-                Еще товары
-              </MyLink>
+              {!showMoreBestSeller ? (
+                <MyLink
+                  className={styles.secondLink}
+                  color="secondary"
+                  iconRight={ArrowDown}
+                  onClick={() => setShowMoreBestSeller(!showMoreBestSeller)}
+                >
+                  Еще товары
+                </MyLink>
+              ) : (
+                <MyLink
+                  className={styles.secondLink}
+                  color="secondary"
+                  iconRight={ArrowUp}
+                  onClick={() => setShowMoreBestSeller(!showMoreBestSeller)}
+                >
+                  Скрыть
+                </MyLink>
+              )}
               <Link to="products" className={styles.productLink}>
                 <span className={styles.linkText}>Смотреть все товары</span>
                 <ArrowRight className={styles.linkIcon} />
@@ -87,32 +131,53 @@ export const MainPage = () => {
           </div>
           <h2 className={styles.productTitle}>Топ продаж</h2>
           <div className={styles.productBlockWrapper}>
-            <div className={styles.productBlock}>
+            <div
+              className={`${styles.productBlock} ${
+                showMoreTopSeller ? [styles.productBlockFullHeight] : ""
+              }`}
+            >
               {products
                 ?.map((product) => (
                   <Card
                     className={styles.product}
                     product={product}
+                    cart={cart}
+                    wishList={wishList}
+                    compare={compare}
                     id={product.id}
                     key={product.id}
                     title={product.title}
                     src={product.src}
                     price={product.price}
                     onClick={() => {
-                      handleAddProduct(product);
+                      handleAddInCart(product);
                     }}
+                    onWishListClick={() => handleClickOnWishList(product)}
+                    onCompareClick={() => handleClickOnCompare(product)}
                   />
                 ))
                 .slice(-6)}
             </div>
             <div className={styles.myLinks}>
-              <MyLink
-                className={styles.secondLink}
-                color="secondary"
-                iconRight={ArrowDown}
-              >
-                Скрыть
-              </MyLink>
+              {!showMoreTopSeller ? (
+                <MyLink
+                  className={styles.secondLink}
+                  color="secondary"
+                  iconRight={ArrowDown}
+                  onClick={() => setShowMoreTopSeller(!showMoreTopSeller)}
+                >
+                  Еще товары
+                </MyLink>
+              ) : (
+                <MyLink
+                  className={styles.secondLink}
+                  color="secondary"
+                  iconRight={ArrowUp}
+                  onClick={() => setShowMoreTopSeller(!showMoreTopSeller)}
+                >
+                  Скрыть
+                </MyLink>
+              )}
               <Link to="products" className={styles.productLink}>
                 <span className={styles.linkText}>Смотреть все товары</span>
                 <ArrowRight className={styles.linkIcon} />
@@ -127,32 +192,57 @@ export const MainPage = () => {
             <hr className={styles.gameZoneLine}></hr>
           </div>
           <div className={styles.bgImg} />
-          <div className={styles.productBlock}>
+          <div
+            className={`${styles.productBlock} ${
+              showMoreGameBestSeller ? [styles.productBlockFullHeight] : ""
+            }`}
+          >
             {products
               ?.map((product) => (
                 <Card
                   className={styles.product}
                   product={product}
+                  cart={cart}
+                  wishList={wishList}
+                  compare={compare}
                   id={product.id}
                   key={product.id}
                   title={product.title}
                   src={product.src}
                   price={product.price}
                   onClick={() => {
-                    handleAddProduct(product);
+                    handleAddInCart(product);
                   }}
+                  onWishListClick={() => handleClickOnWishList(product)}
+                  onCompareClick={() => handleClickOnCompare(product)}
                 />
               ))
               .slice(11, 17)}
           </div>
           <div className={styles.myLinks}>
-            <MyLink
-              className={styles.secondLink}
-              color="primary"
-              iconRight={ArrowDown}
-            >
-              Еще товары
-            </MyLink>
+            {!showMoreGameBestSeller ? (
+              <MyLink
+                className={styles.secondLink}
+                color="primary"
+                iconRight={ArrowDown}
+                onClick={() =>
+                  setShowMoreGameBestSeller(!showMoreGameBestSeller)
+                }
+              >
+                Еще товары
+              </MyLink>
+            ) : (
+              <MyLink
+                className={styles.secondLink}
+                color="primary"
+                iconRight={ArrowUp}
+                onClick={() =>
+                  setShowMoreGameBestSeller(!showMoreGameBestSeller)
+                }
+              >
+                Скрыть
+              </MyLink>
+            )}
             <Link to="products" className={styles.productLink}>
               <span className={styles.linkText}>Смотреть все товары</span>
               <ArrowRight className={styles.linkIcon} />

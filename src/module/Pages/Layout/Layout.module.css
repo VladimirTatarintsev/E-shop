@@ -50,7 +50,9 @@
   flex: 0 1 45%;
   position: relative;
   align-items: center;
-  justify-self: end;
+}
+.searchInput input {
+  border: none;
 }
 .searchBtn {
   position: absolute;
@@ -91,7 +93,7 @@
 .linkCounter {
   position: absolute;
   top: 0;
-  right: -4px;
+  right: -5px;
   width: 1rem;
   height: 1rem;
   background-color: #ffcd1b;
@@ -191,16 +193,19 @@
     background-color: #060f42;
     margin-bottom: 0;
     top: 3rem;
+    padding-right: 0;
+    position: static;
   }
   .logo {
+    display: none;
+  }
+  .logoWrapper {
     display: none;
   }
   .inputWrapper {
     margin: 0;
     justify-content: center;
-  }
-  .searchInput {
-    display: none;
+    flex: 1 0 100%;
   }
   .searchBtn {
     position: static;
@@ -209,6 +214,10 @@
   .searchBtn svg {
     height: 2rem;
     width: 2rem;
+    pointer-events: none;
+  }
+  .headBtnWrapper {
+    display: none;
   }
   .btnWrapper {
     display: none;

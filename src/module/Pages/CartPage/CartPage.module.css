@@ -45,6 +45,14 @@
 .title {
   font-size: 1.125rem;
   color: #333333;
+  text-decoration: none;
+}
+.titleText {
+  font-weight: 500;
+}
+.title:hover {
+  cursor: pointer;
+  color: #01579b;
 }
 .countBtn {
   width: 2rem;
@@ -136,21 +144,24 @@
     padding: 0.25rem 0.5rem;
   }
   .product {
-    padding: 0;
-    height: 5rem;
+    padding: 1rem 0.5rem;
+    height: 100%;
+    flex-direction: column;
+  }
+  .descriptionContainer {
+    margin-bottom: 0.5rem;
   }
   .imgContainer {
-    width: 50px;
-    height: 50px;
-    margin-right: 0.25rem;
-    flex-shrink: 0;
+    flex: 0 0 auto;
+    margin-right: 0.75rem;
   }
   .title {
-    font-size: 0.75rem;
-    text-align: center;
+    width: 100%;
+    font-size: 0.875rem;
   }
   .priceContainer {
-    flex: 0 0 35%;
+    width: 100%;
+    justify-content: flex-end;
   }
   .countBtn {
     width: 1.25rem;
@@ -159,12 +170,12 @@
   }
   .count {
     font-size: 0.875rem;
-    padding: 0 0.375rem;
   }
   .price {
-    font-size: 0.75rem;
-    flex-direction: column;
-    align-items: center;
+    flex: 1 0 auto;
+    font-size: 0.875rem;
+    margin-right: 1rem;
+    justify-content: flex-end;
   }
   .deleteBtn {
     width: 1rem;
@@ -184,6 +195,9 @@
   .emptyCart h2 {
     font-size: 1.5rem;
   }
+  .confirmBtn {
+    width: 100%;
+  }
   .linkToBuy {
     width: 100%;
   }
@@ -192,7 +206,7 @@
   }
   .totalPriceContainer {
     justify-content: space-between;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     line-height: 1.25rem;
   }
   .totalPrice {
@@ -206,29 +220,25 @@
     display: flex;
   }
 }
-@media (min-width: 768px) and (max-width: 950px) {
+@media (min-width: 768px) and (max-width: 900px) {
   .product {
     padding: 0;
     height: 5rem;
   }
   .imgContainer {
-    width: 50px;
-    height: 50px;
-    flex-shrink: 0;
+    flex: 0 0 auto;
   }
   .title {
-    font-size: 0.875rem;
-    padding-left: 0.25rem;
+    font-size: 1rem;
   }
   .priceContainer {
-    flex: 0 0 30%;
+    flex: 0 0 35%;
   }
   .count {
-    font-size: 0.875rem;
-    padding: 0 0.375rem;
+    font-size: 1rem;
   }
   .price {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .deleteBtn {
     width: 1rem;
@@ -251,6 +261,9 @@
   .linkToBuy {
     width: 100%;
   }
+  .confirmBtn {
+    width: 100%;
+  }
   .continueBtn {
     width: 100%;
   }
@@ -258,7 +271,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1.25rem;
     line-height: 1.25rem;
   }
   .totalPrice {

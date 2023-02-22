@@ -129,16 +129,78 @@
 .formBlock:last-child {
   margin: 0;
 }
-.formInput {
-  border: 1px solid #ccccccae;
-  border-radius: 3px;
-}
 .formInput:first-child {
   margin-right: 1rem;
+}
+.deliveryContainer {
+  display: flex;
+  flex-direction: column;
 }
 .deliveryMethods {
   width: 25%;
 }
-.radioBtn:hover {
-  background-color: #fff !important;
+.radioLabel {
+  line-height: 2rem;
+}
+
+@media (max-width: 1200px) and (min-width: 768px) {
+  .orderContainer {
+    flex-direction: column;
+  }
+  .imgWrap {
+    margin-right: 0.5rem;
+  }
+  .formBlock {
+    flex-direction: column;
+  }
+  .formInput {
+    margin: 0 0 1rem 0;
+  }
+  .formInput:last-child {
+    margin: 0;
+  }
+  .deliveryMethods {
+    width: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .orderContainer {
+    flex-direction: column;
+  }
+  .product {
+    flex-direction: column;
+    height: 100%;
+    padding: 0.5rem 0;
+  }
+  .productCellWrap {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .productCellWrap:last-child {
+    margin-bottom: 0;
+    justify-content: space-between;
+  }
+  .imgWrap {
+    margin-right: 1rem;
+    flex: 1 0 auto;
+  }
+  .cell {
+    margin-right: 0.5rem;
+  }
+  .contactFormContainer {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  .formBlock {
+    flex-direction: column;
+  }
+  .formInput {
+    margin: 0 0 1rem 0;
+  }
+  .formInput:last-child {
+    margin: 0;
+  }
+  .deliveryMethods {
+    width: 100%;
+  }
 }

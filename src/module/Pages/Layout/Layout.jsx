@@ -8,9 +8,13 @@ import {
 import { Button, Input } from "components";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useGetCartQuery } from "store/services/goodsApi";
+import {
+  useGetCartQuery,
+  useGetCompareQuery,
+  useGetWishListQuery,
+} from "store/services/goodsApi";
 import { setMobileMenu } from "store/slices/mobileMenuSlice";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import { ReactComponent as MenuIcon } from "icons/menu.svg";
 import { ReactComponent as Cart } from "icons/cart.svg";
 import { ReactComponent as User } from "icons/user.svg";
@@ -20,14 +24,27 @@ import { ReactComponent as DeleteIcon } from "icons/x-large.svg";
 import { ReactComponent as HeartIcon } from "icons/heart.svg";
 import { ReactComponent as ScalesIcon } from "icons/scales.svg";
 import styles from "./Layout.module.css";
+import { setSearchQuery } from "store/slices/searchSlice";
 
 export const Layout = () => {
-  const [value, setValue] = useState("");
   const dispatch = useDispatch();
-  const { data = [] } = useGetCartQuery();
+  const { data: products = [] } = useGetCartQuery();
+  const { data: wishList = [] } = useGetWishListQuery();
+  const { data: compare = [] } = useGetCompareQuery();
+  const navigate = useNavigate();
+  const [searchValue, setSearchValue] = useState("");
 
-  const handleChangeInput = ({ target: { value } }) => {
-    setValue(value);
+  const handleChangeSearchQuery = ({ target: { value } }) => {
+    setSearchValue(value);
+  };
+  const hahdleClearSearchQuery = () => {
+    setSearchValue("");
+  };
+  const handleSetSearchQuery = () => {
+    dispatch(setSearchQuery(searchValue));
+    if (searchValue === "") {
+      navigate(`/products`);
+    } else navigate(`/search/products/${searchValue}`);
   };
 
   return (
@@ -66,49 +83,68 @@ export const Layout = () => {
           />
         </div>
       </NavBar>
-      <MobileMenu header={"E-SHOP"} />
+      <MobileMenu
+        header={"E-SHOP"}
+        data={{ cart: products, compare: compare, wishList: wishList }}
+      />
       <PageHeader className={styles.header}>
         <div className={styles.logoWrapper}>
           <Link to="/" className={styles.logo}>
             E-SHOP
           </Link>
-          <Button size="medium" color="primary" icon={Catalog}>
+          <Button
+            className={styles.catalogBtn}
+            size="medium"
+            color="primary"
+            icon={Catalog}
+            onClick={() => navigate("/catalog")}
+          >
             КАТАЛОГ ТОВАРОВ
           </Button>
         </div>
         <div className={styles.inputWrapper}>
           <Input
-            value={value}
-            onChange={handleChangeInput}
+            value={searchValue}
+            onChange={handleChangeSearchQuery}
             iconRight={DeleteIcon}
             className={styles.searchInput}
             placeholder="Поиск..."
+            onClick={() => hahdleClearSearchQuery()}
           />
           <Button
             className={styles.searchBtn}
             size="large"
             color="secondary"
             largeIcon={SearchIcon}
+            onClick={() => handleSetSearchQuery()}
           />
         </div>
         <div className={styles.headBtnWrapper}>
           <div className={styles.btnWrapper}>
             <Link to="/" className={styles.headBtn}>
               <ScalesIcon className={styles.linkIcon} />
-              <div className={styles.linkCounter}>2</div>
+              {compare.length ? (
+                <div className={styles.linkCounter}>{compare.length}</div>
+              ) : (
+                ""
+              )}
             </Link>
           </div>
           <div className={styles.btnWrapper}>
             <Link to="/" className={styles.headBtn}>
               <HeartIcon className={styles.linkIcon} />
-              <div className={styles.linkCounter}>2</div>
+              {wishList.length ? (
+                <div className={styles.linkCounter}>{wishList.length}</div>
+              ) : (
+                ""
+              )}
             </Link>
           </div>
           <div className={styles.btnWrapper}>
             <Link to="/cart" className={styles.headBtn}>
               <Cart className={styles.linkIcon} />
-              {data.length ? (
-                <div className={styles.linkCounter}>{data.length}</div>
+              {products.length ? (
+                <div className={styles.linkCounter}>{products.length}</div>
               ) : (
                 ""
               )}

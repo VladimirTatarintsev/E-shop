@@ -6,22 +6,45 @@ import { ReactComponent as StarIcon } from "icons/star.svg";
 import { ReactComponent as CartIcon } from "icons/cart.svg";
 import { ReactComponent as Checkmark } from "icons/checkmark.svg";
 import { Link } from "react-router-dom";
+import { isIn } from "utils/utils";
 import styles from "./Card.module.css";
-import { useGetCartQuery } from "store/services/goodsApi";
 
-export const Card = ({ id, title, price, src, className, onClick }) => {
+export const Card = ({
+  id,
+  title,
+  price,
+  src,
+  className,
+  onClick,
+  onWishListClick,
+  onCompareClick,
+  cart,
+  wishList,
+  compare,
+}) => {
   const cardClass = cx(styles.card, className);
-  const { data = [] } = useGetCartQuery();
 
-  const isInCart = data.map((product) => product.id).includes(id);
+  const isInCart = isIn(cart, id);
+  const isInWishList = isIn(wishList, id);
+  const isInCompare = isIn(compare, id);
 
   return (
     <div className={cardClass} id={id}>
       <div className={styles.label}>
-        <button className={styles.labelBtn}>
+        <button
+          className={`${styles.labelBtn} ${
+            isInCompare ? [styles.labelBtnActive] : ""
+          }`}
+          onClick={onCompareClick}
+        >
           <ScalesIcon className={styles.icon} />
         </button>
-        <button className={styles.labelBtn}>
+        <button
+          className={`${styles.labelBtn} ${
+            isInWishList ? [styles.labelBtnActive] : ""
+          }`}
+          onClick={onWishListClick}
+        >
           <LikeIcon className={styles.icon} />
         </button>
       </div>
