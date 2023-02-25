@@ -16,7 +16,7 @@ export const BannerSlider = ({ className, autoPlay, autoPlayTime }) => {
     fetchBanners();
   }, []);
   async function fetchBanners() {
-    const response = await axios.get("http://localhost:3001/banners");
+    const response = await axios.get("http://194.58.109.209:3001/banners");
     setBanners(response.data);
   }
 
