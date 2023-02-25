@@ -36,7 +36,7 @@ export const createPages = (pages, totalPages) => {
 export const getSum = (price, qty) => {
   return price * qty;
 };
-export const getCorrectWard = (qty) => {
+export const getCorrectWord = (qty) => {
   let str = "";
   if (qty === 1) {
     str += "товар";
