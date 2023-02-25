@@ -15,7 +15,7 @@ import {
   setOrderInfo,
   setUserContacts,
 } from "store/slices/orderSlice";
-import { getSum, getCorrectWard } from "utils/utils";
+import { getSum, getCorrectWord } from "utils/utils";
 import { ReactComponent as DeleteIcon } from "icons/x-medium.svg";
 import styles from "./OrderingPage.module.css";
 
@@ -134,7 +134,7 @@ export const OrderingPage = () => {
             <div className={styles.orderInfo}>
               <div className={styles.orderInfoCell}>
                 <div className={styles.orderCellTitle}>
-                  {`${currentProductQty} ${getCorrectWard(
+                  {`${currentProductQty} ${getCorrectWord(
                     currentProductQty
                   )} на сумму`}
                 </div>

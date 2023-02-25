@@ -892,5 +892,26 @@
   "cart": [],
   "wishList": [],
   "compare": [],
-  "orders": []
+  "orders": [
+    {
+      "id": 1677166150021,
+      "userContacts": {
+        "firstName": "V",
+        "lastName": "TATARINTSEV",
+        "email": "falian37@gmail.com",
+        "phone": "89503083197"
+      },
+      "selectedDelivery": "russianPost",
+      "orderSum": 56299,
+      "orderSpec": [
+        {
+          "id": 25,
+          "title": "Игровая консоль Microsoft Xbox Series S 1Tb",
+          "price": 53799,
+          "src": "/image/card-image/Игровая консоль Microsoft Xbox Series S.jpg",
+          "qty": 1
+        }
+      ]
+    }
+  ]
 }
