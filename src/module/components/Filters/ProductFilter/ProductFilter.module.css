@@ -1,0 +1,45 @@
+.filter {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.filterTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.filterContainer {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.showFilterContainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.filtersBlock {
+  height: 6rem;
+  overflow: hidden;
+}
+.icon {
+  transform: rotate(0deg);
+  transition: all 0.3s;
+}
+.reverseIcon {
+  transform: rotate(-180deg);
+  transition: all 0.3s;
+}
+.item {
+  font-size: 0.75rem;
+  height: 1.5rem;
+}
+.toggleBtn {
+  align-self: flex-end;
+}

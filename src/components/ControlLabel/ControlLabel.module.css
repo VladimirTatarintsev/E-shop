@@ -1,0 +1,22 @@
+.label {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 0.5rem;
+  border-radius: 2px;
+}
+.controlLabel {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+.label:hover .controlLabel {
+  color: #01579b;
+}
+.checked {
+  color: #01579b;
+}
+.withOutIcon {
+  margin-left: 0px;
+}

@@ -1,0 +1,59 @@
+.selectContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.customSelect {
+  height: 2rem;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding-left: 0.5rem;
+  user-select: none;
+}
+.text {
+  white-space: nowrap;
+  margin-right: 0.25rem;
+}
+.customSelect p {
+  margin-right: 0.5rem;
+}
+.icon {
+  width: 0.875rem;
+  height: 0.875rem;
+  transition: all 0.2s;
+}
+.turnIcon {
+  transform: rotate(-180deg);
+  transition: all 0.3s;
+}
+.showDropdown {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  min-height: 100%;
+  bottom: -4.25rem;
+  left: 0;
+  z-index: 5;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.option {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  height: 1.5rem;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+.option:hover {
+  background-color: rgb(50, 141, 207);
+  color: #fff;
+}

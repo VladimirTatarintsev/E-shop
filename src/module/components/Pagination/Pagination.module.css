@@ -1,0 +1,43 @@
+.pagination {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pageNum {
+  font-size: 1.25rem;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #01579b;
+  cursor: pointer;
+}
+.pageNum:hover {
+  font-weight: 700;
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+.currentPage {
+  font-weight: 600;
+  border-bottom: 1px solid #01579b;
+}
+.prevPage {
+  display: flex;
+  margin-right: 0.5rem;
+  height: 100%;
+  cursor: pointer;
+}
+.nextPage {
+  display: flex;
+  margin-left: 0.5rem;
+  height: 100%;
+  cursor: pointer;
+}
+.arrowsBtn {
+  display: flex;
+  stroke: #01579b;
+  align-self: center;
+}

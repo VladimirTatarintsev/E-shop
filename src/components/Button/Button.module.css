@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+.button {
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  line-height: 1rem;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+.button:active {
+  transform: scale(0.98);
+}
+.text {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  display: block;
+}
+.colorPrimary {
+  background: #06a56c;
+  color: white;
+}
+.colorSecondary {
+  color: #fff;
+  background: #01579b;
+}
+.colorTertiary {
+  color: #060f42;
+  background: transparent;
+}
+.colorTransparent {
+  background-color: transparent;
+  color: #fff;
+}
+.colorRed {
+  background: #f53152;
+  color: white;
+}
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+.sizeSmall {
+  height: 2rem;
+  padding: 0.5rem 1rem;
+}
+.sizeSmall ~ .iconOnly {
+  padding: 0.25rem;
+  height: 1.5rem;
+}
+.sizeSmall .icon + .text {
+  margin-left: 0.25rem;
+}
+.sizeMedium {
+  height: 2.5rem;
+  padding: 0.5rem 1rem;
+}
+.sizeMedium .icon + .text {
+  margin-left: 0.5rem;
+}
+.sizeMedium ~ .iconOnly .icon {
+  padding: 0.5rem;
+}
+.sizeLarge {
+  padding: 0.5rem 0.75rem;
+}
+.sizeLarge .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.colorPrimary .icon {
+  stroke: #fff;
+}
+.colorSecondary .icon {
+  stroke: #fff;
+}
+.colorTertiary .icon {
+  stroke: #060f42;
+}
+.colorTertiary .largeIcon {
+  stroke: #060f42;
+}
+.colorTertiary .text {
+  font-size: 1rem;
+}
+.colorRed .icon {
+  stroke: #fff;
+}
+.colorTransparent .icon {
+  stroke: #fff;
+}
+.buttonFullWidth {
+  width: 100%;
+}
+.iconLabel {
+  stroke: #01579b;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.largeIcon {
+  width: 2rem;
+  height: 2rem;
+}

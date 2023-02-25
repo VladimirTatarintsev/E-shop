@@ -1,0 +1,64 @@
+.bannerItem {
+  display: flex;
+  flex: 1 0 100%;
+  padding: 2.25rem;
+  position: relative;
+}
+.itemImg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.itemText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.itemTitle {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 3rem;
+}
+.itemDescription {
+  margin-bottom: 2rem;
+  color: #cdcdcd;
+}
+@media (max-width: 1201px) and (min-width: 768px) {
+  .itemTitle {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  .itemDescription {
+    font-size: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .bannerItem {
+    height: 12rem;
+    padding: 1rem;
+    justify-content: flex-end;
+  }
+  .itemText {
+    align-items: flex-end;
+  }
+  .itemTitle {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+    line-height: normal;
+  }
+  .itemDescription {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  .itemBtn {
+    height: 2rem;
+    padding: 0.5rem;
+  }
+}

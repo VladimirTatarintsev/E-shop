@@ -1,0 +1,44 @@
+.pageContainer {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.contentWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 8rem;
+  width: 500px;
+}
+.imgWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.img {
+  height: 5.75rem;
+  width: 5.75rem;
+}
+.title {
+  font-size: 1.75rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.orderId {
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.orderId p {
+  margin-left: 0.25rem;
+  color: #01579b;
+}
+.text {
+  color: #333333;
+  font-size: 0.875rem;
+  text-align: center;
+}

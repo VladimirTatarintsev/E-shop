@@ -1,0 +1,41 @@
+.menuItem {
+  height: 3rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  cursor: pointer;
+}
+.menuItem:hover .itemText {
+  color: #01579b;
+}
+.menuItem:hover .primaryIcon {
+  fill: #01579b;
+}
+.menuItem:hover .secondaryIcon {
+  stroke: #01579b;
+}
+.itemTitle {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+.primaryIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: #060f42;
+}
+.itemText {
+  color: #060f42;
+  padding-left: 0.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.25rem;
+}
+.secondaryIcon {
+  stroke: #060f42;
+  width: 1rem;
+  height: 1rem;
+  pointer-events: none;
+}

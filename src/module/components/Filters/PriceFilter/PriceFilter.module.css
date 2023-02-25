@@ -1,0 +1,27 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+.inputContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.inputContainer span {
+  padding: 0 0.5rem;
+}
+.priceInput input {
+  height: 2rem;
+  line-height: 1rem;
+}
+@media (max-width: 767px) {
+  .area {
+    margin-bottom: 0.5rem;
+  }
+}

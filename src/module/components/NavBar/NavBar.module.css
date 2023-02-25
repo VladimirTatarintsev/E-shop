@@ -1,0 +1,30 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  background-color: #060f42;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 3px;
+  padding-left: 1rem;
+}
+@media (max-width: 1201px) and (min-width: 768px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-radius: 0;
+    height: 4rem;
+    padding: 0.5rem 0.625rem;
+  }
+}
+@media (max-width: 767px) {
+  .navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    border-radius: 0;
+    margin: 0;
+    height: 3rem;
+    padding: 0 0.625rem;
+  }
+}

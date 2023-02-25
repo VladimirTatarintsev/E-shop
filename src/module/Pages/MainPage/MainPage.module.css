@@ -1,0 +1,301 @@
+.mainPage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.mainPageBlur {
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 62rem;
+  width: 100%;
+}
+.menuWrapper {
+  display: flex;
+  height: 35rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  position: relative;
+}
+.productTitle {
+  font-size: 1.5rem;
+  color: #333333;
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+.productContainer {
+  display: flex;
+  max-width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.productBlockWrapper {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.productBlock {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-rows: auto;
+  margin-bottom: 1rem;
+}
+.product:last-child {
+  margin: 0;
+}
+.myLinks {
+  display: flex;
+  justify-content: flex-end;
+}
+.productLink {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.linkText {
+  line-height: 0.75rem;
+  font-size: 0.75rem;
+  color: #01579b;
+  margin-right: 0.25rem;
+}
+.linkIcon {
+  stroke: #01579b;
+  width: 0.75rem;
+  height: 0.75rem;
+  stroke-width: 0.5;
+}
+.secondLink {
+  display: none;
+}
+.secondLink svg {
+  stroke: #01579b;
+  stroke-width: 0.5;
+}
+.gameZoneContainer {
+  width: 100%;
+  height: 830px;
+  padding: 2rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.bgImg {
+  background: linear-gradient(rgba(76, 118, 255, 0.8), rgba(25, 25, 73, 0.9)),
+    url(../../../../public/image/game-zone/game-zone.jpg) no-repeat;
+  background-size: 110%;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.gameZoneHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.gameZoneLine {
+  height: 0.125rem;
+  width: 5rem;
+  display: flex;
+  background-color: #fff;
+}
+.gameZoneLine:last-child {
+  flex-grow: 6;
+}
+.gameZoneText {
+  color: #fff;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: "Lato";
+  padding: 0 1.25rem;
+  white-space: nowrap;
+}
+.categoryForGamer {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.headCategoryText {
+  display: flex;
+  align-items: flex-end;
+  font-size: 1.75rem;
+  font-family: "Lato" serif;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+.categoryItem {
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.itemImg {
+  width: 210px;
+  position: absolute;
+  left: 6%;
+}
+.itemBg {
+  width: 170px;
+  height: 170px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.itemTitle {
+  font-size: 1.25rem;
+  color: #fff;
+  padding-left: 1rem;
+}
+.gameZoneContainer .productLink .linkText {
+  color: #d9d9d9;
+}
+.gameZoneContainer .productLink .linkIcon {
+  stroke: #d9d9d9;
+}
+
+@media (max-width: 1201px) and (min-width: 768px) {
+  .menuWrapper {
+    height: 25rem;
+    margin-bottom: 0.5rem;
+  }
+  .productTitle {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  .productBlock {
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    height: 22rem;
+    overflow: hidden;
+  }
+  .productBlockFullHeight {
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    height: 100%;
+  }
+  .myLinks {
+    justify-content: space-between;
+  }
+  .secondLink {
+    display: flex;
+  }
+  .bgImg {
+    background-size: 550%;
+  }
+  .gameZoneContainer {
+    height: 100%;
+  }
+  .gameZoneLine {
+    flex: 6 0 auto;
+  }
+  .gameZoneContainer .myLinks {
+    margin-bottom: 1rem;
+  }
+  .gameProduct {
+    margin-bottom: 1rem;
+  }
+  .categoryForGamer {
+    overflow: scroll;
+    justify-content: flex-start;
+  }
+  .headCategoryText {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .categoryItem {
+    height: 12rem;
+    width: 10rem;
+    padding: 0.5rem 0;
+    margin-right: 1rem;
+  }
+  .itemBg {
+    width: 160px;
+  }
+  .itemImg {
+    left: 1%;
+  }
+  .itemTitle {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .productTitle {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+  .productBlock {
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    height: 22rem;
+    overflow: hidden;
+  }
+  .productBlockFullHeight {
+    grid-gap: 0.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    height: 100%;
+  }
+  .menuWrapper {
+    height: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .myLinks {
+    justify-content: space-between;
+  }
+  .secondLink {
+    display: flex;
+  }
+  .bgImg {
+    background-size: 550%;
+  }
+  .gameZoneContainer {
+    height: 100%;
+  }
+  .gameZoneContainer .myLinks {
+    margin-bottom: 1rem;
+  }
+  .gameProduct {
+    margin-bottom: 1rem;
+  }
+  .categoryForGamer {
+    flex-wrap: wrap;
+    overflow: hidden;
+    justify-content: space-around;
+  }
+  .headCategoryText {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .categoryItem {
+    height: 12rem;
+    width: 10rem;
+    padding: 0.5rem 0;
+  }
+  .itemBg {
+    width: 160px;
+  }
+  .itemImg {
+    left: 1%;
+  }
+  .itemTitle {
+    font-size: 0.75rem;
+  }
+}
