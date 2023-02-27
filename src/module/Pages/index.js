@@ -6,3 +6,4 @@ export { ProductPage } from "./ProductPage/ProductPage";
 export { OrderingPage } from "./OrderingPage/OrderingPage";
 export { EndingOrderPage } from "./EndingOrderPage/EndingOrderPage";
 export { CatalogPage } from "./CatalogPage/CatalogPage";
+export { SearchPage } from "./SearchPage/SearchPage";

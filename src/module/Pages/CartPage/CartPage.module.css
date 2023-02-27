@@ -97,13 +97,6 @@
 .confirmOrder {
   display: flex;
 }
-.linkToBuy {
-  text-decoration: none;
-}
-.continueBtn {
-  border: 3px solid #01579b;
-  color: #01579b;
-}
 .totalPriceContainer {
   display: flex;
   align-items: center;
@@ -124,6 +117,13 @@
   font-size: 1rem;
   padding-left: 0.25rem;
 }
+.linkToBuy {
+  text-decoration: none;
+}
+.continueBtn {
+  border: 3px solid #01579b;
+  color: #01579b;
+}
 .confirmBtn span {
   font-size: 0.75rem;
 }
@@ -137,6 +137,20 @@
 .emptyCart h2 {
   font-size: 2rem;
   margin-bottom: 2rem;
+}
+.btnWrap {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.errBtn {
+  margin-right: 1rem;
+  width: 8rem;
+}
+.errBtn:first-child {
+  border: 2px solid #01579b;
+  color: #01579b;
+  font-weight: 600;
+  margin-right: 0;
 }
 
 @media (max-width: 767px) {
@@ -219,6 +233,15 @@
   .totalPriceText {
     display: flex;
   }
+  .btnWrap {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .errBtn {
+    margin-right: 0;
+    margin-bottom: 0.75rem;
+    width: 100%;
+  }
 }
 @media (min-width: 768px) and (max-width: 900px) {
   .product {
@@ -258,13 +281,7 @@
   .emptyCart h2 {
     font-size: 1.5rem;
   }
-  .linkToBuy {
-    width: 100%;
-  }
   .confirmBtn {
-    width: 100%;
-  }
-  .continueBtn {
     width: 100%;
   }
   .totalPriceContainer {

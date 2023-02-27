@@ -3,9 +3,11 @@
     {
       "id": 1,
       "title": "Видеокарта MSI GeForce RTX 3090 Ti SUPRIM X 24Gb",
+      "slugTitle": "videokarta-msi-geforce-rtx-3090-ti-suprim-x-24Gb",
       "price": 109999,
       "src": "/image/card-image/MSIGeForceRTX3090TiSUPRIMX.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "MSI",
@@ -26,9 +28,11 @@
     {
       "id": 21,
       "title": "27\" Монитор MSI Optix MAG273",
+      "slugTitle": "27-monitor-msi-optix-mag273",
       "price": 19299,
       "src": "/image/card-image/27 Монитор MSI Optix MAG273.jpg",
       "category": "Мониторы",
+      "slug": "monitory",
       "categoryImg": "image/category-img/monitors.jpg",
       "brand": "MSI",
       "characteristics": {
@@ -48,9 +52,11 @@
     {
       "id": 19,
       "title": "16.2\" Ноутбук Apple MacBook Pro серебристый",
+      "slugTitle": "162-noutbuk-apple-macbook-pro-serebristy",
       "price": 193999,
       "src": "/image/card-image/16.2 Ноутбук Apple MacBook Pro серебристый.jpg",
       "category": "Ноутбуки",
+      "slug": "noutbuki",
       "categoryImg": "image/category-img/laptops.jpg",
       "brand": "Apple",
       "characteristics": {
@@ -70,9 +76,11 @@
     {
       "id": 25,
       "title": "Игровая консоль Microsoft Xbox Series S 1Tb",
+      "slugTitle": "igrovaya-konsol-microsoft-xbox-series-s-1Tb",
       "price": 53799,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series S.jpg",
       "category": "Игровые консоли",
+      "slug": "konsoli",
       "categoryImg": "image/category-img/console.jpg",
       "brand": "Microsoft",
       "characteristics": {
@@ -92,9 +100,11 @@
     {
       "id": 23,
       "title": "Процессор Intel Core i7-13700K BOX",
+      "slugTitle": "processor-intel-core-i7-13700k-box",
       "price": 45299,
       "src": "/image/card-image/Процессор Intel Core i7-13700K BOX.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Процессоры",
       "brand": "Intel",
@@ -115,9 +125,11 @@
     {
       "id": 2,
       "title": "Видеокарта GIGABYTE GeForce RTX 3090 24Gb",
+      "slugTitle": "videokarta-gigabyte-geforce-rtx-3090-24Gb",
       "price": 106499,
       "src": "/image/card-image/GIGABYTEGeForceRTX3090GamingOC.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
@@ -138,9 +150,11 @@
     {
       "id": 9,
       "title": "Видеокарта Palit GeForce RTX 3080 Ti GamingPro 12Gb",
+      "slugTitle": "videokarta-palit-geforce-rtx-3080-ti-gaming-pro-12Gb",
       "price": 98999,
       "src": "/image/card-image/PalitGeForceRTX3080TiGamingPro.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "Palit",
@@ -161,9 +175,11 @@
     {
       "id": 5,
       "title": "Видеокарта GIGABYTE AORUS GeForce RTX 4080 XTREME WATERFORCE 16Gb",
+      "slugTitle": "videokarta-gigabyte-aorus-geforce-rtx-4080-xtreme-waterforce-16Gb",
       "price": 123999,
       "src": "/image/card-image/GIGABYTEAORUSGeForceRTX4080XTREMEWATERFORCE.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
@@ -184,9 +200,11 @@
     {
       "id": 6,
       "title": "Видеокарта ASUS ROG Strix GeForce RTX 3080 V2 OC Edition 10Gb",
+      "slugTitle": "videokarta-asus-rog-strix-geforce-rtx-3080-v2-oc-edition-10Gb",
       "price": 94299,
       "src": "/image/card-image/ASUSROGStrixGeForceRTX3080V2OCEdition.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "ASUS",
@@ -207,9 +225,11 @@
     {
       "id": 7,
       "title": "Видеокарта GIGABYTE GeForce RTX 3080 GAMING OC (LHR) 10Gb",
+      "slugTitle": "videokarta-gigabyte-geforce-rtx-3080-gaming-oc-lhr-10Gb",
       "price": 84299,
       "src": "/image/card-image/GIGABYTEGeForceRTX3080GAMINGOC(LHR).jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
@@ -230,9 +250,11 @@
     {
       "id": 15,
       "title": "14\" Ультрабук MSI Prestige 14 A12SC-246RU серый",
+      "slugTitle": "14 ultrabuk-msi-prestige-14-a12sc-246ru-seriy",
       "price": 84999,
       "src": "/image/card-image/14 Ультрабук MSI Prestige 14 A12SC-246RU серый.jpg",
       "category": "Ноутбуки",
+      "slug": "noutbuki",
       "categoryImg": "image/category-img/laptops.jpg",
       "brand": "MSI",
       "characteristics": {
@@ -252,9 +274,11 @@
     {
       "id": 16,
       "title": "15.6\" Ноутбук AORUS 15 XE4 черный",
+      "slugTitle": "156-noutbuk-aorus-15-xe4-cerniy",
       "price": 93199,
       "src": "/image/card-image/15.6 Ноутбук AORUS 15 XE4 черный.jpg",
       "category": "Ноутбуки",
+      "slug": "noutbuki",
       "categoryImg": "image/category-img/laptops.jpg",
       "brand": "GIGABYTE",
       "characteristics": {
@@ -274,9 +298,11 @@
     {
       "id": 3,
       "title": "Видеокарта Palit GeForce RTX 4080 GameRock 16Gb",
+      "slugTitle": "videokarta-palit-geforce-rtx-4080-gamerock-16Gb",
       "price": 106999,
       "src": "/image/card-image/PalitGeForceRTX4080GameRock.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "Palit",
@@ -297,9 +323,11 @@
     {
       "id": 30,
       "title": "Процессор Intel Core i9-13900KF BOX",
+      "slugTitle": "processor-intel-core-i9-13900kf-box",
       "price": 64799,
       "src": "/image/card-image/Процессор Intel Core i9-13900KF BOX.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Процессоры",
       "brand": "Intel",
@@ -320,9 +348,11 @@
     {
       "id": 26,
       "title": "Игровая консоль Microsoft Xbox Series X 1Tb Игры FIFA 22 и Call of Duty Vanguard",
+      "slugTitle": "igrovaya-konsol-microsoft-xbox-series-x-1Tb-igry-fifa-22-&-call-of-duty-vanguard",
       "price": 64499,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X Игры FIFA 22 и Call of Duty Vanguard.jpg",
       "category": "Игровые консоли",
+      "slug": "konsoli",
       "categoryImg": "image/category-img/console.jpg",
       "brand": "Microsoft",
       "characteristics": {
@@ -342,9 +372,11 @@
     {
       "id": 22,
       "title": "27\" Монитор Acer Nitro VG270Sbmiipx",
+      "slugTitle": "27-monitor-acer-nitro-vg270sbmiipx",
       "price": 16999,
       "src": "/image/card-image/Acer Nitro VG270Sbmiipx.jpg",
       "category": "Мониторы",
+      "slug": "monitory",
       "categoryImg": "image/category-img/monitors.jpg",
       "brand": "Acer",
       "characteristics": {
@@ -364,9 +396,11 @@
     {
       "id": 17,
       "title": "15.6\" Ноутбук MSI Raider GE66 12UGS-664XRU синий",
+      "slugTitle": "156-noutbuk-msi-raider-ge66-12ugs-664xru-siniy",
       "price": 144599,
       "src": "/image/card-image/15.6 Ноутбук MSI Raider GE66 12UGS-664XRU синий.jpg",
       "category": "Ноутбуки",
+      "slug": "noutbuki",
       "categoryImg": "image/category-img/laptops.jpg",
       "brand": "MSI",
       "characteristics": {
@@ -386,9 +420,11 @@
     {
       "id": 10,
       "title": "Видеокарта GIGABYTE GeForce RTX 3080 Ti EAGLE OC 12Gb",
+      "slugTitle": "videokarta-gigabyte-geforce-rtx-3080-ti-eagle-oc-12Gb",
       "price": 98999,
       "src": "/image/card-image/GIGABYTEGeForceRTX3080TiEAGLEOC.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
@@ -409,9 +445,11 @@
     {
       "id": 11,
       "title": "Видеокарта PowerColor AMD Radeon RX 6900 XT Red Devil 24Gb",
+      "slugTitle": "videokarta-powercolor-amd-radeon-rx-6900-xt-red-devil-24Gb",
       "price": 73799,
       "src": "/image/card-image/PowerColorAMDRadeonRX6900XTRedDevil.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "PowerColor",
@@ -432,9 +470,11 @@
     {
       "id": 12,
       "title": "Видеокарта Sapphire TOXIC AMD Radeon RX 6900 XT Air Cooled 24Gb",
+      "slugTitle": "videokarta-sapphire-toxic-amd-radeon-rx-6900-xt-air-cooled-24Gb",
       "price": 74499,
       "src": "/image/card-image/SapphireTOXICAMDRadeonRX6900XTAirCooled.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "Sapphire",
@@ -455,9 +495,11 @@
     {
       "id": 13,
       "title": "Видеокарта MSI AMD Radeon RX 6950 XT GAMING X TRIO 24Gb",
+      "slugTitle": "videokarta-msi-amd-radeon-rx-6950-xt-gaming-x-trio-24Gb",
       "price": 89999,
       "src": "/image/card-image/MSIAMDRadeonRX6950XTGAMINGXTRIO.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "MSI",
@@ -478,9 +520,11 @@
     {
       "id": 14,
       "title": "Видеокарта GIGABYTE AMD Radeon RX 6950 XT GAMING OC 24Gb",
+      "slugTitle": "videokarta-gigabyte-amd-radeon-rx-6950-xt-gaming-oc-24Gb",
       "price": 112999,
       "src": "/image/card-image/GIGABYTEAMDRadeonRX6950XTGAMINGOC.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
@@ -501,9 +545,11 @@
     {
       "id": 8,
       "title": "Видеокарта ColorFul iGame GeForce RTX 3080 Advanced OC LHR-V 10Gb",
+      "slugTitle": "videokarta-colorful-igame-geforce-rtx-3080-advanced-oc-lhr-v-10Gb",
       "price": 97799,
       "src": "/image/card-image/ColorFuliGameGeForceRTX3080AdvancedOCLHR-V.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "ColorFul",
@@ -524,9 +570,11 @@
     {
       "id": 18,
       "title": "15.6\" Ультрабук HUAWEI MateBook D 15 BoM-WFQ9 серебристый",
+      "slugTitle": "156-ultrabuk-huawei-matebook-d-15-bom-wfq9-serebristiy",
       "price": 43999,
       "src": "/image/card-image/15.6 Ультрабук HUAWEI MateBook D 15 BoM-WFQ9 серебристый.jpg",
       "category": "Ноутбуки",
+      "slug": "noutbuki",
       "categoryImg": "image/category-img/laptops.jpg",
       "brand": "HUAWEI",
       "characteristics": {
@@ -546,9 +594,11 @@
     {
       "id": 32,
       "title": "Wi-Fi роутер ASUS RT-AC88U",
+      "slugTitle": "wi-fi-router-asus-rt-ac88u",
       "price": 7899,
       "src": "/image/card-image/Wi-Fi роутер ASUS RT-AC88U.jpg",
       "category": "Сетевое оборудование",
+      "slug": "setevoe-oborudovanie",
       "categoryImg": "image/category-img/network.jpg",
       "brand": "ASUS",
       "characteristics": {
@@ -568,9 +618,11 @@
     {
       "id": 20,
       "title": "23.6\" Монитор ASUS TUF Gaming VG24VQE черный",
+      "slugTitle": "236-monitor-asus-tuf-gaming-vg24vqe-cerniy",
       "price": 16899,
       "src": "/image/card-image/23.6 Монитор ASUS TUF Gaming VG24VQE черный.jpg",
       "category": "Мониторы",
+      "slug": "monitory",
       "categoryImg": "image/category-img/monitors.jpg",
       "brand": "ASUS",
       "characteristics": {
@@ -590,9 +642,11 @@
     {
       "id": 33,
       "title": "Wi-Fi роутер Tenda AC6",
+      "slugTitle": "wi-fi-router-tenda-ac6",
       "price": 2699,
       "src": "/image/card-image/Wi-Fi роутер Tenda AC6.jpg",
       "category": "Сетевое оборудование",
+      "slug": "setevoe-oborudovanie",
       "categoryImg": "image/category-img/network.jpg",
       "brand": "Tenda",
       "characteristics": {
@@ -612,9 +666,11 @@
     {
       "id": 34,
       "title": "Wi-Fi роутер TP-LINK Archer C20",
+      "slugTitle": "wi-fi-router-tp-link-archer-c20",
       "price": 1999,
       "src": "/image/card-image/Wi-Fi роутер TP-LINK Archer C20.jpg",
       "category": "Сетевое оборудование",
+      "slug": "setevoe-oborudovanie",
       "categoryImg": "image/category-img/network.jpg",
       "brand": "TP-LINK",
       "characteristics": {
@@ -634,9 +690,11 @@
     {
       "id": 24,
       "title": "24\" Монитор MSI G2412",
+      "slugTitle": "24-monitor-msi-g2412",
       "price": 15499,
       "src": "/image/card-image/MSI G2412.jpg",
       "category": "Мониторы",
+      "slug": "monitory",
       "categoryImg": "image/category-img/monitors.jpg",
       "brand": "MSI",
       "characteristics": {
@@ -656,9 +714,11 @@
     {
       "id": 29,
       "title": "Игровая консоль PlayStation 5 Digital Edition",
+      "slugTitle": "igrovaya-konsol-playstation-5-digital-edition",
       "price": 59499,
       "src": "/image/card-image/Игровая консоль PlayStation 5 Digital Edition.jpg",
       "category": "Игровые консоли",
+      "slug": "konsoli",
       "categoryImg": "image/category-img/console.jpg",
       "brand": "PlayStation",
       "characteristics": {
@@ -678,9 +738,11 @@
     {
       "id": 39,
       "title": "Процессор AMD Ryzen 9 5950X OEM",
+      "slugTitle": "processor-amd-ryzen-9-5950x-oem",
       "price": 29999,
       "src": "/image/card-image/Процессор AMD Ryzen 9 5950X OEM.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Процессоры",
       "brand": "AMD",
@@ -701,9 +763,11 @@
     {
       "id": 27,
       "title": "Игровая консоль Microsoft Xbox Series X 1Tb",
+      "slugTitle": "igrovaya-konsol-microsoft-xbox-series-x-1Tb",
       "price": 61099,
       "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X.jpg",
       "category": "Игровые консоли",
+      "slug": "konsoli",
       "categoryImg": "image/category-img/console.jpg",
       "brand": "Microsoft",
       "characteristics": {
@@ -723,9 +787,11 @@
     {
       "id": 38,
       "title": "Процессор Intel Core i9-10900F BOX",
+      "slugTitle": "processor-intel-core-i9-10900f-box",
       "price": 28899,
       "src": "/image/card-image/Процессор Intel Core i9-10900F BOX.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Процессоры",
       "brand": "Intel",
@@ -746,9 +812,11 @@
     {
       "id": 4,
       "title": "Видеокарта GIGABYTE GeForce RTX 4080 AORUS MASTER 16Gb",
+      "slugTitle": "videokarta-gigabyte-geforce-rtx-4080-aorus-master-16Gb",
       "price": 119999,
       "src": "/image/card-image/GIGABYTEGeForceRTX4080AORUSMASTER.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Видеокарты",
       "brand": "GIGABYTE",
@@ -769,9 +837,11 @@
     {
       "id": 37,
       "title": "Процессор Intel Core i9-12900K BOX",
+      "slugTitle": "processor-intel-core-i9-12900k-box",
       "price": 43999,
       "src": "/image/card-image/Процессор Intel Core i9-12900K BOX.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Процессоры",
       "brand": "Intel",
@@ -792,9 +862,11 @@
     {
       "id": 36,
       "title": "24\" Монитор AOC 24G2U5",
+      "slugTitle": "24-monitor-aoc-24gu5",
       "price": 14799,
       "src": "/image/card-image/AOC_24G2U5.jpg",
       "category": "Мониторы",
+      "slug": "monitory",
       "categoryImg": "image/category-img/monitors.jpg",
       "brand": "AOC",
       "characteristics": {
@@ -814,9 +886,11 @@
     {
       "id": 35,
       "title": "Процессор AMD Ryzen 9 7950X BOX",
+      "slugTitle": "processor-amd-ryzen-9-7950x-box",
       "price": 68799,
       "src": "/image/card-image/Процессор AMD Ryzen 9 7950X BOX.jpg",
       "category": "Комплектующие ПК",
+      "slug": "komplektuyushhie-dlya-pk",
       "categoryImg": "image/category-img/cpu.jpg",
       "subCategory": "Процессоры",
       "brand": "AMD",
@@ -837,9 +911,11 @@
     {
       "id": 28,
       "title": "Игровая консоль PlayStation 5 825Gb",
+      "slugTitle": "igrovaya-konsol-playstation-5-825Gb",
       "price": 64999,
       "src": "/image/card-image/Игровая консоль PlayStation 5 белая.jpg",
       "category": "Игровые консоли",
+      "slug": "konsoli",
       "categoryImg": "image/category-img/console.jpg",
       "brand": "PlayStation",
       "characteristics": {
@@ -894,7 +970,7 @@
   "compare": [],
   "orders": [
     {
-      "id": 1677166150021,
+      "id": 1677489055479,
       "userContacts": {
         "firstName": "V",
         "lastName": "TATARINTSEV",
@@ -902,13 +978,13 @@
         "phone": "89503083197"
       },
       "selectedDelivery": "russianPost",
-      "orderSum": 56299,
+      "orderSum": 66999,
       "orderSpec": [
         {
-          "id": 25,
-          "title": "Игровая консоль Microsoft Xbox Series S 1Tb",
-          "price": 53799,
-          "src": "/image/card-image/Игровая консоль Microsoft Xbox Series S.jpg",
+          "id": 26,
+          "title": "Игровая консоль Microsoft Xbox Series X 1Tb Игры FIFA 22 и Call of Duty Vanguard",
+          "price": 64499,
+          "src": "/image/card-image/Игровая консоль Microsoft Xbox Series X Игры FIFA 22 и Call of Duty Vanguard.jpg",
           "qty": 1
         }
       ]

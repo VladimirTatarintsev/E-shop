@@ -7,6 +7,7 @@ import {
   OrderingPage,
   EndingOrderPage,
   CatalogPage,
+  SearchPage,
 } from "module/Pages";
 import { Route, Routes } from "react-router-dom";
 import styles from "./App.module.css";
@@ -26,8 +27,8 @@ export const App = () => {
           <Route path="products" element={<ProductListPage />} />
           <Route path="catalog" element={<CatalogPage />} />
           <Route path="catalog/:category" element={<ProductListPage />} />
-          <Route path="search/products/:value" element={<ProductListPage />} />
-          <Route path="products/:id" element={<ProductPage />} />
+          <Route path="search/:value" element={<SearchPage />} />
+          <Route path="product/:id" element={<ProductPage />} />
         </Route>
       </Routes>
     </div>

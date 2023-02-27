@@ -1,3 +1,17 @@
+.cardWrap {
+  text-decoration: none;
+  color: #333333;
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+.cardWrap:hover {
+  transform: scale(1.025);
+  transition: all 0.2s;
+  box-shadow: 0px 5px 8px 3px#33333349;
+}
+.cardWrap:hover .title {
+  color: #296da1;
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -77,14 +91,8 @@
   line-height: 1.125rem;
   text-decoration: none;
   color: #333333;
-}
-.titleText {
   font-weight: 500;
   font-size: 0.875rem;
-}
-.title:hover {
-  cursor: pointer;
-  color: #01579b;
 }
 .wrapper {
   display: flex;

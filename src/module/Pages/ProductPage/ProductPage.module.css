@@ -2,6 +2,9 @@
   min-height: 80vh;
   padding: 1rem;
 }
+.backBtn {
+  display: none;
+}
 .header {
   margin-bottom: 2rem;
 }
@@ -91,6 +94,16 @@
 @media (max-width: 1200px) and (min-width: 768px) {
   .pageContainer {
     height: 100%;
+    padding: 0.5rem 1rem;
+  }
+  .backBtn {
+    display: flex;
+    padding: 0.25rem;
+  }
+  .backBtn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
   }
   .imgContainer {
     flex: 0 0 100%;
@@ -114,7 +127,16 @@
 
 @media (max-width: 767px) {
   .pageContainer {
-    padding: 1rem 0.5rem;
+    padding: 0 0.5rem;
+  }
+  .backBtn {
+    display: flex;
+    padding: 0.25rem;
+  }
+  .backBtn svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    pointer-events: none;
   }
   .header {
     font-size: 1.125rem;

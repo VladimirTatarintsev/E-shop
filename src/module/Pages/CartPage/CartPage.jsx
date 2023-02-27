@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import {
   useChangeProductQtyMutation,
   useDeleteProductFromCartMutation,
@@ -13,11 +13,17 @@ import styles from "./CartPage.module.css";
 
 export const CartPage = ({ className }) => {
   const cart = cx(styles.cart, className);
-
+  const navigate = useNavigate();
   const { data = [] } = useGetCartQuery();
   const [deleteProduct] = useDeleteProductFromCartMutation();
   const [changeQty] = useChangeProductQtyMutation();
 
+  const handleClickOnMainBtn = () => {
+    navigate("/");
+  };
+  const handleClickOnCatalogBtn = () => {
+    navigate("/catalog");
+  };
   const handleDeleteProduct = (id) => {
     deleteProduct(id);
   };
@@ -50,7 +56,7 @@ export const CartPage = ({ className }) => {
                 <div className={styles.imgContainer}>
                   <img className={styles.img} src={src} alt={title} />
                 </div>
-                <Link to={`/products/${id}`} className={styles.title}>
+                <Link to={`/product/${id}`} className={styles.title}>
                   <span className={styles.titleText}>{title}</span>
                 </Link>
               </div>
@@ -93,15 +99,24 @@ export const CartPage = ({ className }) => {
         ) : (
           <div className={styles.emptyCart}>
             <h2>Ваша корзина пуста</h2>
-            <Link to="/products" className={styles.linkToBuy}>
+            <div className={styles.btnWrap}>
               <Button
-                className={styles.continueBtn}
-                size="medium"
+                className={styles.errBtn}
                 color="tertiary"
+                size="medium"
+                onClick={() => handleClickOnMainBtn()}
               >
-                Вернуться к покупкам
+                НА ГЛАВНУЮ
               </Button>
-            </Link>
+              <Button
+                className={styles.errBtn}
+                color="primary"
+                size="medium"
+                onClick={() => handleClickOnCatalogBtn()}
+              >
+                В КАТАЛОГ
+              </Button>
+            </div>
           </div>
         )}
       </div>
@@ -113,7 +128,7 @@ export const CartPage = ({ className }) => {
               size="medium"
               color="tertiary"
             >
-              Продолжить покупки
+              ПРОДОЛЖИТЬ ПОКУПКИ
             </Button>
           </Link>
           <div className={styles.confirmOrder}>

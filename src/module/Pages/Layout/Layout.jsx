@@ -42,9 +42,7 @@ export const Layout = () => {
   };
   const handleSetSearchQuery = () => {
     dispatch(setSearchQuery(searchValue));
-    if (searchValue === "") {
-      navigate(`/products`);
-    } else navigate(`/search/products/${searchValue}`);
+    navigate(`/search/${searchValue}`);
   };
 
   return (
@@ -113,6 +111,7 @@ export const Layout = () => {
           />
           <Button
             className={styles.searchBtn}
+            disabled={!searchValue}
             size="large"
             color="secondary"
             largeIcon={SearchIcon}

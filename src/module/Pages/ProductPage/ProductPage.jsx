@@ -1,8 +1,9 @@
 import cx from "classnames";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button } from "components/Button/Button";
 import { ReactComponent as CartIcon } from "icons/cart.svg";
 import { ReactComponent as Checkmark } from "icons/checkmark.svg";
+import { ReactComponent as ArrowLeft } from "icons/arrow-left.svg";
 import { useParams } from "react-router-dom";
 import {
   useGetGoodQuery,
@@ -12,11 +13,13 @@ import {
 import styles from "./ProductPage.module.css";
 
 export const ProductPage = ({ className }) => {
-  const { id } = useParams();
   const ProductPageClass = cx(styles.pageContainer, className);
+
+  const { id } = useParams();
+  const navigate = useNavigate();
   const { data: product = {} } = useGetGoodQuery(id);
-  const { data = [] } = useGetCartQuery();
   const { title, brand, src, price, characteristics, description } = product;
+  const { data = [] } = useGetCartQuery();
   const isInCart = data.map((product) => product.id).includes(Number(id));
 
   const [addProduct] = useAddProductInCartMutation();
@@ -25,6 +28,7 @@ export const ProductPage = ({ className }) => {
     addProduct({
       id: product.id,
       title: product.title,
+      slugTitle: product.slugTitle,
       price: product.price,
       src: product.src,
       qty: 1,
@@ -33,6 +37,13 @@ export const ProductPage = ({ className }) => {
 
   return (
     <div className={ProductPageClass}>
+      <Button
+        className={styles.backBtn}
+        color="tertiary"
+        size="medium"
+        icon={ArrowLeft}
+        onClick={() => navigate(-1)}
+      />
       <h2 className={styles.header}>{title}</h2>
       <div className={styles.productContainer}>
         <div className={styles.imgContainer}>

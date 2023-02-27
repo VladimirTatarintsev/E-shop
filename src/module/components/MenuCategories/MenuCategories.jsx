@@ -22,35 +22,35 @@ export const MenuCategories = ({ className }) => {
           <MenuCategoryItem
             icon={CpuIcon}
             onClick={handleSelectCategory}
-            data-name="Комплектующие ПК"
+            data-name="komplektuyushhie-dlya-pk"
           >
             Комплектующие ПК
           </MenuCategoryItem>
           <MenuCategoryItem
             icon={Display}
             onClick={handleSelectCategory}
-            data-name="Мониторы"
+            data-name="monitory"
           >
             Мониторы
           </MenuCategoryItem>
           <MenuCategoryItem
             icon={Laptop}
             onClick={handleSelectCategory}
-            data-name="Ноутбуки"
+            data-name="noutbuki"
           >
             Ноутбуки
           </MenuCategoryItem>
           <MenuCategoryItem
             icon={PlayStation}
             onClick={handleSelectCategory}
-            data-name="Игровые консоли"
+            data-name="konsoli"
           >
             Игровые консоли
           </MenuCategoryItem>
           <MenuCategoryItem
             icon={Router}
             onClick={handleSelectCategory}
-            data-name="Сетевое оборудование"
+            data-name="setevoe-oborudovanie"
           >
             Сетевое оборудование
           </MenuCategoryItem>

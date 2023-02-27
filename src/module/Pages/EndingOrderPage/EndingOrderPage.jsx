@@ -14,7 +14,7 @@ export const EndingOrderPage = () => {
     setTimeout(() => {
       navigate("/");
     }, 5000);
-  }, []);
+  }, [navigate]);
   return (
     <div className={styles.pageContainer}>
       <div className={styles.contentWrap}>

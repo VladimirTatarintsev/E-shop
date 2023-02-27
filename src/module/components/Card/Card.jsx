@@ -5,7 +5,7 @@ import { ReactComponent as ScalesIcon } from "icons/scales.svg";
 import { ReactComponent as StarIcon } from "icons/star.svg";
 import { ReactComponent as CartIcon } from "icons/cart.svg";
 import { ReactComponent as Checkmark } from "icons/checkmark.svg";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { isIn } from "utils/utils";
 import styles from "./Card.module.css";
 
@@ -22,6 +22,7 @@ export const Card = ({
   wishList,
   compare,
 }) => {
+  const navigate = useNavigate();
   const cardClass = cx(styles.card, className);
 
   const isInCart = isIn(cart, id);
@@ -29,71 +30,73 @@ export const Card = ({
   const isInCompare = isIn(compare, id);
 
   return (
-    <div className={cardClass} id={id}>
-      <div className={styles.label}>
-        <button
-          className={`${styles.labelBtn} ${
-            isInCompare ? [styles.labelBtnActive] : ""
-          }`}
-          onClick={onCompareClick}
-        >
-          <ScalesIcon className={styles.icon} />
-        </button>
-        <button
-          className={`${styles.labelBtn} ${
-            isInWishList ? [styles.labelBtnActive] : ""
-          }`}
-          onClick={onWishListClick}
-        >
-          <LikeIcon className={styles.icon} />
-        </button>
-      </div>
-      <div className={styles.imgWrap}>
-        <img className={styles.img} src={src} alt={title} />
-      </div>
-      <Link to={`/products/${id}`} className={styles.title}>
-        <span className={styles.titleText}>{title}</span>
-      </Link>
-      <div className={styles.reviewBlock}>
-        <div className={styles.rating}>
-          <StarIcon className={styles.ratingStar} />
-          <StarIcon className={styles.ratingStar} />
-          <StarIcon className={styles.ratingStar} />
-          <StarIcon className={styles.ratingStar} />
-          <StarIcon className={styles.ratingStar} />
+    <Link to={`/product/${id}`} className={styles.cardWrap}>
+      <div className={cardClass} id={id}>
+        <div className={styles.label}>
+          <button
+            className={`${styles.labelBtn} ${
+              isInCompare ? [styles.labelBtnActive] : ""
+            }`}
+            onClick={onCompareClick}
+          >
+            <ScalesIcon className={styles.icon} />
+          </button>
+          <button
+            className={`${styles.labelBtn} ${
+              isInWishList ? [styles.labelBtnActive] : ""
+            }`}
+            onClick={onWishListClick}
+          >
+            <LikeIcon className={styles.icon} />
+          </button>
         </div>
-        <span>
-          Отзывов:<span className={styles.reviewQty}>4</span>
-        </span>
-      </div>
-      <div className={styles.wrapper}>
-        <span className={styles.price}>
-          {price}
-          <p>руб.</p>
-        </span>
-        {isInCart ? (
-          <Link to="/cart" className={styles.goToCart}>
+        <div className={styles.imgWrap}>
+          <img className={styles.img} src={src} alt={title} />
+        </div>
+        <span className={styles.title}>{title}</span>
+        <div className={styles.reviewBlock}>
+          <div className={styles.rating}>
+            <StarIcon className={styles.ratingStar} />
+            <StarIcon className={styles.ratingStar} />
+            <StarIcon className={styles.ratingStar} />
+            <StarIcon className={styles.ratingStar} />
+            <StarIcon className={styles.ratingStar} />
+          </div>
+          <span>
+            Отзывов:<span className={styles.reviewQty}>4</span>
+          </span>
+        </div>
+        <div className={styles.wrapper}>
+          <span className={styles.price}>
+            {price}
+            <p>руб.</p>
+          </span>
+          {isInCart ? (
             <Button
               className={styles.goToCartBtn}
               color="secondary"
               size="large"
               icon={Checkmark}
+              onClick={(e) => {
+                navigate("/cart");
+                e.preventDefault();
+              }}
             >
               В КОРЗИНЕ
             </Button>
-          </Link>
-        ) : (
-          <Button
-            className={styles.buyBtn}
-            color="primary"
-            size="large"
-            icon={CartIcon}
-            onClick={onClick}
-          >
-            КУПИТЬ
-          </Button>
-        )}
+          ) : (
+            <Button
+              className={styles.buyBtn}
+              color="primary"
+              size="large"
+              icon={CartIcon}
+              onClick={onClick}
+            >
+              КУПИТЬ
+            </Button>
+          )}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };

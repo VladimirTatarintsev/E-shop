@@ -30,20 +30,18 @@ import { isIn } from "utils/utils";
 import { getSort } from "store/selectors/sortSelector";
 import { getPagination } from "store/selectors/paginationSelector";
 import { getProductsFilter } from "store/selectors/productFilterSelector";
-import { getSearchQuery } from "store/selectors/searchSelector";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ReactComponent as FilterIcon } from "icons/filter.svg";
 import { ReactComponent as CloseIcon } from "icons/x-large.svg";
-import styles from "./ProductListPage.module.css";
 import { setCurrentPage, setTotalPages } from "store/slices/paginationSlice";
 import { setClearSearchInput } from "store/slices/searchSlice";
+import styles from "./ProductListPage.module.css";
 
 export const ProductListPage = () => {
   const { category } = useParams();
   const dispatch = useDispatch();
   const { selectedValue } = useSelector(getSort);
-  const { searchQuery } = useSelector(getSearchQuery);
   const { currentPage, limit, totalPages } = useSelector(getPagination);
   const { selectedBrands, selectedPriceFrom, selectedPriceTo } =
     useSelector(getProductsFilter);
@@ -62,7 +60,6 @@ export const ProductListPage = () => {
   const { data: compare = [] } = useGetCompareQuery();
   const { products, totalCount } = useGetFilteredAndSortedGoodsQuery(
     {
-      search: searchQuery,
       category: category,
       sort: selectedValue,
       limit: limit,
@@ -110,7 +107,7 @@ export const ProductListPage = () => {
   const [deleteFromWishList] = useDeleteFromWishListMutation();
   const [deleteFromCompare] = useDeleteFromCompareMutation();
 
-  const handleAddInCart = (product) => {
+  const handleAddInCart = (product, e) => {
     addInCart({
       id: product.id,
       title: product.title,
@@ -118,8 +115,9 @@ export const ProductListPage = () => {
       src: product.src,
       qty: 1,
     });
+    e.preventDefault();
   };
-  const handleClickOnWishList = (product) => {
+  const handleClickOnWishList = (product, e) => {
     const isInWishList = isIn(wishList, product.id);
     isInWishList
       ? deleteFromWishList(product.id)
@@ -129,8 +127,9 @@ export const ProductListPage = () => {
           price: product.price,
           src: product.src,
         });
+    e.preventDefault();
   };
-  const handleClickOnCompare = (product) => {
+  const handleClickOnCompare = (product, e) => {
     const isInCompare = isIn(compare, product.id);
     isInCompare
       ? deleteFromCompare(product.id)
@@ -141,6 +140,7 @@ export const ProductListPage = () => {
           src: product.src,
           category: product.category,
         });
+    e.preventDefault();
   };
 
   useEffect(() => {
@@ -149,121 +149,106 @@ export const ProductListPage = () => {
 
   return (
     <div className={styles.pageContainer}>
-      {searchQuery ? (
-        <h2
-          className={styles.pageTitle}
-        >{`Результаты поиска по запросу "${searchQuery}"`}</h2>
-      ) : (
-        <h2 className={styles.pageTitle}>Все товары</h2>
-      )}
-      {products && !searchQuery ? (
-        <div className={styles.productContainer}>
-          <div
-            className={`${
-              activeMobileFilters
-                ? [styles.activeFilterPanel]
-                : [styles.filterPanel]
-            }`}
+      <h2 className={styles.pageTitle}>Все товары</h2>
+      <div className={styles.productContainer}>
+        <div
+          className={`${
+            activeMobileFilters
+              ? [styles.activeFilterPanel]
+              : [styles.filterPanel]
+          }`}
+        >
+          <div className={styles.filtersHeader}>
+            <span className={styles.filtersTitle}>Фильтры</span>
+            <button
+              className={styles.closeBtn}
+              onClick={() => setActiveMobileFilters(false)}
+            >
+              <CloseIcon className={styles.closeBtnIcon} />
+            </button>
+          </div>
+          <PriceFilter
+            priceFrom={priceFiltersOnClick.priceFrom}
+            priceTo={priceFiltersOnClick.priceTo}
+            onChangePriceFrom={handleChangePriceFilter}
+            onChangePriceTo={handleChangePriceFilter}
+            onClearPriceFrom={handleClearPriceFilter}
+            onClearPriceTo={handleClearPriceFilter}
           >
-            <div className={styles.filtersHeader}>
-              <span className={styles.filtersTitle}>Фильтры</span>
-              <button
-                className={styles.closeBtn}
-                onClick={() => setActiveMobileFilters(false)}
-              >
-                <CloseIcon className={styles.closeBtnIcon} />
-              </button>
-            </div>
-            <PriceFilter
-              priceFrom={priceFiltersOnClick.priceFrom}
-              priceTo={priceFiltersOnClick.priceTo}
-              onChangePriceFrom={handleChangePriceFilter}
-              onChangePriceTo={handleChangePriceFilter}
-              onClearPriceFrom={handleClearPriceFilter}
-              onClearPriceTo={handleClearPriceFilter}
+            По цене
+          </PriceFilter>
+          <ProductFilter
+            products={data}
+            selectedFilter={isChecked}
+            onCheckboxClick={handleSetSelectedBrands}
+          >
+            По производителю
+          </ProductFilter>
+          <div className={styles.filterBtns}>
+            <Button
+              className={styles.cancelBtn}
+              color="tertiary"
+              size="small"
+              onClick={handleClearAllFilter}
             >
-              По цене
-            </PriceFilter>
-            <ProductFilter
-              products={data}
-              selectedFilter={isChecked}
-              onCheckboxClick={handleSetSelectedBrands}
+              Сбросить
+            </Button>
+            <Button
+              className={styles.confirmBtn}
+              color="secondary"
+              size="small"
+              onClick={handleSetAllFilters}
             >
-              По производителю
-            </ProductFilter>
-            <div className={styles.filterBtns}>
-              <Button
-                className={styles.cancelBtn}
-                color="tertiary"
-                size="small"
-                onClick={handleClearAllFilter}
-              >
-                Сбросить
-              </Button>
-              <Button
-                className={styles.confirmBtn}
-                color="secondary"
-                size="small"
-                onClick={handleSetAllFilters}
-              >
-                Применить
-              </Button>
-            </div>
-          </div>
-          <div className={styles.productBlockWrap}>
-            <div className={styles.sortContainer}>
-              <Button
-                className={styles.mobileFilterBtn}
-                color="secondary"
-                size="medium"
-                icon={FilterIcon}
-                onClick={handleSetActiveMobileFilters}
-              />
-              <Select
-                className={styles.sortProduct}
-                options={[
-                  { value: "price", name: "по цене" },
-                  { value: "title", name: "по наименованию" },
-                  { value: "category", name: "по категориям" },
-                ]}
-              />
-            </div>
-            <div className={styles.productBlock}>
-              {products?.map((product) => (
-                <Card
-                  className={styles.product}
-                  product={product}
-                  cart={cart}
-                  wishList={wishList}
-                  compare={compare}
-                  key={product.id}
-                  id={product.id}
-                  title={product.title}
-                  src={product.src}
-                  price={product.price}
-                  onClick={() => {
-                    handleAddInCart(product);
-                  }}
-                  onWishListClick={() => handleClickOnWishList(product)}
-                  onCompareClick={() => handleClickOnCompare(product)}
-                />
-              ))}
-            </div>
-            {totalPages > 1 ? (
-              <Pagination
-                className={styles.pagination}
-                totalPages={totalPages}
-              />
-            ) : (
-              ""
-            )}
+              Применить
+            </Button>
           </div>
         </div>
-      ) : (
-        <div className={styles.errorTitle}>
-          <h2 className={styles.erroeText}>Товары не найдены!</h2>
+        <div className={styles.productBlockWrap}>
+          <div className={styles.sortContainer}>
+            <Button
+              className={styles.mobileFilterBtn}
+              color="secondary"
+              size="medium"
+              icon={FilterIcon}
+              onClick={handleSetActiveMobileFilters}
+            />
+            <Select
+              className={styles.sortProduct}
+              options={[
+                { value: "price", name: "по цене" },
+                { value: "title", name: "по наименованию" },
+                { value: "category", name: "по категориям" },
+              ]}
+            />
+          </div>
+          <div className={styles.productBlock}>
+            {products?.map((product) => (
+              <Card
+                className={styles.product}
+                product={product}
+                cart={cart}
+                wishList={wishList}
+                compare={compare}
+                key={product.id}
+                id={product.id}
+                title={product.title}
+                src={product.src}
+                price={product.price}
+                onClick={(e) => {
+                  handleAddInCart(product, e);
+                }}
+                onWishListClick={(e) => handleClickOnWishList(product, e)}
+                onCompareClick={(e) => handleClickOnCompare(product, e)}
+              />
+            ))}
+          </div>
+          {totalPages > 1 ? (
+            <Pagination className={styles.pagination} totalPages={totalPages} />
+          ) : (
+            ""
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };

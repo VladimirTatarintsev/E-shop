@@ -45,18 +45,28 @@
   color: #060f42;
 }
 .inputWrapper {
+  padding: 0 0.5rem;
   display: flex;
-  height: 100%;
   flex: 0 1 45%;
+  height: 100%;
   position: relative;
   align-items: center;
 }
+.inputWrapper:hover {
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 5px #00000030;
+}
 .searchInput input {
   border: none;
+  padding-right: 5.25rem;
+  outline: none;
+}
+.searchInput button {
+  right: 3.75rem;
 }
 .searchBtn {
   position: absolute;
-  right: -3.125rem;
+  right: 0.5rem;
   height: 2.5rem;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
@@ -84,6 +94,11 @@
   display: flex;
   align-items: flex-end;
   position: relative;
+  transition: all 0.3s;
+}
+.headBtn:hover {
+  transform: scale(1.15);
+  transition: all 0.3s;
 }
 .linkIcon {
   width: 2.5rem;
@@ -143,19 +158,33 @@
     margin-bottom: 0;
     top: 4rem;
   }
+  .logoWrapper {
+    margin: 0;
+  }
   .logo {
     display: none;
   }
   .inputWrapper {
     margin: 0;
+    flex: 1 0 auto;
+  }
+  .searchInput input {
+    border: none;
+    padding-right: 4.5rem;
+    outline: none;
+  }
+  .searchInput button {
+    right: 3rem;
   }
   .searchBtn {
-    position: static;
-    background-color: transparent !important;
+    background-color: transparent;
+    padding: 0 0.375rem;
   }
   .searchBtn svg {
     height: 2rem;
     width: 2rem;
+    pointer-events: none;
+    stroke: #060f42;
   }
   .headBtnWrapper {
     justify-content: flex-end;
@@ -193,7 +222,7 @@
     background-color: #060f42;
     margin-bottom: 0;
     top: 3rem;
-    padding-right: 0;
+    padding: 0;
     position: static;
   }
   .logo {
@@ -207,14 +236,23 @@
     justify-content: center;
     flex: 1 0 100%;
   }
+  .searchInput input {
+    border: none;
+    padding-right: 4.75rem;
+    outline: none;
+  }
+  .searchInput button {
+    right: 3rem;
+  }
   .searchBtn {
-    position: static;
-    background-color: transparent !important;
+    background-color: transparent;
+    padding: 0.25rem;
   }
   .searchBtn svg {
     height: 2rem;
     width: 2rem;
     pointer-events: none;
+    stroke: #060f42;
   }
   .headBtnWrapper {
     display: none;

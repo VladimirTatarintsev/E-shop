@@ -91,6 +91,9 @@
   display: flex;
   flex-direction: column;
 }
+.gameZoneContainer .secondLink svg {
+  stroke: #fff;
+}
 .bgImg {
   background: linear-gradient(rgba(76, 118, 255, 0.8), rgba(25, 25, 73, 0.9)),
     url(../../../../public/image/game-zone/game-zone.jpg) no-repeat;
@@ -165,10 +168,11 @@
   padding-left: 1rem;
 }
 .gameZoneContainer .productLink .linkText {
-  color: #d9d9d9;
+  color: #fff;
 }
 .gameZoneContainer .productLink .linkIcon {
-  stroke: #d9d9d9;
+  stroke: #fff;
+  fill: #fff;
 }
 
 @media (max-width: 1201px) and (min-width: 768px) {

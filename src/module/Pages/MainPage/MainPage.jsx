@@ -33,7 +33,7 @@ export const MainPage = () => {
   const [showMoreTopSeller, setShowMoreTopSeller] = useState(true);
   const [showMoreGameBestSeller, setShowMoreGameBestSeller] = useState(false);
 
-  const handleAddInCart = (product) => {
+  const handleAddInCart = (product, e) => {
     addInCart({
       id: product.id,
       title: product.title,
@@ -41,8 +41,9 @@ export const MainPage = () => {
       src: product.src,
       qty: 1,
     });
+    e.preventDefault();
   };
-  const handleClickOnWishList = (product) => {
+  const handleClickOnWishList = (product, e) => {
     const isInWishList = isIn(wishList, product.id);
     isInWishList
       ? deleteFromWishList(product.id)
@@ -52,8 +53,9 @@ export const MainPage = () => {
           price: product.price,
           src: product.src,
         });
+    e.preventDefault();
   };
-  const handleClickOnCompare = (product) => {
+  const handleClickOnCompare = (product, e) => {
     const isInCompare = isIn(compare, product.id);
     isInCompare
       ? deleteFromCompare(product.id)
@@ -64,6 +66,7 @@ export const MainPage = () => {
           src: product.src,
           category: product.category,
         });
+    e.preventDefault();
   };
 
   return (
@@ -94,11 +97,11 @@ export const MainPage = () => {
                     title={product.title}
                     src={product.src}
                     price={product.price}
-                    onClick={() => {
-                      handleAddInCart(product);
+                    onClick={(e) => {
+                      handleAddInCart(product, e);
                     }}
-                    onWishListClick={() => handleClickOnWishList(product)}
-                    onCompareClick={() => handleClickOnCompare(product)}
+                    onWishListClick={(e) => handleClickOnWishList(product, e)}
+                    onCompareClick={(e) => handleClickOnCompare(product, e)}
                   />
                 ))
                 .slice(0, 6)}
@@ -149,11 +152,11 @@ export const MainPage = () => {
                     title={product.title}
                     src={product.src}
                     price={product.price}
-                    onClick={() => {
-                      handleAddInCart(product);
+                    onClick={(e) => {
+                      handleAddInCart(product, e);
                     }}
-                    onWishListClick={() => handleClickOnWishList(product)}
-                    onCompareClick={() => handleClickOnCompare(product)}
+                    onWishListClick={(e) => handleClickOnWishList(product, e)}
+                    onCompareClick={(e) => handleClickOnCompare(product, e)}
                   />
                 ))
                 .slice(-6)}
@@ -210,11 +213,11 @@ export const MainPage = () => {
                   title={product.title}
                   src={product.src}
                   price={product.price}
-                  onClick={() => {
-                    handleAddInCart(product);
+                  onClick={(e) => {
+                    handleAddInCart(product, e);
                   }}
-                  onWishListClick={() => handleClickOnWishList(product)}
-                  onCompareClick={() => handleClickOnCompare(product)}
+                  onWishListClick={(e) => handleClickOnWishList(product, e)}
+                  onCompareClick={(e) => handleClickOnCompare(product, e)}
                 />
               ))
               .slice(11, 17)}
