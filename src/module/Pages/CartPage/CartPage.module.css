@@ -75,6 +75,7 @@
 .price {
   display: flex;
   font-size: 1.25rem;
+  font-weight: 600;
 }
 .price p {
   padding-left: 0.25rem;
@@ -110,6 +111,7 @@
   align-items: flex-end;
   font-size: 1.5rem;
   margin-right: 1rem;
+  font-weight: 600;
 }
 .totalPrice p {
   line-height: 1.25rem;
@@ -120,8 +122,9 @@
   text-decoration: none;
 }
 .continueBtn {
-  border: 3px solid #01579b;
+  border: 2px solid #01579b;
   color: #01579b;
+  font-weight: 600;
 }
 .confirmBtn span {
   font-size: 0.75rem;
