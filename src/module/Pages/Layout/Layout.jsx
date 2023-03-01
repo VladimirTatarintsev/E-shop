@@ -28,7 +28,7 @@ import { setSearchQuery } from "store/slices/searchSlice";
 
 export const Layout = () => {
   const dispatch = useDispatch();
-  const { data: products = [] } = useGetCartQuery();
+  const { data: cart = [] } = useGetCartQuery();
   const { data: wishList = [] } = useGetWishListQuery();
   const { data: compare = [] } = useGetCompareQuery();
   const navigate = useNavigate();
@@ -83,7 +83,7 @@ export const Layout = () => {
       </NavBar>
       <MobileMenu
         header={"E-SHOP"}
-        data={{ cart: products, compare: compare, wishList: wishList }}
+        data={{ cart: cart, compare: compare, wishList: wishList }}
       />
       <PageHeader className={styles.header}>
         <div className={styles.logoWrapper}>
@@ -130,7 +130,7 @@ export const Layout = () => {
             </Link>
           </div>
           <div className={styles.btnWrapper}>
-            <Link to="/" className={styles.headBtn}>
+            <Link to="/wishlist" className={styles.headBtn}>
               <HeartIcon className={styles.linkIcon} />
               {wishList.length ? (
                 <div className={styles.linkCounter}>{wishList.length}</div>
@@ -142,8 +142,8 @@ export const Layout = () => {
           <div className={styles.btnWrapper}>
             <Link to="/cart" className={styles.headBtn}>
               <Cart className={styles.linkIcon} />
-              {products.length ? (
-                <div className={styles.linkCounter}>{products.length}</div>
+              {cart.length ? (
+                <div className={styles.linkCounter}>{cart.length}</div>
               ) : (
                 ""
               )}

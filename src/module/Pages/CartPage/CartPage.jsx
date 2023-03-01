@@ -46,7 +46,7 @@ export const CartPage = ({ className }) => {
   return (
     <div className={cart}>
       <div className={styles.header}>
-        <span className={styles.headerTitle}>Корзина</span>
+        <h2 className={styles.headerTitle}>Корзина</h2>
       </div>
       <div className={styles.productBlock}>
         {data.length ? (
@@ -98,10 +98,10 @@ export const CartPage = ({ className }) => {
           ))
         ) : (
           <div className={styles.emptyCart}>
-            <h2>Ваша корзина пуста</h2>
+            <span className={styles.emptyCartText}>Ваша корзина пуста</span>
             <div className={styles.btnWrap}>
               <Button
-                className={styles.errBtn}
+                className={styles.btn}
                 color="tertiary"
                 size="medium"
                 onClick={() => handleClickOnMainBtn()}
@@ -109,7 +109,7 @@ export const CartPage = ({ className }) => {
                 НА ГЛАВНУЮ
               </Button>
               <Button
-                className={styles.errBtn}
+                className={styles.btn}
                 color="primary"
                 size="medium"
                 onClick={() => handleClickOnCatalogBtn()}

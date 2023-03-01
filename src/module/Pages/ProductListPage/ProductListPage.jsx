@@ -226,11 +226,11 @@ export const ProductListPage = () => {
               <Card
                 className={styles.product}
                 product={product}
+                id={product.id}
+                key={product.id}
                 cart={cart}
                 wishList={wishList}
                 compare={compare}
-                key={product.id}
-                id={product.id}
                 title={product.title}
                 src={product.src}
                 price={product.price}

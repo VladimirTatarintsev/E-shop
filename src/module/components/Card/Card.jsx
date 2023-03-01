@@ -22,9 +22,8 @@ export const Card = ({
   wishList,
   compare,
 }) => {
-  const navigate = useNavigate();
   const cardClass = cx(styles.card, className);
-
+  const navigate = useNavigate();
   const isInCart = isIn(cart, id);
   const isInWishList = isIn(wishList, id);
   const isInCompare = isIn(compare, id);

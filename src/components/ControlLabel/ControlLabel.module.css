@@ -1,9 +1,7 @@
 .label {
   display: flex;
-  width: 100%;
   align-items: center;
   cursor: pointer;
-  padding: 0 0.5rem;
   border-radius: 2px;
 }
 .controlLabel {

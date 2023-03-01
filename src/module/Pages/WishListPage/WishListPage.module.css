@@ -1,0 +1,97 @@
+.pageContainer {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.pageTitle {
+  margin-bottom: 2rem;
+}
+.productBlockHeader {
+  padding: 0 1rem;
+  display: flex;
+  margin-bottom: 1rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px 1px #00000030;
+  border-radius: 5px;
+}
+.checkboxWrap {
+  display: flex;
+  align-items: center;
+  width: 20%;
+}
+.deleteBtn {
+  padding: 0.25rem 0.5rem;
+}
+
+.productBlock {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+.product {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px 1px #00000025;
+}
+.selectProduct {
+  align-self: flex-start;
+}
+.imgWrap {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+.img {
+  width: 150px;
+}
+.productTitle {
+  flex: 1 0 auto;
+  font-weight: 600;
+}
+.productPrice {
+  display: flex;
+  align-items: center;
+}
+.price {
+  font-weight: 600;
+  margin-right: 2rem;
+}
+.buyBtn {
+  padding: 0.5rem 1rem;
+}
+.buyBtn svg {
+  display: none;
+}
+.emptyWishList {
+  padding-top: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.emptyWishListText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.btnWrap {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.btn {
+  margin-right: 1rem;
+  width: 8rem;
+}
+.btn:first-child {
+  border: 2px solid #01579b;
+  color: #01579b;
+  font-weight: 600;
+  margin-right: 0;
+}

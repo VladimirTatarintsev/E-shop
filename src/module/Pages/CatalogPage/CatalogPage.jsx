@@ -10,7 +10,7 @@ export const CatalogPage = () => {
     categories.push({
       category: product.category,
       img: product.categoryImg,
-      slug: product.slug,
+      categorySlug: product.categorySlug,
     });
   });
   const uniqeCategories = categories.filter(
@@ -23,10 +23,10 @@ export const CatalogPage = () => {
     <div className={styles.pageContainer}>
       <h2 className={styles.pageTitle}>Каталог товаров</h2>
       <div className={styles.categoriesContainer}>
-        {uniqeCategories?.map(({ category, slug, img }) => (
+        {uniqeCategories?.map(({ category, categorySlug, img }) => (
           <Link
-            to={`/catalog/${slug}`}
-            key={slug}
+            to={`/catalog/${categorySlug}`}
+            key={category}
             className={styles.categoryLink}
           >
             <div className={styles.categoryItem}>

@@ -8,6 +8,7 @@ import {
   EndingOrderPage,
   CatalogPage,
   SearchPage,
+  WishListPage,
 } from "module/Pages";
 import { Route, Routes } from "react-router-dom";
 import styles from "./App.module.css";
@@ -19,6 +20,7 @@ export const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path="cart" element={<CartPage />} />
+          <Route path="wishlist" element={<WishListPage />} />
           <Route path="cart/ordering" element={<OrderingPage />} />
           <Route
             path="cart/ordering/order-ending"

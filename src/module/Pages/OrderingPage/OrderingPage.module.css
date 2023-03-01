@@ -54,7 +54,7 @@
   margin-right: 2rem;
 }
 .productImg {
-  height: 4.5rem;
+  height: auto;
   width: 4.5rem;
 }
 .cell {
