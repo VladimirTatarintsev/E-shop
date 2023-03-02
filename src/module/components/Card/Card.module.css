@@ -191,6 +191,11 @@
   .card {
     padding: 0.5rem;
   }
+  .cardWrap:hover {
+    transform: none;
+    transition: none;
+    box-shadow: none;
+  }
   .label {
     padding: 0;
   }

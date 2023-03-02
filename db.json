@@ -966,7 +966,20 @@
     }
   ],
   "cart": [],
-  "wishList": [],
+  "wishList": [
+    {
+      "id": 1,
+      "title": "Видеокарта MSI GeForce RTX 3090 Ti SUPRIM X 24Gb",
+      "price": 109999,
+      "src": "/image/card-image/MSIGeForceRTX3090TiSUPRIMX.jpg"
+    },
+    {
+      "id": 21,
+      "title": "27\" Монитор MSI Optix MAG273",
+      "price": 19299,
+      "src": "/image/card-image/27 Монитор MSI Optix MAG273.jpg"
+    }
+  ],
   "compare": [],
   "orders": [
     {

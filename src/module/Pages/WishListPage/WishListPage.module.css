@@ -132,6 +132,7 @@
     font-size: 0.875rem;
     flex-direction: column;
     padding: 0.5rem;
+    align-items: flex-start;
   }
   .imgWrap {
     margin-right: 0.75rem;

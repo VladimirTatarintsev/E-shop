@@ -136,10 +136,8 @@
   display: flex;
   align-items: flex-end;
   font-size: 1.75rem;
-  font-family: "Lato" serif;
   color: #fff;
   margin-bottom: 2rem;
-  padding: 0 1rem;
 }
 .categoryItem {
   width: 15rem;
