@@ -146,6 +146,11 @@ export const ProductListPage = () => {
   useEffect(() => {
     dispatch(setTotalPages(getPagesCount(totalCount, limit)));
   }, [totalCount, limit]);
+  useEffect(() => {
+    if (isChecked.length === 0) {
+      dispatch(setClearAllFilters());
+    }
+  }, [isChecked]);
 
   return (
     <div className={styles.pageContainer}>
