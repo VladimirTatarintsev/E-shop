@@ -39,6 +39,7 @@
   margin-bottom: 1rem;
   border-radius: 5px;
   box-shadow: 0px 2px 5px 1px #00000025;
+  justify-content: space-between;
 }
 .selectProduct {
   align-self: flex-start;
@@ -50,6 +51,7 @@
 }
 .productSection {
   display: flex;
+  align-items: center;
 }
 .img {
   width: 150px;
