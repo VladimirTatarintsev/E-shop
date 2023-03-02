@@ -15,8 +15,8 @@ export const CatalogPage = () => {
   });
   const uniqeCategories = categories.filter(
     (
-      (el) => (f) =>
-        !el.has(f.category) && el.add(f.category)
+      (el) => (p) =>
+        !el.has(p.category) && el.add(p.category)
     )(new Set())
   );
   return (

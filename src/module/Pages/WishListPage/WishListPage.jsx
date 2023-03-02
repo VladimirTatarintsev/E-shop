@@ -97,23 +97,26 @@ export const WishListPage = () => {
           </div>
           {wishList?.map((product) => (
             <div className={styles.product} key={product.id}>
-              <div className={styles.selectProduct}>
-                <ControlLabel
-                  control={
-                    <Checkbox
-                      checked={selectedProducts.includes(product.id.toString())}
-                      onChange={handleSetIsChecked}
-                      value={product.id}
-                      withIcon
-                    />
-                  }
-                />
+              <div className={styles.productSection}>
+                <div className={styles.selectProduct}>
+                  <ControlLabel
+                    control={
+                      <Checkbox
+                        checked={selectedProducts.includes(
+                          product.id.toString()
+                        )}
+                        onChange={handleSetIsChecked}
+                        value={product.id}
+                        withIcon
+                      />
+                    }
+                  />
+                </div>
+                <div className={styles.imgWrap}>
+                  <img className={styles.img} alt="" src={product.src} />
+                </div>
+                <div className={styles.productTitle}>{product.title}</div>
               </div>
-
-              <div className={styles.imgWrap}>
-                <img className={styles.img} alt="" src={product.src} />
-              </div>
-              <div className={styles.productTitle}>{product.title}</div>
               <div className={styles.productPrice}>
                 <span className={styles.price}>{`${product.price} руб.`}</span>
                 {isIn(cart, product.id) ? (

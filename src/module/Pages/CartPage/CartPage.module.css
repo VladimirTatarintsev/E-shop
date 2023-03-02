@@ -1,7 +1,9 @@
 .cart {
-  max-width: 100%;
-  height: 100%;
+  width: 100%;
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
 }
 .header {
   display: flex;
@@ -206,11 +208,9 @@
     flex-direction: column;
     margin-bottom: 1rem;
   }
-  .emptyCart {
-    padding: 0.5rem;
-  }
-  .emptyCart h2 {
-    font-size: 1.5rem;
+  .emptyCartText {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
   .confirmBtn {
     width: 100%;

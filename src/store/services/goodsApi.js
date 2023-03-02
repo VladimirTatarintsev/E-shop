@@ -6,7 +6,12 @@ export const goodsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (build) => ({
     getGoods: build.query({
-      query: () => `goods`,
+      query: (category) => ({
+        url: `goods`,
+        params: {
+          categorySlug: category,
+        },
+      }),
     }),
     getFilteredAndSortedGoods: build.query({
       query: ({

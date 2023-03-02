@@ -54,7 +54,7 @@ export const ProductListPage = () => {
   const [activeMobileFilters, setActiveMobileFilters] = useState(false);
 
   const brandFilters = getFilteredBrandsToString(selectedBrands);
-  const { data = [] } = useGetGoodsQuery();
+  const { data = [] } = useGetGoodsQuery(category);
   const { data: cart = [] } = useGetCartQuery();
   const { data: wishList = [] } = useGetWishListQuery();
   const { data: compare = [] } = useGetCompareQuery();

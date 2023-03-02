@@ -23,10 +23,28 @@ export const ProductFilter = ({
   const handleShowAllItem = () => {
     setShowAllItem(!showAllItem);
   };
-  products?.forEach((product) => searchQueryArr.push(product.brand));
+  products?.forEach((product) =>
+    searchQueryArr.push({ brand: product.brand, category: product.category })
+  );
 
-  let uniqeBrands = [...new Set(searchQueryArr)].sort();
-
+  const uniqeProducts = searchQueryArr
+    .filter(
+      (
+        (el) => (p) =>
+          !el.has(p.brand) && el.add(p.brand)
+      )(new Set())
+    )
+    .sort((a, b) => {
+      const brandA = a.brand;
+      const brandB = b.brand;
+      if (brandA > brandB) {
+        return 1;
+      }
+      if (brandA < brandB) {
+        return -1;
+      }
+      return 0;
+    });
   return (
     <div className={cx(styles.filter, className)}>
       <span className={styles.filterTitle} onClick={handleShowFilter}>
@@ -45,38 +63,42 @@ export const ProductFilter = ({
             showAllItem ? [styles.showFiltersBlock] : [styles.filtersBlock]
           }`}
         >
-          {uniqeBrands?.map((brand) => (
+          {uniqeProducts?.map((product) => (
             <ControlLabel
               className={styles.item}
-              key={brand}
+              key={product.brand}
               control={
                 <Checkbox
-                  checked={selectedFilter.includes(brand)}
+                  checked={selectedFilter.includes(product.brand)}
                   onChange={onCheckboxClick}
-                  value={brand}
+                  value={product.brand}
                   withIcon
                 />
               }
-              label={brand}
+              label={product.brand}
             ></ControlLabel>
           ))}
         </div>
-        {!showAllItem ? (
-          <MyLink
-            className={styles.toggleBtn}
-            color="secondary"
-            onClick={handleShowAllItem}
-          >
-            Показать все
-          </MyLink>
-        ) : (
-          <MyLink
-            className={styles.toggleBtn}
-            color="secondary"
-            onClick={handleShowAllItem}
-          >
-            Скрыть
-          </MyLink>
+        {uniqeProducts.length > 4 && (
+          <div className={styles.toggleBtnWrap}>
+            {!showAllItem ? (
+              <MyLink
+                className={styles.toggleBtn}
+                color="secondary"
+                onClick={handleShowAllItem}
+              >
+                Показать все
+              </MyLink>
+            ) : (
+              <MyLink
+                className={styles.toggleBtn}
+                color="secondary"
+                onClick={handleShowAllItem}
+              >
+                Скрыть
+              </MyLink>
+            )}
+          </div>
         )}
       </div>
     </div>
