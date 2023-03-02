@@ -28,7 +28,7 @@ export const App = () => {
           />
           <Route path="products" element={<ProductListPage />} />
           <Route path="catalog" element={<CatalogPage />} />
-          <Route path="catalog/:category" element={<ProductListPage />} />
+          <Route path="catalog/:categorySlug" element={<ProductListPage />} />
           <Route path="search/:value" element={<SearchPage />} />
           <Route path="product/:id" element={<ProductPage />} />
         </Route>

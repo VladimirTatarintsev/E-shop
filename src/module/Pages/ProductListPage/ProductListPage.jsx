@@ -39,7 +39,7 @@ import { setClearSearchInput } from "store/slices/searchSlice";
 import styles from "./ProductListPage.module.css";
 
 export const ProductListPage = () => {
-  const { category } = useParams();
+  const { categorySlug } = useParams();
   const dispatch = useDispatch();
   const { selectedValue } = useSelector(getSort);
   const { currentPage, limit, totalPages } = useSelector(getPagination);
@@ -54,13 +54,13 @@ export const ProductListPage = () => {
   const [activeMobileFilters, setActiveMobileFilters] = useState(false);
 
   const brandFilters = getFilteredBrandsToString(selectedBrands);
-  const { data = [] } = useGetGoodsQuery(category);
+  const { data = [] } = useGetGoodsQuery(categorySlug);
   const { data: cart = [] } = useGetCartQuery();
   const { data: wishList = [] } = useGetWishListQuery();
   const { data: compare = [] } = useGetCompareQuery();
   const { products, totalCount } = useGetFilteredAndSortedGoodsQuery(
     {
-      category: category,
+      category: categorySlug,
       sort: selectedValue,
       limit: limit,
       page: currentPage,

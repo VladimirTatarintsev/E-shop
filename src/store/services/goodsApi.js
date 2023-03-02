@@ -6,10 +6,10 @@ export const goodsApi = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (build) => ({
     getGoods: build.query({
-      query: (category) => ({
+      query: (categorySlug) => ({
         url: `goods`,
         params: {
-          categorySlug: category,
+          categorySlug: categorySlug,
         },
       }),
     }),
