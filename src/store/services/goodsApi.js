@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const goodsApi = createApi({
   reducerPath: "goodsApi",
-  tagTypes: ["Products"],
+  tagTypes: ["Products", "Cart", "WishList", "Compare"],
   baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:3001/" }),
   endpoints: (build) => ({
     getGoods: build.query({
@@ -49,10 +49,10 @@ export const goodsApi = createApi({
       providesTags: (result) =>
         result
           ? [
-              ...result.map(({ id }) => ({ type: "Products", id })),
-              { type: "Products", id: "LIST" },
+              ...result.map(({ id }) => ({ type: "Cart", id })),
+              { type: "Cart", id: "LIST" },
             ]
-          : [{ type: "Products", id: "LIST" }],
+          : [{ type: "Cart", id: "LIST" }],
     }),
     addProductInCart: build.mutation({
       query: (body) => ({
@@ -60,14 +60,14 @@ export const goodsApi = createApi({
         method: "POST",
         body,
       }),
-      invalidatesTags: [{ type: "Products", id: "LIST" }],
+      invalidatesTags: [{ type: "Cart", id: "LIST" }],
     }),
     deleteProductFromCart: build.mutation({
       query: (id) => ({
         url: `cart/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: [{ type: "Products", id: "LIST" }],
+      invalidatesTags: [{ type: "Cart", id: "LIST" }],
     }),
     changeProductQty: build.mutation({
       query: ({ id, ...body }) => ({
@@ -83,10 +83,10 @@ export const goodsApi = createApi({
       providesTags: (result) =>
         result
           ? [
-              ...result.map(({ id }) => ({ type: "Products", id })),
-              { type: "Products", id: "LIST" },
+              ...result.map(({ id }) => ({ type: "WishList", id })),
+              { type: "WishList", id: "LIST" },
             ]
-          : [{ type: "Products", id: "LIST" }],
+          : [{ type: "WishList", id: "LIST" }],
     }),
     addInWishList: build.mutation({
       query: (body) => ({
@@ -94,14 +94,14 @@ export const goodsApi = createApi({
         method: "POST",
         body,
       }),
-      invalidatesTags: [{ type: "Products", id: "LIST" }],
+      invalidatesTags: [{ type: "WishList", id: "LIST" }],
     }),
     deleteFromWishList: build.mutation({
       query: (id) => ({
         url: `wishList/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: [{ type: "Products", id: "LIST" }],
+      invalidatesTags: [{ type: "WishList", id: "LIST" }],
     }),
 
     getCompare: build.query({
@@ -109,10 +109,10 @@ export const goodsApi = createApi({
       providesTags: (result) =>
         result
           ? [
-              ...result.map(({ id }) => ({ type: "Products", id })),
-              { type: "Products", id: "LIST" },
+              ...result.map(({ id }) => ({ type: "Compare", id })),
+              { type: "Compare", id: "LIST" },
             ]
-          : [{ type: "Products", id: "LIST" }],
+          : [{ type: "Compare", id: "LIST" }],
     }),
     addInCompare: build.mutation({
       query: (body) => ({
@@ -120,14 +120,14 @@ export const goodsApi = createApi({
         method: "POST",
         body,
       }),
-      invalidatesTags: [{ type: "Products", id: "LIST" }],
+      invalidatesTags: [{ type: "Compare", id: "LIST" }],
     }),
     deleteFromCompare: build.mutation({
       query: (id) => ({
         url: `compare/${id}`,
         method: "DELETE",
       }),
-      invalidatesTags: [{ type: "Products", id: "LIST" }],
+      invalidatesTags: [{ type: "Compare", id: "LIST" }],
     }),
 
     addOrder: build.mutation({

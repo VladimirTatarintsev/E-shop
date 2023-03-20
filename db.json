@@ -966,14 +966,7 @@
     }
   ],
   "cart": [],
-  "wishList": [
-    {
-      "id": 25,
-      "title": "Игровая консоль Microsoft Xbox Series S 1Tb",
-      "price": 53799,
-      "src": "/image/card-image/Игровая консоль Microsoft Xbox Series S.jpg"
-    }
-  ],
+  "wishList": [],
   "compare": [],
   "orders": [
     {
