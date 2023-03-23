@@ -75,7 +75,7 @@ export const goodsApi = createApi({
         method: "PATCH",
         body,
       }),
-      invalidatesTags: ({ id }) => [{ type: "Products", id }],
+      invalidatesTags: ({ id }) => [{ type: "Cart", id }],
     }),
 
     getWishList: build.query({
